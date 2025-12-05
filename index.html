@@ -8,7 +8,7 @@
 .board-section-rows {
   display: flex;
   flex-direction: column;
-  gap: 50px; 
+  gap: 50px; /* spacing between rows */
 }
 .gitna {
 text-align: center;}
@@ -18,7 +18,7 @@ text-align: center;}
   gap: 50px;
 }
 
-	
+/* Wrapper for each row group */
 .role-group {
   width: 100%;
   display: grid;
@@ -26,7 +26,7 @@ text-align: center;}
   margin-bottom: 40px;
 }
 
-
+/* PRESIDENT → single centered */
 .role-group.single {
   display: grid;
   grid-template-columns: 1fr;
@@ -39,9 +39,8 @@ text-align: center;}
 .role-group.single .person-card {
   width: 100%;
 }
-
-
-
+/* PRESIDENT → single centered cleanly */
+/* Add spacing under the full-width President row */
 #is-president .role-group.single {
   margin-bottom: 50px; /* adjust spacing here */
 }
@@ -138,16 +137,6 @@ color: #ffffff;}
 }
 /* Optional: override default even/odd rule */
 
-
-
-
-
-
-
-
-
-
-	
 .top-header {
   position: fixed;
   top: -80px; /* hide above the viewport */
@@ -218,17 +207,7 @@ color: #ffffff;}
 
 /* ==================== Sidebar ==================== */
 /* Sidebar Toggle Button */
-.sidebar { position: fixed; 
-          top: 0; 
-          left: 0;
-          width: 230px; 
-          height: 100vh; 
-          background: var(--green); 
-          color: white; 
-          padding: 20px; 
-          box-sizing: border-box; 
-          overflow-y: auto; 
-          transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease; }
+.sidebar { position: fixed; top: 0; left: 0; width: 230px; height: 100vh; background: var(--green); color: white; padding: 20px; box-sizing: border-box; overflow-y: auto; transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease; }
 
 .sidebar.collapsed {
   transform: translateX(-165px);
@@ -379,13 +358,8 @@ section.show{
   --muted:#6b6b6b;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
-*{box-sizing:border-box;
-  margin:0;
-  padding:0;}
-body  {
-  background:var(--light); 
-  color:var(--green); 
-  line-height:1.5;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--light); color:var(--green); line-height:1.5;}
 
 /* ==================== Sections ==================== */
 section{
@@ -1110,21 +1084,6 @@ footer small{
 
 </style>
 </head>
-
-<!-- ==================== HTML==================== -->
-	
-<!-- ==================== HTML==================== -->
-	
-<!-- ==================== HTML==================== -->
-	
-<!-- ==================== HTML==================== -->
-	
-<!-- ==================== HTML==================== -->
-	
-<!-- ==================== HTML==================== -->
-	
-<!-- ==================== HTML==================== -->
-	
 <body>
 
 <header class="top-header">
@@ -1841,23 +1800,7 @@ footer small{
 </footer>
 
 </div> <!-- end .content -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
-	
-  <!-- ====================JAVASCRIPT==================== -->
 
-	
-  
 <script>
 // Sidebar show on load
 
@@ -2009,7 +1952,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-function changeRecords(evt, tabId) {
+function changeAlumniTab(evt, tabId) {
 
   const panels = document.querySelectorAll(".dlsl-panel");
   const buttons = document.querySelectorAll(".dlsl-switch");
@@ -2020,6 +1963,9 @@ function changeRecords(evt, tabId) {
   document.getElementById(tabId).classList.add("active");
   evt.currentTarget.classList.add("active");
 }
+
+
 </script>
+
 </body>
 </html>
