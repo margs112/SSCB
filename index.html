@@ -207,7 +207,17 @@ color: #ffffff;}
 
 /* ==================== Sidebar ==================== */
 /* Sidebar Toggle Button */
-.sidebar { position: fixed; top: 0; left: 0; width: 230px; height: 100vh; background: var(--green); color: white; padding: 20px; box-sizing: border-box; overflow-y: auto; transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease; }
+.sidebar { position: fixed; 
+          top: 0; 
+          left: 0;
+          width: 230px; 
+          height: 100vh; 
+          background: var(--green); 
+          color: white; 
+          padding: 20px; 
+          box-sizing: border-box; 
+          overflow-y: auto; 
+          transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease; }
 
 .sidebar.collapsed {
   transform: translateX(-165px);
@@ -358,8 +368,13 @@ section.show{
   --muted:#6b6b6b;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--light); color:var(--green); line-height:1.5;}
+*{box-sizing:border-box;
+  margin:0;
+  padding:0;}
+body  {
+  background:var(--light); 
+  color:var(--green); 
+  line-height:1.5;}
 
 /* ==================== Sections ==================== */
 section{
@@ -523,7 +538,7 @@ background: var(--dlsl-green);
   max-width:1200px;
   margin:0 auto;
 }
-
+	
 /* ==================== Cover ==================== */
 .hero {
   position: relative;
@@ -891,7 +906,165 @@ background: var(--dlsl-green);
   border-radius: 50%;
   cursor: pointer;
 }
+/* ===============================
+   DLSL TAB SYSTEM (UNIQUE)
+================================ */
 
+.dlsl-switcher {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.dlsl-switcher-menu {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.dlsl-switch {
+  background: none;
+  border: none;
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  color: #222;
+}
+
+/* hover underline */
+.dlsl-switch::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--dlsl-green);
+  transition: 0.4s ease;
+}
+
+.dlsl-switch:hover::after {
+  width: 100%;
+}
+
+/* active button */
+.dlsl-switch.active {
+  background: var(--dlsl-green);
+  color: white;
+}
+
+.dlsl-switch.active::after {
+  display: none;
+}
+
+/* panels */
+.dlsl-switcher-body {
+  padding: 40px 10px;
+}
+
+.dlsl-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.35s ease;
+}
+
+.dlsl-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ================================
+   RECORDS TAB - VISUAL MATCH
+================================ */
+
+.records-visual-wrap{
+
+  padding: 60px 6%;
+  background: #f8fdfb;
+background-size: cover;
+}
+
+/* Title */
+.records-visual-title{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.records-visual-title h2{
+  color: #0f3d2e;
+  font-size: 2.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.records-visual-title span{
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #0f3d2e, transparent);
+}
+
+/* Tabs container (your 3 buttons) */
+.records-visual-tabs{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  justify-content: center; /* CENTER the buttons */
+}
+
+/* Style all buttons INSIDE records only */
+.records-visual-tabs button{
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 1.5px solid #0f3d2e;
+  background: transparent;
+  color: #0f3d2e;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+/* Active tab button */
+.records-visual-tabs button.active{
+  background: #0f3d2e;
+  color: white;
+}
+
+/* Hover effect */
+.records-visual-tabs button:hover{
+  background: #0f3d2e;
+  color: white;
+}
+
+/* Content area */
+.records-visual-content{
+  background: white;
+  padding: 35px 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+  min-height: 200px;
+  animation: recordsFade .4s ease;
+  line-height: 1.7;
+  color: #2b2b2b;
+}
+
+@keyframes recordsFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* ==================== Footer ==================== */
 footer{
@@ -926,6 +1099,21 @@ footer small{
 
 </style>
 </head>
+
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+  //HTML
+
+  
 <body>
 
 <header class="top-header">
@@ -941,7 +1129,7 @@ footer small{
       <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram" />
     </a>
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sscb.dlsl@gmail.com" target="_blank" class="social-btn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Signum_Fidei_green.svg/1200px-Signum_Fidei_green.svg.png" alt="DLSL" />
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/email-envelope-white-icon.png" alt="DLSL" />
     </a>
     <a href="https://www.dlsl.edu.ph/" target="_blank" class="social-btn">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Signum_Fidei_green.svg/1200px-Signum_Fidei_green.svg.png" alt="DLSL" />
@@ -1559,6 +1747,79 @@ footer small{
   </section>
 </div>
 
+<!-- ==================== Records =================== -->
+<div id="records" class="tab-content">
+ <div class="records-visual-wrap">
+
+  <div class="records-visual-title">
+    <h2>Records</h2>
+    <span></span>
+  </div>
+
+  <div class="records-visual-tabs">
+    <button class="dlsl-switch active" onclick="changeAlumniTab(event, 'dlsl-about')">
+      SSCB Constitution of 2025
+    </button>
+
+    <button class="dlsl-switch" onclick="changeAlumniTab(event, 'dlsl-career')">
+      Concerns
+    </button>
+
+  <button class="dlsl-switch" onclick="changeAlumniTab(event, 'dlsl-report')">
+      Semestral Report on SSCB Performance
+    </button>
+
+    <button class="dlsl-switch" onclick="changeAlumniTab(event, 'dlsl-news')">
+      Programs
+    </button>
+  </div>
+
+
+  <div class="records-visual-content">
+    <!-- ABOUT -->
+    <div id="dlsl-about" class="dlsl-panel active">
+      <h2>About Our Alumni</h2>
+      <p>
+        The De La Salle Lipa Alumni Community is a growing network of Lasallians
+        who contribute in leadership, service, and innovation locally and globally.
+      </p>
+    </div>
+
+
+    <!-- CAREER -->
+    <div id="dlsl-career" class="dlsl-panel">
+      <h2>Career Opportunities</h2>
+      <ul>
+        <li>Marketing Assistant – Lipa City</li>
+        <li>Graphic Designer – Manila</li>
+        <li>Software Engineer – Remote</li>
+        <li>HR Associate – Batangas</li>
+      </ul>
+    </div>
+
+<div id="dlsl-report" class="dlsl-panel">
+      <h2>Career Opportunities</h2>
+      <ul>
+        <li>Marketing Assistant – Lipa City</li>
+        <li>Graphic Designer – Manila</li>
+        <li>Software Engineer – Remote</li>
+        <li>HR Associate – Batangas</li>
+      </ul>
+    </div>
+
+    <!-- NEWS -->
+    <div id="dlsl-news" class="dlsl-panel">
+      <h2>News and Updates</h2>
+      <p><b>Aug 12:</b> Alumni Homecoming Announced</p>
+      <p><b>Jun 25:</b> Scholarship Program Launched</p>
+      <p><b>May 10:</b> Networking Night Success</p>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
 
 <!-- ==================== Footer ==================== -->
 </div> <!-- end last tab-content -->
@@ -1569,7 +1830,25 @@ footer small{
 </footer>
 
 </div> <!-- end .content -->
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
+  // SCRIPT
 
+  
 <script>
 // Sidebar show on load
 
@@ -1721,8 +2000,17 @@ window.addEventListener('scroll', () => {
   }
 });
 
+function changeRecords(evt, tabId) {
 
+  const panels = document.querySelectorAll(".dlsl-panel");
+  const buttons = document.querySelectorAll(".dlsl-switch");
+
+  panels.forEach(p => p.classList.remove("active"));
+  buttons.forEach(b => b.classList.remove("active"));
+
+  document.getElementById(tabId).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
 </script>
-
 </body>
 </html>
