@@ -137,17 +137,16 @@ color: var(--dlsl-green);
       display: inline-block;
     }
     .dot-present { background: #3bb143; }
-.dot-excused { background: #f08c00; }
+    .dot-excused { background: #f08c00; }
     .dot-absent { background: #fa5252; }
+
 @font-face {
             font-family: 'Visby CF Heavy';
-            src: url('fsp-demo-visby-cf-heavy-regular.otf') format('opentype');
-
+            src: url('fonts/fsp-demo-visby-cf-heavy-regular.otf') format('opentype');
         }
 @font-face {
             font-family: 'Livvic';
             src: url('Livvic-Regular.otf') format('truetype');
-    
         }
 section p{
  font-family: 'Livvic';
@@ -159,11 +158,6 @@ section p{
 }
 .gitna {
 text-align: center;}
-.board-section-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
 
 /* Wrapper for each row group */
 .role-group {
@@ -187,31 +181,30 @@ text-align: center;}
   width: 100%;
 }
 /* PRESIDENT → single centered cleanly */
-/* Add spacing under the full-width President row */
 #is-president .role-group.single {
-  margin-bottom: 50px; /* adjust spacing here */
+  margin-bottom: 50px; 
 }
 
 #is-president .role-group.single .person-card {
-  max-width: 420px; /* same card width as others */
+  max-width: 420px; 
   width: 100%;
 }
 
 #is-president .role-group.single {
   display: flex;
   justify-content: center;
-  margin: 0 auto 50px auto; /* adds spacing below + centers */
+  margin: 0 auto 50px auto; 
 }
 
 #is-president .role-group.single .person-card {
   width: 100%;
-  max-width: 420px;  /* SAME width as other person-cards */
+  max-width: 420px;  
 }
 
 /* TREASURERS / PROS → 2 equal columns */
 .role-group.double {
   grid-template-columns: repeat(2, 1fr);
-  max-width: 900px;     /* SAME WIDTH AS PRESIDENT */
+  max-width: 900px;     
   margin-left: auto;
   margin-right: auto;
   gap: 40px;
@@ -223,18 +216,12 @@ text-align: center;}
   max-width: 420px;
 }
 
-
-
-
-
-/* Avatar shapes & alignment (optional keep from your EB tab) */
+/* Avatar shapes & alignment */
 .avatar img {
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
-
-
 
 .center-row {
   justify-content: center;
@@ -247,25 +234,23 @@ text-align: center;}
 }
 
 .person-card.full-row {
-  grid-column: 1 / 4; /* spans all 3 columns */
+  grid-column: 1 / 4; 
 }
 
 .empty-card {
   visibility: hidden;
 }
 
-
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* ensures full viewport height */
-  margin: 0; /* prevent extra space from default margin */
+  min-height: 100vh; 
+  margin: 0; 
 }
 
 .hahaha {
 color: #0f3d2e;
 text-align: justify;}
-
 
 .haha {
 font-family: "Visby CF Heavy";
@@ -281,11 +266,10 @@ color: #ffffff;}
 .content.collapsed {
   margin-left: 0px;
 }
-/* Optional: override default even/odd rule */
 
 .top-header {
   position: fixed;
-  top: -80px; /* hide above the viewport */
+  top: -80px; 
   width: 100%;
   background: var(--dlsl-green);
   color: #fff;
@@ -334,7 +318,6 @@ font-family: "Visby CF Heavy";
   width: 36px;
   height: 36px;
   border-radius: 50%;
-
   transition: all 0.3s ease;
 }
 
@@ -353,22 +336,29 @@ font-family: "Visby CF Heavy";
 }
 
 /* ==================== Sidebar ==================== */
-/* Sidebar Toggle Button */
-.sidebar { position: fixed; top: 0; left: 0; width: 230px; height: 100vh; 
-background: var(--dlsl-green-dark); color: white; padding: 20px; box-sizing: border-box; overflow-y: auto; transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease; }
+.sidebar { 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 230px; 
+  height: 100vh; 
+  background: var(--dlsl-green-dark); 
+  color: white; 
+  padding: 20px; 
+  box-sizing: border-box; 
+  overflow-y: auto; 
+  transition: width 0.3s ease, transform 0.3s ease, opacity 0.3s ease; 
+  z-index: 9999;
+}
 
 .sidebar.collapsed {
   transform: translateX(-165px);
   width: 60px;
 }
 
-
 .sidebar h3,
 .sidebar .tab {
-  transition: 
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
 
 .sidebar.collapsed h3,
@@ -378,14 +368,11 @@ background: var(--dlsl-green-dark); color: white; padding: 20px; box-sizing: bor
   visibility: hidden;
 }
 
- 
-
-/* Sidebar toggle button always on top */
 .sidebar-toggle {
   position: fixed;
   top: 8.5px;
   left: 20px;
-  z-index: 10000; /* higher than .top-header (9999) */
+  z-index: 10000; 
   background: var(--dlsl-green-dark);
   color: #fff;
   border: none;
@@ -396,11 +383,9 @@ background: var(--dlsl-green-dark); color: white; padding: 20px; box-sizing: bor
   transition: background 0.3s ease;
 }
 
-
 .sidebar-toggle:hover {
   background: var(--dlsl-green-dark);
-}/* Sidebar slide-in */
-
+}
 
 .sidebar h3{
   margin-bottom: 30px;
@@ -422,14 +407,10 @@ font-family: "Visby CF Heavy";
   transition: all 0.3s ease;
 }
 
-
-
-
 /* ==================== Tabs ==================== */
 .tab-content{
   display: none;
   animation: recordsFade .7s ease;
-
 }
 .tab-content.active{
   display: block;
@@ -445,7 +426,6 @@ section.show{
   opacity:1;
   transform:translateY(0);
 }
-/* Sidebar & primary UI elements */
 .sidebar {
   background: #00A0BE;
 }
@@ -457,10 +437,9 @@ section.show{
 }
 .tab.active, .tab:hover {
   background: var(--dlsl-green-dark);
- box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
 }
 
-/* Section backgrounds */
 .intro-section {
   background: #fff;
   color: var(--dlsl-green-dark);
@@ -476,17 +455,15 @@ section.show{
   color: var(--muted-text);
 }
 
-/* Buttons and links */
 .email-btn, .some-button-class {
   background: var(--dlsl-green);
   color: var(--dlsl-white);
-
 }
 .email-btn:hover {
   background: var(--dlsl-green-dark);
 }
 .button-wrapper {
-display: flex;
+    display: flex;
     justify-content: center;
     width: 100%;
   }
@@ -497,20 +474,14 @@ display: flex;
 
 /* ==================== Colors ==================== */
 :root{
-
-  /* Core / Brand colors */
-  --dlsl-green: #00A0BE;         /* official Lasallian green */ :contentReference[oaicite:2]{index=2}
-  --dlsl-green-dark: #13768b;    /* darker shade for contrast or hover */
+  --dlsl-green: #00A0BE;         
+  --dlsl-green-dark: #13768b;    
   --dlsl-white: #ffffff;
-  
-  /* Complementary / neutral colors */
   --light-gray: #f5f6f5;
   --soft-gray: #e9eceb;
   --muted-text: #3a3a3a;
-  
-  /* Accent / optional highlight */
-  --accent-light: #dfece6;       /* very light green */
-  --accent-soft: #daf5e9;        /* soft green tone for backgrounds */
+  --accent-light: #dfece6;       
+  --accent-soft: #daf5e9;        
 
   --green:#0f3d2e; 
   --light:#f7f7f7; 
@@ -521,7 +492,6 @@ display: flex;
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--light); color:var(--green); line-height:1.5;}
 
-/* ==================== Sections ==================== */
 section{
   width:100%;
   padding:60px 28px;
@@ -554,7 +524,6 @@ section .container{
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 section .blablas{
-
   padding: 5px;
   border-radius: 18px;
 }
@@ -625,7 +594,6 @@ background: var(--dlsl-green);
   box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
-
 .person-card .avatar{
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -680,12 +648,10 @@ font-family: "Visby CF Heavy";
   }
 }
 
-/* ==================== Containers ==================== */
 .container{
   max-width:1200px;
   margin:0 auto;
 }
-
 
 .container1{
   max-width:1200px;
@@ -700,22 +666,20 @@ font-family: "Visby CF Heavy";
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* important! */
+  overflow: hidden; 
 }
 
-/* Your GIF overlay */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: url('https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyYzZjazdlbDl6dDRxeXNndHpkazN1YnBmYTZqb2M1bTd6OWVzMWZrZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3xz2BRU6WpaxKiPzuE/source.gif') center/cover no-repeat;
-  opacity: 0.25; /* adjust 0.1–0.45 depending on vibe */
+  opacity: 0.25; 
   pointer-events: none;
-  mix-blend-mode: screen; /* makes it fairytale-magical */
+  mix-blend-mode: screen; 
   z-index: 2;
 }
 
-/* Dark gradient overlay so text is readable */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -726,7 +690,6 @@ font-family: "Visby CF Heavy";
   z-index: 1;
 }
 
-
 .hero-content {
   position: relative;
   z-index: 3;
@@ -734,12 +697,11 @@ font-family: "Visby CF Heavy";
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* bottom */
-  align-items: center; /* center horizontally */
-  height: 100%; /* full hero height */
-  padding-bottom: 40px; /* space from bottom */
+  justify-content: flex-end; 
+  align-items: center; 
+  height: 100%; 
+  padding-bottom: 40px; 
 }
-
 
 .hero-btn {
 font-family: "Visby CF Heavy";
@@ -754,7 +716,7 @@ font-family: "Visby CF Heavy";
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   transition: all 0.3s ease;
   position: relative;
-  z-index: 4; /* above overlay and GIF */
+  z-index: 4; 
 }
 
 .hero-btn:hover {
@@ -763,9 +725,8 @@ font-family: "Visby CF Heavy";
   box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-
 .scroll-arrow {
-  margin-top: px;
+  margin-top: 10px;
   opacity: 0.8;
   animation: slowFloat 2.2s ease-in-out infinite;
   pointer-events: none;
@@ -775,28 +736,17 @@ font-family: "Visby CF Heavy";
   transform: scale(0.9);
 }
 
-/* much softer animation than bouncing */
 @keyframes slowFloat {
-  0% { 
-    transform: translateY(0);
-    opacity: 0.4;
-  }
-  50% { 
-    transform: translateY(14px);
-    opacity: 1;
-  }
-  100% { 
-    transform: translateY(0);
-    opacity: 0.4;
-  }
+  0% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(14px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.4; }
 }
 .blue {
 color: #00A0BE;}
 
 .cover {
   height: 400px;
-  background:
-       url('1234.png');
+  background: url('1234.png');
   background-size: cover;
   background-position: center;
   display: grid;
@@ -813,7 +763,6 @@ font-family: "Visby CF Heavy";
 }
 
 /* ==================== Intro ==================== */
-/* --- Background like the Sanggunian section --- */
 .intro-section {
     background: #fff; 
     padding: 80px 20px;
@@ -821,13 +770,11 @@ font-family: "Visby CF Heavy";
     justify-content: center;
 }
 
-/* --- Centered layout container --- */
 .intro-wrapper {
     max-width: 1200px;
     width: 100%;
 }
 
-/* --- Flex layout same as pic --- */
 .intro {
     display: flex;
     align-items: center;
@@ -837,15 +784,14 @@ font-family: "Visby CF Heavy";
     text-align: left;
 }
 
-/* --- Logo circle similar to the crest on the left --- */
 .logo-circle {
 font-family: "Visby CF Heavy";
     width: 220px;
     height: 220px;
     border-radius: 50%;
     background: url('logo.png') no-repeat center center;
-   background-size: 140%;
-    background-color: var(--soft-leaf); /* optional behind photo */
+    background-size: 140%;
+    background-color: var(--soft-leaf); 
     object-fit: cover;
     color: white;
     display: flex;
@@ -857,17 +803,12 @@ font-family: "Visby CF Heavy";
     box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-
-/* --- Title styling to match screenshot --- */
-
-
-/* --- Description text --- */
 .intro-desc {
     max-width: 600px;
     font-size: 18px;
     line-height: 1.6;
     color: #444;
-text-align: justify;
+    text-align: justify;
 }
 
 .section-desc {
@@ -902,20 +843,16 @@ color: #000;
   height:500px;
   margin:0 auto;
 }
-/* Make Latest News section wider */
 .news-section .container1 {
   max-width: 1400px;
   padding: 50px 40px;
 }
 
-/* Separate carousel containers for spacing */
 .news-carousel-container {
   width: 100%;
-  margin-bottom: 40px; /* space before portrait carousel */
+  margin-bottom: 40px; 
 }
 
-
-/* Portrait carousel height remains */
 .portrait-carousel {
   height: 400px;
 }
@@ -924,25 +861,24 @@ color: #000;
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  flex-wrap: wrap; /* allows stacking on smaller screens */
+  flex-wrap: wrap; 
 }
 
 .news-carousel-container {
-  flex: 2; /* landscape carousel takes more space */
+  flex: 2; 
   min-width: 300px;
 }
 
 .portrait-carousel-container {
-  flex: 1; /* portrait carousel smaller */
-  max-width: 400px; /* optional */
+  flex: 1; 
+  max-width: 400px; 
 }
 
 .portrait-carousel {
-  flex: 0 0 300px; /* fixed width */
+  flex: 0 0 300px; 
   height: 500px;
 }
 
-/* Portrait carousel */
 .portrait-carousel {
   border-radius:14px;
   position:relative;
@@ -961,7 +897,7 @@ color: #000;
   transition: opacity 0.8s ease, transform 0.8s ease;
   z-index:1;
   pointer-events:none;
-  overflow:hidden; /* add this so caption doesn't overflow */
+  overflow:hidden; 
 }
 
 .portrait-slide.active {
@@ -989,7 +925,6 @@ color: #000;
   box-sizing:border-box;
 }
 
-
 .portrait-dots {
   position:absolute;
   bottom:0px;
@@ -1008,7 +943,6 @@ color: #000;
   cursor:pointer;
 }
 
-
  .slide {
   position: absolute;
   top: 0;
@@ -1019,7 +953,7 @@ color: #000;
   transform: translateX(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   z-index: 1;
-  pointer-events: none; /* prevent clicks on hidden slides */
+  pointer-events: none; 
 }
 
  .slide.active {
@@ -1033,7 +967,7 @@ color: #000;
   width: 100%;
   height: auto;
   border-radius: 14px;
-  object-fit: cover; /* fill container without stretching */
+  object-fit: cover; 
 }
 .tab-content.active section {
   opacity: 1;
@@ -1061,7 +995,7 @@ font-size:12px;opacity:0.8;}
   bottom: 0px;
   width: 100%;
   text-align: center;
-  z-index: 5;  /* make sure it's on top of slides */
+  z-index: 5;  
 }
 .dot {
   display: inline-block;
@@ -1072,10 +1006,10 @@ font-size:12px;opacity:0.8;}
   border-radius: 50%;
   cursor: pointer;
 }
+
 /* ===============================
    DLSL TAB SYSTEM (UNIQUE)
 ================================ */
-
 .dlsl-switcher {
   width: 100%;
   max-width: 1100px;
@@ -1100,7 +1034,6 @@ font-size:12px;opacity:0.8;}
   color: var(--dlsl-green);
 }
 
-/* hover underline */
 .dlsl-switch::after {
   content: "";
   position: absolute;
@@ -1116,7 +1049,6 @@ font-size:12px;opacity:0.8;}
   width: 100%;
 }
 
-/* active button */
 .dlsl-switch.active {
   background: var(--dlsl-green);
   color: white;
@@ -1126,7 +1058,6 @@ font-size:12px;opacity:0.8;}
   display: none;
 }
 
-/* panels */
 .dlsl-switcher-body {
   padding: 40px 10px;
 }
@@ -1147,16 +1078,13 @@ font-size:12px;opacity:0.8;}
 /* ================================
    RECORDS TAB - VISUAL MATCH
 ================================ */
-
 .records-visual-wrap{
-
   padding: 60px 6%;
   background: #f8fdfb;
-background-size: cover;
-min-height: 100vh;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-/* Title */
 .records-visual-title{
   display: flex;
   align-items: center;
@@ -1178,17 +1106,15 @@ font-family: 'Visby CF Heavy';
   background: linear-gradient(to right, var(--dlsl-green), transparent);
 }
 
-/* Tabs container (your 3 buttons) */
 .records-visual-tabs{
 font-family: 'Visby CF Heavy';
   display: flex;
   gap: 15px;
   margin-bottom: 35px;
   flex-wrap: wrap;
-  justify-content: center; /* CENTER the buttons */
+  justify-content: center; 
 }
 
-/* Style all buttons INSIDE records only */
 .records-visual-tabs button{
 font-family: 'Visby CF Heavy';
   padding: 10px 22px;
@@ -1201,19 +1127,16 @@ font-family: 'Visby CF Heavy';
   transition: .25s ease;
 }
 
-/* Active tab button */
 .records-visual-tabs button.active{
   background: var(--dlsl-green);
   color: white;
 }
 
-/* Hover effect */
 .records-visual-tabs button:hover{
   background: var(--dlsl-green);
   color: white;
 }
 
-/* Content area */
 .records-visual-content{
   background: white;
   padding: 35px 32px;
@@ -1226,27 +1149,9 @@ font-family: 'Visby CF Heavy';
 }
 
 @keyframes recordsFade {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-@keyframes recordsFade {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 /* ==================== Footer ==================== */
 footer{
@@ -1255,7 +1160,6 @@ footer{
   text-align: center;
   color: #000;
  font-family: 'Livvic';
-
 }
 
 footer h3{
@@ -1273,420 +1177,482 @@ footer small{
   opacity:0.7;
 }
 
-
-
 .email-btn {
   position: relative;
   z-index: 10;
   pointer-events: auto;
 }
-        .columns-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            align-items: start;
-        }
-        /* Column Styling */
-        .column {
-            display: flex;
-            flex-direction: column;
-        }
-        /* Underlined Headings matching the image style */
-        .heading {
-            font-size: 22px;
-            font-weight: bold;
-font-family: 'Visby CF Heavy';
-            text-decoration: underline;
-            margin-bottom: 25px;
-            color: var(--dlsl-green);
-        }
-        /* List Items styling */
-        .club-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .club-item {
-            margin-bottom: 18px;
-            display: flex;
-            align-items: flex-start;
-            font-size: 15px;
-font-family: 'Livvic';
-            line-height: 1.4;
-        }
-        /* Triangle bullet point indicator */
-        .club-item::before {
-            content: "▶";
-            font-size: 10px;
-            margin-right: 8px;
-            margin-top: 3px;
-            color: var(--dlsl-green-dark);
-            flex-shrink: 0;
-        }
-        /* Text Links styling */
-        .club-link {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .club-link:hover {
-            text-decoration: underline;
-        }
-        /* Responsive adjustments for smaller screens */
-        @media (max-width: 768px) {
-            .columns-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-    :root {
-        --sscb-stories-bg: #fbf7f0;
-        --sscb-stories-dark: #2d3748;
-        --sscb-stories-muted: #718096;
-        --sscb-stories-blue: #0ea5e9;
-        --sscb-stories-pink: #ec4899;
-    }
+.columns-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Visby CF Heavy';
+    text-decoration: underline;
+    margin-bottom: 25px;
+    color: var(--dlsl-green);
+}
+.club-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.club-item {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    font-family: 'Livvic';
+    line-height: 1.4;
+}
+.club-item::before {
+    content: "➤";
+    font-size: 10px;
+    margin-right: 8px;
+    margin-top: 3px;
+    color: var(--dlsl-green-dark);
+    flex-shrink: 0;
+}
+.club-link {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.club-link:hover {
+    text-decoration: underline;
+}
 
-    .sscb-stories-wrapper {
-background-color: #fff;
-        color: var(--sscb-stories-dark);
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
+:root {
+    --sscb-stories-bg: #fbf7f0;
+    --sscb-stories-dark: #2d3748;
+    --sscb-stories-muted: #718096;
+    --sscb-stories-blue: #0ea5e9;
+    --sscb-stories-pink: #ec4899;
+}
 
-    .sscb-stories-wrapper .sscb-hidden {
-        display: none !important;
-    }
+.sscb-stories-wrapper {
+    background-color: #fff;
+    color: var(--sscb-stories-dark);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
-    /* Standard container for home dashboard */
-    .sscb-main-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
+.sscb-stories-wrapper .sscb-hidden {
+    display: none !important;
+}
 
-    /* --- SEARCH SECTION --- */
-    .sscb-controls-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
+.sscb-main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-    .sscb-search-box {
-        flex: 1;
-        max-width: 400px;
-    }
+/* --- SEARCH SECTION --- */
+.sscb-controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    .sscb-search-box input {
-        width: 100%;
-        padding: 12px 16px;
-        border: 1px solid #cbd5e1;
-        border-radius: 8px;
-        font-size: 14px;
-        outline: none;
-        background-color: #fff;
-        transition: border-color 0.2s;
-    }
+.sscb-search-box {
+    flex: 1;
+    max-width: 400px;
+}
 
-    .sscb-search-box input:focus {
-        border-color: var(--sscb-stories-blue);
-    }
+.sscb-search-box input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.2s;
+}
 
-    /* --- HOME PAGE: FEATURED STORY --- */
+.sscb-search-box input:focus {
+    border-color: var(--sscb-stories-blue);
+}
+
+/* --- HOME PAGE: FEATURED STORY --- */
+.sscb-featured-story {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+@media (min-width: 768px) {
     .sscb-featured-story {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-bottom: 60px;
-        cursor: pointer;
-        transition: opacity 0.2s;
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
     }
+}
 
-    @media (min-width: 768px) {
-        .sscb-featured-story {
-            grid-template-columns: 1.1fr 1fr;
-            align-items: center;
-        }
-    }
+.sscb-featured-story:hover {
+    opacity: 0.95;
+}
 
-    .sscb-featured-story:hover {
-        opacity: 0.95;
-    }
+.sscb-featured-img-wrapper {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
 
-    .sscb-featured-img-wrapper {
-        width: 100%;
-        border-radius: 4px;
-        overflow: hidden;
-        aspect-ratio: 4 / 3;
-    }
+.sscb-featured-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .sscb-featured-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.sscb-featured-content h1 {
+    font-family: 'Visby CF Heavy';
+    font-size: 32px;
+    color: var(--sscb-stories-blue);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
 
-    .sscb-featured-content h1 {
-font-family: 'Visby CF Heavy';
-        font-size: 32px;
-        color: var(--dlsl-green);
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
+.sscb-featured-meta {
+    font-size: 14px;
+    color: var(--sscb-stories-dark);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
 
-    .sscb-featured-meta {
+.sscb-featured-excerpt {
+    color: var(--sscb-stories-muted);
+    font-family: 'Livvic';
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
-        font-size: 14px;
-        color: var(--sscb-stories-dark);
-        font-weight: 500;
-        margin-bottom: 15px;
-    }
+.sscb-read-more-link {
+    color: var(--dlsl-green);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 15px;
+}
 
-    .sscb-featured-excerpt {
-        color: var(--sscb-stories-muted);
-font-family: 'Livvic';
+/* --- HOME PAGE: SMALLER GRID STORIES --- */
+.sscb-stories-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px 30px;
+}
 
-        font-size: 15px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-
-    .sscb-read-more-link {
-        color: var(--dlsl-green);
-        font-weight: 600;
-        text-decoration: none;
-        font-size: 15px;
-    }
-
-    /* --- HOME PAGE: SMALLER GRID STORIES --- */
+@media (min-width: 768px) {
     .sscb-stories-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px 30px;
+        grid-template-columns: 1fr 1fr;
     }
+}
 
-    @media (min-width: 768px) {
-        .sscb-stories-grid {
-            grid-template-columns: 1fr 1fr;
-        }
+.sscb-story-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0e6d2;
+}
+
+.sscb-story-item:hover {
+    transform: translateY(-2px);
+}
+
+.sscb-story-thumb {
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sscb-story-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sscb-story-meta {
+    font-size: 13px;
+    color: var(--sscb-stories-dark);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.sscb-story-title {
+    font-family: 'Visby CF Heavy';
+    font-size: 18px;
+    color: var(--sscb-stories-blue);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sscb-story-excerpt {
+    font-family: 'Livvic';
+    color: var(--sscb-stories-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- ARTICLE VIEW LAYOUT --- */
+.sscb-article-page {
+    background-color: #fff;
+}
+
+.sscb-article-hero-banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+}
+
+.sscb-article-hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.sscb-article-hero-overlay {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: #ffffff;
+}
+
+.sscb-article-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.sscb-article-badge {
+    display: inline-block;
+    font-family: 'Visby CF Heavy';
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.sscb-article-main-title {
+    font-family: 'Visby CF Heavy';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.sscb-article-body-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px 20px;
+    text-align: left;
+}
+
+.sscb-article-meta-row {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--sscb-stories-muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.sscb-article-author {
+    font-size: 15px;
+    color: var(--sscb-stories-dark);
+    margin-bottom: 20px;
+}
+
+.sscb-article-divider {
+    border: none;
+    border-top: 1px solid #cbd5e1;
+    margin: 20px 0;
+    max-width: 250px;
+    margin-left: 0;
+}
+
+.sscb-article-share-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.sscb-share-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #0ea5e9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sscb-article-body-content {
+    font-family: 'Livvic';
+    text-align: justify;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.sscb-article-body-content p {
+    margin-bottom: 20px;
+}
+
+.sscb-article-body-content blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--sscb-stories-blue);
+    padding-left: 20px;
+    margin: 30px 0;
+    color: var(--sscb-stories-dark);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.sscb-back-nav-bar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+    width: 100%;
+}
+
+.sscb-back-action-trigger {
+    color: var(--dlsl-green);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sscb-back-action-trigger:hover {
+    color: var(--dlsl-green-dark);
+}
+
+/* ========================================================
+   MOBILE OPTIMIZATION MEDIA QUERY 
+   Matches 80% desktop aspect-ratio experience natively
+=========================================================== */
+@media (max-width: 768px) {
+    /* Compress broad elements slightly to emulate an 80% viewport scale */
+    section {
+        padding: 40px 16px;
     }
-
-    .sscb-story-item {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-        cursor: pointer;
-        transition: transform 0.2s;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #f0e6d2;
-    }
-
-    .sscb-story-item:hover {
-        transform: translateY(-2px);
-    }
-
-    .sscb-story-thumb {
-        width: 130px;
-        height: 130px;
-        border-radius: 8px;
-        object-fit: cover;
-        flex-shrink: 0;
-    }
-
-    .sscb-story-info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .sscb-story-meta {
-        font-size: 13px;
-        color: var(--sscb-stories-dark);
-        font-weight: 500;
-        margin-bottom: 6px;
-    }
-
-    .sscb-story-title {
-font-family: 'Visby CF Heavy';
-        font-size: 18px;
-        color: var(--dlsl-green);
-line-height: 1.3;
-        margin-bottom: 8px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .sscb-story-excerpt {
-font-family: 'Livvic';
-        color: var(--sscb-stories-muted);
-        font-size: 14px;
-        line-height: 1.5;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    /* --- ARTICLE VIEW LAYOUT --- */
-    .sscb-article-page {
-        background-color: #fff;
-    }
-
-    .sscb-article-hero-banner {
-        position: relative;
-        width: 100%;
-        height: 450px;
-        background-color: #fff;
-    }
-
-    .sscb-article-hero-banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.85;
-    }
-
-    .sscb-article-hero-overlay {
-        position: absolute;
-        bottom: -30px;
-        left: 0;
-        width: 100%;
-        padding: 40px 0;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-        color: #ffffff;
-    }
-
-    .sscb-article-hero-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-        width: 100%;
-    }
-
-    .sscb-article-badge {
-        display: inline-block;
-font-family: 'Visby CF Heavy';
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        color: #ffffff;
-    }
-
-    .sscb-article-main-title {
-font-family: 'Visby CF Heavy';
-
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.2;
-    }
-
-    .sscb-article-body-wrapper {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 40px 20px 80px 20px;
-        text-align: left;
-    }
-
-    .sscb-article-meta-row {
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--sscb-stories-muted);
-        margin-bottom: 10px;
-        font-weight: 600;
-    }
-
-    .sscb-article-author {
-        font-size: 15px;
-        color: var(--sscb-stories-dark);
-        margin-bottom: 20px;
-    }
-
-    .sscb-article-divider {
-        border: none;
-        border-top: 1px solid #cbd5e1;
-        margin: 20px 0;
-        max-width: 250px;
-        margin-left: 0;
-    }
-
-    .sscb-article-share-bar {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    .sscb-share-button {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background-color: #0ea5e9;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    .sscb-article-body-content {
-
-font-family: 'Livvic';
-text-align: justify;
-        font-size: 17px;
-        line-height: 1.8;
-        color: #334155;
-    }
-
-    .sscb-article-body-content p {
-        margin-bottom: 20px;
-    }
-
-    .sscb-article-body-content blockquote {
-        font-style: italic;
-        border-left: 4px solid var(--sscb-stories-blue);
-        padding-left: 20px;
-        margin: 30px 0;
-        color: var(--sscb-stories-dark);
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
-    .sscb-back-nav-bar {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 20px 20px 0 20px;
-        width: 100%;
-    }
-
-    .sscb-back-action-trigger {
-        color: var(--dlsl-green);
-        text-decoration: none;
-        font-weight: 600;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
+    section h2 {
+        font-size: 26px !important;
     }
     
-    .sscb-back-action-trigger:hover {
-        color: var(--dlsl-green-dark);
+    /* Layout Scaling Changes */
+    .columns-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
+    .role-group.double {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Adapt News Flex Container Alignment */
+    .news-flex {
+        flex-direction: column;
+    }
+    .news-carousel-container,
+    .portrait-carousel-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .news-carousel, 
+    .portrait-carousel {
+        height: 360px;
+    }
+    
+    /* Scale Intro Section Layout elements */
+    .intro {
+        gap: 24px;
+        text-align: center;
+    }
+    .intro-desc {
+        text-align: center;
+    }
+    .logo-circle {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+    
+    /* Attendance Element scaling adjustments */
+    .attendance-grid {
+        grid-template-columns: 1fr;
+    }
+    .breakdown-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    /* Records tab system formatting updates */
+    .records-visual-tabs button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .records-visual-content {
+        padding: 20px 16px;
+    }
+    
+    /* Article Detail banner mobile optimization layout */
+    .sscb-article-hero-banner {
+        height: 280px;
+    }
+    .sscb-article-main-title {
+        font-size: 22px;
+    }
+    .sscb-featured-content h1 {
+        font-size: 22px;
+    }
+}
 </style>
 </head>
 <body>
 
 <header class="top-header">
   <div class="header-left">
- 
     <span class="header-title"> </span>
   </div>
   <div class="header-right">
@@ -1712,10 +1678,8 @@ text-align: justify;
   <button onclick="openTab(event,'sao')" class="tab">Student Activities Office</button>
   <button onclick="openTab(event,'op')" class="tab">Office of the Integrated School President</button>
   <button onclick="openTab(event,'ovp')" class="tab">Office of the Vice President</button>
-
   <button onclick="openTab(event,'records')" class="tab">Records</button>
-  <button onclick="openTab(event,'constitution)" class="tab">Constitution</button>
-
+  <button onclick="openTab(event,'constitution')" class="tab">Constitution</button>
 </div>
 
 <div class="content collapsed">
@@ -1726,7 +1690,6 @@ text-align: justify;
   <div class="hero-overlay"></div>
 <div class="hero-content">
   <a href="#carousel-section" class="hero-btn">Click here</a>
-
 <div class="scroll-arrow">
   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
        stroke="white" stroke-width="1.2"
@@ -1734,8 +1697,6 @@ text-align: justify;
     <path d="M6 9l6 6 6-6"/>
   </svg>
 </div>
-
-
 </div>
 </header>
 
@@ -1743,7 +1704,6 @@ text-align: justify;
     <div class="intro-wrapper">
         <div class="intro">
             <div class="logo-circle"></div>
-
             <div class="intro-text">
                 <h2 class="blue">Senior Student Coordinating Board</h2>
                 <p class="intro-desc">
@@ -1761,9 +1721,7 @@ text-align: justify;
     <div class="mv-grid">
       <div class="mv-box">
         <h3> Mission</h3>
-        <p class="hahaha">The Senior Student Coordinating Board is committed to empowering the student body of De La Salle Lipa Senior High School through servant leadership, transformative social action, and student-centered representation. Guided by the Lasallian values of Faith, Service, and Communion, the SSCB advocates for student welfare, promotes holistic development, and advances nation-building through formative in-campus initiatives and responsive off-campus engagements that address contemporary Filipino and global socio-political realities.
-
-</p>
+        <p class="hahaha">The Senior Student Coordinating Board is committed to empowering the student body of De La Salle Lipa Senior High School through servant leadership, transformative social action, and student-centered representation. Guided by the Lasallian values of Faith, Service, and Communion, the SSCB advocates for student welfare, promotes holistic development, and advances nation-building through formative in-campus initiatives and responsive off-campus engagements that address contemporary Filipino and global socio-political realities.</p>
       </div>
       <div class="mv-box">
         <h3>Vision</h3>
@@ -1772,188 +1730,149 @@ text-align: justify;
     </div>
   </div>
 </section>
+
 <section id="carousel-section" class="news-section">
   <div class="container1">
     <h2 class="haha">Latest </h2>
-
-    <!-- Flex container for side-by-side carousels -->
     <div class="news-flex">
-
       <!-- Main Landscape Carousel -->
       <div class="news-carousel-container">
         <h3 class="haha" style="margin-bottom:16px; font-size:25px;">Events</h3>
         <div class="news-carousel">
           <div class="slides">
-            <a href="https://www.instagram.com/p/DRPCS_HEguh/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="slide">
+            <a href="https://www.instagram.com/p/DYhLSj_oCAr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="slide">
               <img src="https://scontent.fmnl17-6.fna.fbcdn.net/v/t39.30808-6/701385215_921381004285034_431412304096290290_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGpE9_Ot1UdJHF8pgPuDz6JGkoQKmSjG84aShAqZKMbzl2wZWysjFPd6sgjqialScTq6gp8VmrZenfQnZJSmB-T&_nc_ohc=MaUCw7FcbbMQ7kNvwGxiuON&_nc_oc=AdqJM1d-J5Mec6sxoJA1Aegdtek_c6F55icz6z9unjie4-BkFkUTd5Eg2ioNHkHdS9k&_nc_zt=23&_nc_ht=scontent.fmnl17-6.fna&_nc_gid=TGN9Ov-3DBcSipZ0wVqVvA&_nc_ss=7b2a8&oh=00_Af8dhzlj-vB0-VGCAo4rOnkpgjFq3bh3u1djH8Vzjb789g&oe=6A260F4C" class="slide-img">
               <div class="caption">
                 <div class="news-date">May 9, 2026</div>
                 <div class="news-title">Eleventh Hour: Onse Upon a Time – The Grandest Day at De La Salle Lipa </div>
               </div>
             </a>
-<a href="https://www.instagram.com/p/DUZRZteEhk6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="slide">
+            <a href="https://www.instagram.com/p/DUZRZteEhk6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="slide">
               <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/628351308_837890599300742_606693866830286417_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHNgvu0_h79hOMqAWL0yRMZq-pf5AiFHXqr6l_kCIUdejr60pBEzeOCe3CVcgpC2KlSaIXlY7bzT9zVWjkUF2Uv&_nc_ohc=YGhiry-7AzwQ7kNvwGafjQg&_nc_oc=AdqTVQKU8HCeHOxIeklIAjPBk3Pbzw-y2uN8fQvok67VJ5-d0zxfjLWSyVhVzY1HOjg&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=0yDUBLRGfx3pPThLkmDNvw&_nc_ss=7b2a8&oh=00_Af9YP6C_xWnQw-Fi_PK8ETVry0WnJOZpldUvtKyKbIohDQ&oe=6A2624CA" class="slide-img">
               <div class="caption">
-                <div class="news-date">January 28, 2026
-</div>
-                <div class="news-title">iLAYA: The Turnover
-
-</div>
+                <div class="news-date">January 28, 2026</div>
+                <div class="news-title">iLAYA: The Turnover</div>
               </div>
             </a>
-
             <a href="https://www.instagram.com/p/DQn76uaElLZ/?igsh=MWFwODB5ODk0YW55Zg%3D%3D" class="slide">
               <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/576249503_765545256535277_5273356593290655036_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF7HvQ7nfYAz8lSq7ilHxLBpCyEFvHMGBSkLIQW8cwYFImAsb07lPJoBrHUiFKmbQlcX3Kprk9yHiy_mY3Dou5L&_nc_ohc=Bz6y4QxiXvEQ7kNvwGcvg5h&_nc_oc=AdoudyCyqIPJoaP5-boL4SxKDKBN0ikrMZGXKGETBRs7DEA_KBpLZnlx5iBQpkBKuq4&_nc_zt=23&_nc_ht=scontent.fmnl17-3.fna&_nc_gid=-JIGFgKCQ5O8DBSEF8U1TQ&_nc_ss=7b2a8&oh=00_Af-ZdAJzeaaAwdrdWtXuV3yDYynujHF-D7BIRFmgz_cKrw&oe=6A263BDD" class="slide-img">
               <div class="caption">
                 <div class="news-date">October 7, 9-10, 2025</div>
-                <div class="news-title">iLAYA Bingo Unites Lasallians for a Greater Cause
-
-</div>
+                <div class="news-title">iLAYA Bingo Unites Lasallians for a Greater Cause</div>
               </div>
             </a>
-                      </div>
+          </div>
           <div class="dots"></div>
         </div>
       </div>
 
       <!-- Portrait Carousel -->
-<div class="portrait-carousel-container">
-        <h3 class="haha" style="margin-bottom:16px;  font-size:25px;">Announcements</h3>
-     <div class="portrait-carousel">
-
-  <!-- Slide 1 -->
-  <div class="portrait-slide">
-
-    <a href="https://www.instagram.com/p/DYZRW9DP0J_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-      <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/700317152_918722464550888_872141254612147828_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHMZVR01G0JpEDMHSUj_KLUJovpE0bylqgmi-kTRvKWqNdov-vsj5JakGT1KBGuA6QWMqEuTzWHp2zFDWqKdhYQ&_nc_ohc=Rgai3z194mEQ7kNvwGesei-&_nc_oc=Adpo6Y4vlgKnb9HO8iLM30MXHeRSEiHtigyhasLZ9eplawBXcAdldepkpruyc_HUvm8&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=bJjBLgTJcx2rf4swiIw30A&_nc_ss=7b2a8&oh=00_Af_FPlnRsABARwofjbqpiitjTmaNpQMaACGm48TfYzqk3w&oe=6A26264E" class="portrait-slide-img" />
-    </a>
-    <div class="caption">
-      <div class="news-date">May 16, 2026</div>
-      <div class="news-title"> Voter Registration</div>
-    </div>
-  </div>
-
-  <!-- Slide 2 -->
-  <div class="portrait-slide">
-    <a href="https://www.instagram.com/p/DXyejYUjvtv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-      <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/686078875_906400739116394_4472250046427991426_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeErj82GIM0uK80TcuG9GlE95CWGdYym5s3kJYZ1jKbmzQj0nbqBNiLGhk30BjwaUi58uI99RZb0n3YvXVCC3cQJ&_nc_ohc=aSPOa7HDAZMQ7kNvwFosmKW&_nc_oc=AdoJLjAXeAhz8dDBjVOK4dqNaaBjrDhoFppiFaNFpcHnK71OF9KJbZSDNUlprZcvo_8&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=EUQ8cnM_aP6l42ZDN3DztQ&_nc_ss=7b2a8&oh=00_Af_4-iPo0CQpwYqNGMBChe0BXBXPw2p48yXw3W_hKq9yOg&oe=6A262F42" class="portrait-slide-img" />
-    </a>
-    <div class="caption">
-      <div class="news-date">May 1, 2026</div>
-      <div class="news-title"> Elected Leaders for the Senior Student Coordinating Board S.Y. 2026 - 2027</div>
-    </div>
-  </div>
-
-  <!-- Slide 3 -->
-  <div class="portrait-slide">
-    <a href="https://www.instagram.com/p/DXAyuNvkg_R/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
-      <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/671715621_890504194039382_7148662998894201349_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGl27FC5NAkklnllGO6U1_eTer7WcVWt1RN6vtZxVa3VAPBmtO_JQoRnLo7q3bbDYqB_b1ETOegJYigSgDeUo3O&_nc_ohc=A3oZ3dQtuRAQ7kNvwFpfOjq&_nc_oc=AdrpjNra3cNURMkkbCnVticqPyxQl_t9wz6hgFPfGUEH6IWDbJBs9gRTQVs6_lQv6PY&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=CyLdwZ66QUnzov_zAJne-g&_nc_ss=7b2a8&oh=00_Af_evCEVUsaFszVwSaBynK2OHmh0vwPHlmWuEK2lVAc3oQ&oe=6A2620F6" class="portrait-slide-img" />
-    </a>
-    <div class="caption">
-      <div class="news-date">April 12, 2026</div>
-      <div class="news-title">Meet the Grade 12 SSCB Candidates</div>
-    </div>
-  </div>
-
-  <div class="portrait-dots"></div>
-</div>
-
+      <div class="portrait-carousel-container">
+        <h3 class="haha" style="margin-bottom:16px; font-size:25px;">Announcements</h3>
+        <div class="portrait-carousel">
+          <div class="portrait-slide">
+            <a href="https://www.instagram.com/p/DYZRW9DP0J_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+              <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/700317152_918722464550888_872141254612147828_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHMZVR01G0JpEDMHSUj_KLUJovpE0bylqgmi-kTRvKWqNdov-vsj5JakGT1KBGuA6QWMqEuTzWHp2zFDWqKdhYQ&_nc_ohc=Rgai3z194mEQ7kNvwGesei-&_nc_oc=Adpo6Y4vlgKnb9HO8iLM30MXHeRSEiHtigyhasLZ9eplawBXcAdldepkpruyc_HUvm8&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=bJjBLgTJcx2rf4swiIw30A&_nc_ss=7b2a8&oh=00_Af_FPlnRsABARwofjbqpiitjTmaNpQMaACGm48TfYzqk3w&oe=6A26264E" class="portrait-slide-img" />
+            </a>
+            <div class="caption">
+              <div class="news-date">May 16, 2026</div>
+              <div class="news-title"> Voter Registration</div>
+            </div>
+          </div>
+          <div class="portrait-slide">
+            <a href="https://www.instagram.com/p/DXyejYUjvtv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+              <img src="https://scontent.fmnl17-7.fna.fbcdn.net/v/t39.30808-6/686078875_906400739116394_4472250046427991426_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeErj82GIM0uK80TcuG9GlE95CWGdYym5s3kJYZ1jKbmzQj0nbqBNiLGhk30BjwaUi58uI99RZb0n3YvXVCC3cQJ&_nc_ohc=aSPOa7HDAZMQ7kNvwFosmKW&_nc_oc=AdoJLjAXeAhz8dDBjVOK4dqNaaBjrDhoFppiFaNFpcHnK71OF9KJbZSDNUlprZcvo_8&_nc_zt=23&_nc_ht=scontent.fmnl17-7.fna&_nc_gid=EUQ8cnM_aP6l42ZDN3DztQ&_nc_ss=7b2a8&oh=00_Af_4-iPo0CQpwYqNGMBChe0BXBXPw2p48yXw3W_hKq9yOg&oe=6A262F42" class="portrait-slide-img" />
+            </a>
+            <div class="caption">
+              <div class="news-date">May 1, 2026</div>
+              <div class="news-title"> Elected Leaders for the Senior Student Coordinating Board S.Y. 2026 - 2027</div>
+            </div>
+          </div>
+          <div class="portrait-slide">
+            <a href="https://www.instagram.com/p/DXAyuNvkg_R/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+              <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/671715621_890504194039382_7148662998894201349_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGl27FC5NAkklnllGO6U1_eTer7WcVWt1RN6vtZxVa3VAPBmtO_JQoRnLo7q3bbDYqB_b1ETOegJYigSgDeUo3O&_nc_ohc=A3oZ3dQtuRAQ7kNvwFpfOjq&_nc_oc=AdrpjNra3cNURMkkbCnVticqPyxQl_t9wz6hgFPfGUEH6IWDbJBs9gRTQVs6_lQv6PY&_nc_zt=23&_nc_ht=scontent.fmnl17-1.fna&_nc_gid=CyLdwZ66QUnzov_zAJne-g&_nc_ss=7b2a8&oh=00_Af_evCEVUsaFszVwSaBynK2OHmh0vwPHlmWuEK2lVAc3oQ&oe=6A2620F6" class="portrait-slide-img" />
+            </a>
+            <div class="caption">
+              <div class="news-date">April 12, 2026</div>
+              <div class="news-title">Meet the Grade 12 SSCB Candidates</div>
+            </div>
+          </div>
+          <div class="portrait-dots"></div>
+        </div>
       </div>
-
     </div> <!-- end news-flex -->
   </div> <!-- end container1 -->
 </section>
 
-  <section class="board-section">
-    <div class="container">
-      <h2 class="blue" style=text-align: center; >SSCB Executive Board</h2>
-      <div class="board-grid">
-        <div class="person-card">
-          <div class="avatar"><img src="https://t4.ftcdn.net/jpg/02/44/80/33/360_F_244803369_cNviClISSSUV5FGcYsJR9anLrqiRrHVK.jpg"></div>
-          <div class="person-info">
-            <div class="name">Princess Venus Tolentino</div>
-            <div class="role">Moderator, SSCB</div>
-           <a class="email-btn"
-   href="https://mail.google.com/mail/?view=cm&fs=1&to=ma.melissa.ishikawa@dlsl.edu.ph"
-   target="_blank">
-   Gmail
-</a>
-
-
-          </div>
-        </div>
-        <div class="person-card">
-          <div class="avatar"><img src="tolentino.png"></div>
-          <div class="person-info">
-            <div class="name">Princess Venus B. Tolentino</div>
-            <div class="role">Integrated School President</div>
-            <a class="email-btn" 
-   href="https://mail.google.com/mail/?view=cm&fs=1&to=casi_gabrielle_cantos@dlsl.edu.ph"
-   target="_blank">Gmail</a>
-          </div>
-        </div>
-        <div class="person-card">
-          <div class="avatar"><img src="pastolero.png"></div>
-          <div class="person-info">
-            <div class="name">Luis Gabriel F. Pastolero</div>
-            <div class="role">Grade 12 Vice President</div>
-           <a class="email-btn" 
-   href="https://mail.google.com/mail/?view=cm&fs=1&to=kyrsten_avril_ann_sanchez@dlsl.edu.ph"
-   target="_blank">Gmail</a>
-
-          </div>
-        </div>
-        <div class="person-card">
-          <div class="avatar"><img src="https://t4.ftcdn.net/jpg/02/44/80/33/360_F_244803369_cNviClISSSUV5FGcYsJR9anLrqiRrHVK.jpg"></div>
-          <div class="person-info">
-            <div class="name">David Uriel B. Malabanan</div>
-            <div class="role">Grade 11 Vice President</div>
-           <a class="email-btn" 
-   href="https://mail.google.com/mail/?view=cm&fs=1&to=princess_venus_tolentino@dlsl.edu.ph"
-   target="_blank">Gmail</a>
-          </div>
+<section class="board-section">
+  <div class="container">
+    <h2 class="blue" style="text-align: center;">SSCB Executive Board</h2>
+    <div class="board-grid">
+      <div class="person-card">
+        <div class="avatar"><img src="https://t4.ftcdn.net/jpg/02/44/80/33/360_F_244803369_cNviClISSSUV5FGcYsJR9anLrqiRrHVK.jpg"></div>
+        <div class="person-info">
+          <div class="name">Princess Venus Tolentino</div>
+          <div class="role">Moderator, SSCB</div>
+          <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=ma.melissa.ishikawa@dlsl.edu.ph" target="_blank">Gmail</a>
         </div>
       </div>
-  
-  </section>
+      <div class="person-card">
+        <div class="avatar"><img src="tolentino.png"></div>
+        <div class="person-info">
+          <div class="name">Princess Venus B. Tolentino</div>
+          <div class="role">Integrated School President</div>
+          <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=casi_gabrielle_cantos@dlsl.edu.ph" target="_blank">Gmail</a>
+        </div>
+      </div>
+      <div class="person-card">
+        <div class="avatar"><img src="pastolero.png"></div>
+        <div class="person-info">
+          <div class="name">Luis Gabriel F. Pastolero</div>
+          <div class="role">Grade 12 Vice President</div>
+          <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=kyrsten_avril_ann_sanchez@dlsl.edu.ph" target="_blank">Gmail</a>
+        </div>
+      </div>
+      <div class="person-card">
+        <div class="avatar"><img src="https://t4.ftcdn.net/jpg/02/44/80/33/360_F_244803369_cNviClISSSUV5FGcYsJR9anLrqiRrHVK.jpg"></div>
+        <div class="person-info">
+          <div class="name">David Uriel B. Malabanan</div>
+          <div class="role">Grade 11 Vice President</div>
+          <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=princess_venus_tolentino@dlsl.edu.ph" target="_blank">Gmail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
 
 <!-- ==================== SAO TAB ==================== -->
-
 <div id="sao" class="tab-content">
   <section class="board-section">
     <div class="container">
-
       <h2 class="blue">Student Activities Office</h2>
       <p class="section-desc">
        The Senior High School (SHS) arm of the Student Activities Office is in charge of designing, implementing, and monitoring student activities for SHS, overseeing the execution of co-curricular and extracurricular activities for the Grade 11 and Grade 12 communities.
-
       </p>
-<br>
+      <br>
       <div class="role-group single">
         <div class="person-card">
           <div class="avatar"><img src="jo.jpg"></div>
           <div class="person-info">
-            <div class="name">Ms. Jocelyn Rosos
-</div>
-            <div class="role">Moderator, Student Activities Office
-</div>
-            <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=jocelyn.rosos@dlsl.edu.ph
- target="_blank">Gmail</a>
+            <div class="name">Ms. Jocelyn Rosos</div>
+            <div class="role">Moderator, Student Activities Office</div>
+            <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=jocelyn.rosos@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
       </div>
-</div>
-<br>
-  <div class="container">
-<h2 class="blue">Clubs under the Student Activities Office</h2>
-
-    <div class="columns-container">
-        
+    </div>
+    <br>
+    <div class="container">
+      <h2 class="blue">Clubs under the Student Activities Office</h2>
+      <div class="columns-container">
         <div class="column">
             <div class="heading">Special Interest Clubs</div>
             <ul class="club-list">
-<li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=jolo.mendoza@dlsl.edu.ph" target="_blank">Arts and Letters</a></li>
+                <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=jolo.mendoza@dlsl.edu.ph" target="_blank">Arts and Letters</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=darwin.pena@dlsl.edu.ph" target="_blank">Art Club</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=marivic.arteza@dlsl.edu.ph" target="_blank">ANIMO EXPRESSIONISTAS</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=mona.liza.de.villa@dlsl.edu.ph" target="_blank">BATANG KOOP</a></li>
@@ -1977,11 +1896,10 @@ text-align: justify;
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=ma.melissa.ishikawa@dlsl.edu.ph" target="_blank">SCB</a></li>
             </ul>
         </div>
-
         <div class="column">
             <div class="heading">Society, Culture, and Religion</div>
             <ul class="club-list">
-              <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=heidi.larano@dsl.edu.ph" target="_blank">ANAK</a></li>
+                <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=heidi.larano@dsl.edu.ph" target="_blank">ANAK</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=renemarie.fabon@dlsl.edu.ph" target="_blank">Well-being Club</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=xymon.king.marasigan@dlsl.edu.ph" target="_blank">Student Campus Ministry Lectors and Commentators</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=ehlysohl.elefante@dlsl.edu.ph" target="_blank">Student Campus Ministry Altar Servers</a></li>
@@ -1993,11 +1911,10 @@ text-align: justify;
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=julius.ballesteros@dlsl.edu.ph,lerma.ilao@dlsl.edu.ph,merryle.marquez@dlsl.edu.ph,isidro.mark.salarda@dlsl.edu.ph" target="_blank">The SHS Knights of DLSL</a></li>
             </ul>
         </div>
-
         <div class="column">
             <div class="heading">Academic Varsity Club</div>
             <ul class="club-list">
-              <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=elldhie.caunca@dlsl.edu.ph" target="_blank">Social Science Varsity</a></li>
+                <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=elldhie.caunca@dlsl.edu.ph" target="_blank">Social Science Varsity</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=jamie.delapaz@dlsl.edu.ph" target="_blank">Debate Club</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=ruby.angeles@dlsl.edu.ph" target="_blank">Math Varsity</a></li>
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=maria.leonora.leynes@dlsl.edu.ph" target="_blank">Research Varsity Program</a></li>
@@ -2008,30 +1925,21 @@ text-align: justify;
                 <li class="club-item"><a class="club-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=lailanie.guitierrez@dlsl.edu.ph" target="_blank">ADLAW-SHS</a></li>
             </ul>
         </div>
-
+      </div>
     </div>
-</div>
-
-        </div>
-   
-            
   </section>
-
+</div>
 
 <!-- ==================== IS PRESIDENT TAB ==================== -->
 <div id="op" class="tab-content">
   <section class="board-section">
     <div class="container">
-
       <h2 class="blue" style="text-align: center;">Office of the IS President</h2>
-<h3 style="text-align: center; font-size: 25px;">Functions of the Office</h3>
-<p class="section-desc" style="text-align: center;">
+      <h3 style="text-align: center; font-size: 25px;">Functions of the Office</h3>
+      <p class="section-desc" style="text-align: center;">
         The Office of the IS President serves as the core council of the Senior Student Coordinating Board, representing the entire student body and spearheading the operations of student activities. The OIP oversees all internal committees and enforces that all elective officers are held to high standards of student conduct.
-
-
       </p>
-<br>
-      <!-- PRESIDENT (single centered) -->
+      <br>
       <div class="role-group single">
         <div class="person-card">
           <div class="avatar"><img src="tolentino.png"></div>
@@ -2042,9 +1950,7 @@ text-align: justify;
           </div>
         </div>
       </div>
-<br>
-
-      <!-- VICE PRESIDENTS -->
+      <br>
       <div class="role-group double">
         <div class="person-card">
           <div class="avatar"><img src="pastolero.png"></div>
@@ -2054,7 +1960,7 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=luis_gabriel_pastolero@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
- <div class="person-card">
+        <div class="person-card">
           <div class="avatar"><img src="pastolero.png"></div>
           <div class="person-info">
             <div class="name">David Uriel B. Malabanan</div>
@@ -2062,7 +1968,6 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=david_uriel_malabanan@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
-     
         <div class="person-card">
           <div class="avatar"><img src="pastolero.png"></div>
           <div class="person-info">
@@ -2071,7 +1976,7 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=marc_mackeuz_vizcondeo@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
-<div class="person-card">
+        <div class="person-card">
           <div class="avatar"><img src="pastolero.png"></div>
           <div class="person-info">
             <div class="name">Marc Mackeuz L. Vizconde</div>
@@ -2080,30 +1985,20 @@ text-align: justify;
           </div>
         </div>
       </div>
-      </div>
-
-    
-   
-   
+    </div>
   </section>
 </div>
 
-
-<!-- ==================== IS PRESIDENT TAB ==================== -->
+<!-- ==================== IS VICE PRESIDENT TAB ==================== -->
 <div id="ovp" class="tab-content">
   <section class="board-section">
       <div class="container">
-
       <h2 class="blue" style="text-align: center;">Office of the G12 Vice President</h2>
-<h3 style="text-align: center; font-size: 25px;">Functions of the Office</h3>
-
+      <h3 style="text-align: center; font-size: 25px;">Functions of the Office</h3>
       <p class="section-desc" style="text-align: center;">
-        The Office of the Vice President supports the leadership of the OIP by ensuring smooth coordination across all student-led initiatives. The OVP oversees the Programs, Logistics, and Communications & Archives Committees, guiding their operations and ensuring that activities are aligned with the goals of the SHS level communities.
-
-
+       The Office of the Grade 12 Vice President supports the leadership of the OIP by ensuring smooth coordination across all student-led initiatives. The O12VP oversees the Committees on Creatives, Archives, and Communications, guiding their operations and ensuring that deliverables are aligned with the goals of the Grade 12 Community.
       </p>
-<br>
-      <!-- G12 VP (single centered) -->
+      <br>
       <div class="role-group single">
         <div class="person-card">
           <div class="avatar"><img src="pastolero.png"></div>
@@ -2114,12 +2009,11 @@ text-align: justify;
           </div>
         </div>
       </div>
-<br>
-<h3 class="gitna">Committee on Archives</h3>
-        <p  style="color:#000;" class="gitna">The Committee on Archives is in charge of drafting activity proposals, safekeeping of council repository, and all logistical requirements needed for the realization of SSCB advocacies.
+      <br>
+      <h3 class="gitna">Committee on Archives</h3>
+      <p style="color:#000;" class="gitna">The Committee on Archives is in charge of drafting activity proposals, safekeeping of council repository, and all logistical requirements needed for the realization of SSCB advocacies.
 </p>
-<br>
-    
+      <br>
       <div class="role-group single">
         <div class="person-card">
           <div class="avatar"><img src="para.png"></div>
@@ -2130,9 +2024,7 @@ text-align: justify;
           </div>
         </div>
       </div>
-
-
-    <br>
+      <br>
       <div class="role-group double">
         <div class="person-card">
           <div class="avatar"><img src="andaya.png"></div>
@@ -2142,7 +2034,7 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=gene_marvin_andaya@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
- <div class="person-card">
+        <div class="person-card">
           <div class="avatar"><img src="sarmiento.png"></div>
           <div class="person-info">
             <div class="name">Sophia J. Sarmiento </div>
@@ -2150,13 +2042,13 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=sophia_sarmiento@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
-</div>
+      </div>
      
- <div class="committee-container">
+      <div class="committee-container">
         <h3 class="gitna">Committee on Communications</h3>
-        <p  style="color:#000;" class="gitna">The Committee on Communications is in charge of managing all internal and external affairs of the SSCB, including but not limited to letters, correspondences, announcements, and social media management.</p>
-<br>
-<div class="role-group single">
+        <p style="color:#000;" class="gitna">The Committee on Communications is in charge of managing all internal and external affairs of the SSCB, including but not limited to letters, correspondences, announcements, and social media management.</p>
+        <br>
+        <div class="role-group single">
           <div class="person-card">
             <div class="avatar"><img src="ibarra.png"></div>
             <div class="person-info">
@@ -2167,12 +2059,10 @@ text-align: justify;
           </div>
         </div>
       </div>
-<br>
-          <h3 class="gitna">Committee on Creatives</h3>
-        <p style="color:#000;" class="gitna">The Committee on Creatives is in charge of branding, designing, and operating audio-visual publication materials in pursuit of promulgating news and auxiliary information on student activities and governance.
-</p>
-<br>
-    
+      <br>
+      <h3 class="gitna">Committee on Creatives</h3>
+      <p style="color:#000;" class="gitna">The Committee on Creatives is in charge of branding, designing, and operating audio-visual publication materials in pursuit of promulgating news and auxiliary information on student activities and governance.</p>
+      <br>
       <div class="role-group single">
         <div class="person-card">
           <div class="avatar"><img src="cabardo.jpeg"></div>
@@ -2183,9 +2073,7 @@ text-align: justify;
           </div>
         </div>
       </div>
-
-<br>
-    
+      <br>
       <div class="role-group double">
         <div class="person-card">
           <div class="avatar"><img src="hornilla.png"></div>
@@ -2195,7 +2083,7 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=mark_justine_hornilla@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
- <div class="person-card">
+        <div class="person-card">
           <div class="avatar"><img src="azores.png"></div>
           <div class="person-info">
             <div class="name">Ronel Albert Iosef S. Azores</div>
@@ -2203,72 +2091,49 @@ text-align: justify;
             <a class="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=ronel_albert_iosef_azores@dlsl.edu.ph" target="_blank">Gmail</a>
           </div>
         </div>
-
       </div>
-
-  
     </div>
-   
   </section>
 </div>
 
 <!-- ==================== Records =================== -->
 <div id="records" class="tab-content">
  <div class="records-visual-wrap">
-
   <div class="records-visual-title">
     <h2>Records</h2>
     <span></span>
   </div>
 
   <div class="records-visual-tabs">
-<button class="dlsl-switch active" onclick="changeAlumniTab(event, 'sscb-reports')">
-      Reports
-    </button>
-
-    <button class="dlsl-switch" onclick="changeAlumniTab(event, 'sscb-scf')">
-      Student Concern Form
-    </button>
-
-
-    <button class="dlsl-switch" onclick="changeAlumniTab(event, 'sscb-performance')">
-     SSCB Performance
-    </button>
-
-  
-
-
+    <button class="dlsl-switch active" onclick="changeAlumniTab(event, 'sscb-reports')">Reports</button>
+    <button class="dlsl-switch" onclick="changeAlumniTab(event, 'sscb-scf')">Student Concern Form</button>
+    <button class="dlsl-switch" onclick="changeAlumniTab(event, 'sscb-performance')">SSCB Performance</button>
   </div>
 
-
   <div class="records-visual-content">
-    <!-- ABOUT -->
+    <!-- Student Concern Form -->
     <div id="sscb-scf" class="dlsl-panel">
-<div id="container">
-      <h2 style="font-family: 'Visby CF Heavy'; color: var(--dlsl-green); text-align:center;">Student Concern Form</h2>
-      <p class="section-desc" style="text-align: justify">
-        The <a href="https://docs.google.com/document/d/17qDsEyPcilcn4rKjtRQbzekIj6W4O9yDO5NcZzl-Usw/edit?usp=sharing">Student Concern Form (SCF) </a> is a document used to request assistance from the SSCB in endorsing in-campus complaints and student grievances. It serves as a mechanism for addressing concerns that may require immediate attention and action.
-<br> 
-<br>
-The SCF ensures that concerns are acted upon promptly, preventing delays that may arise from the fact that COSCA meetings are conducted only once per semester. Through this process, students can receive timely support and resolution for eligible concerns.
-      </p>
-<br>
-<div class="button-wrapper">
-        <a href="https://forms.gle/zFHtfiqs4g7G5r4e7" class="email-btn">Submit here</a>
-
-</div>
+      <div id="container">
+        <h2 style="font-family: 'Visby CF Heavy'; color: var(--dlsl-green); text-align:center;">Student Concern Form</h2>
+        <p class="section-desc" style="text-align: justify">
+          The <a href="https://docs.google.com/document/d/17qDsEyPcilcn4rKjtRQbzekIj6W4O9yDO5NcZzl-Usw/edit?usp=sharing">Student Concern Form (SCF) </a> is a document used to request assistance from the SSCB in endorsing in-campus complaints and student grievances. It serves as a mechanism for addressing concerns that may require immediate attention and action.
+          <br><br>
+          The SCF ensures that concerns are acted upon promptly, preventing delays that may arise from the fact that COSCA meetings are conducted only once per semester. Through this process, students can receive timely support and resolution for eligible concerns.
+        </p>
+        <br>
+        <div class="button-wrapper">
+          <a href="https://forms.gle/zFHtfiqs4g7G5r4e7" class="email-btn">Submit here</a>
+        </div>
+      </div>
     </div>
-</div>
 
-    <!-- CAREER -->
+    <!-- Reports -->
     <div id="sscb-reports" class="dlsl-panel active">
- 
      <div class="sscb-stories-wrapper">
-
-    <div id="sscbStoriesHome">
+      <div id="sscbStoriesHome">
         <div class="sscb-main-container">
             <div class="sscb-controls-section">
-<h2 style="font-family: 'Visby CF Heavy';" class="blue">Reports</h2>
+                <h2 class="blue">Reports</h2>
                 <div class="sscb-search-box">
                     <input type="text" id="sscbStoriesSearch" placeholder="Search..." onkeyup="sscbFilterStories()">
                 </div>
@@ -2282,22 +2147,18 @@ The SCF ensures that concerns are acted upon promptly, preventing delays that ma
                     <div class="sscb-featured-content">
                         <h1>Onse Upon A Time, A Legacy Began: Grade 11 students end SY 2026-2027 with Eleventh Hour</h1>
                         <div class="sscb-featured-meta">May 2026</div>
-                        <div class="sscb-featured-excerpt">Draped in crimson and lit in red, the De La Salle Lipa SENTRUM was a beauty to behold in its final day for Grade 11 students. Built on the stories of a fairytale, the junior community danced the noon away in elegance and music during this year’s pioneering occasion—the Eleventh Hour!
-</div>
+                        <div class="sscb-featured-excerpt">Draped in crimson and lit in red, the De La Salle Lipa SENTRUM was a beauty to behold in its final day for Grade 11 students. Built on the stories of a fairytale, the junior community danced the noon away in elegance and music during this year’s pioneering occasion—the Eleventh Hour!</div>
                         <span class="sscb-read-more-link">Read More »</span>
                     </div>
                 </div>
             </div>
 
             <div class="sscb-stories-grid" id="sscbGridContainer">
-                
-                <div class="sscb-story-item" data-sscb-search-title="REFUGEling The Spirit: iLAYA turns over nearly P 50K for educ donations
- onclick="sscbShowArticle('sscb-art-1')">
+                <div class="sscb-story-item" data-sscb-search-title="refugeling the spirit: ilaya turns over nearly p 50k for educ donations" onclick="sscbShowArticle('sscb-art-1')">
                     <img class="sscb-story-thumb" src="turnover.jpg" alt="Hapag ng Ani">
                     <div class="sscb-story-info">
                         <div class="sscb-story-meta">January 2026</div>
-                        <div class="sscb-story-title">REFUGEling The Spirit: iLAYA turns over nearly P 50K for educ donations
-</div>
+                        <div class="sscb-story-title">REFUGEling The Spirit: iLAYA turns over nearly P 50K for educ donations</div>
                         <div class="sscb-story-excerpt">Set in the most humble of Lipasallian avenues, the Capilla de San Juan Bautista de La Salle stood transformed—no longer just a place of reflection, but a gathering ground for conviction and unity—as Grade 11 and Grade 12 students filled its halls. </div>
                     </div>
                 </div>
@@ -2310,22 +2171,16 @@ The SCF ensures that concerns are acted upon promptly, preventing delays that ma
                         <div class="sscb-story-excerpt">While the Philippines wrestles with corruption under the shelter of our democratic halls, another nation to the north bleeds from wounds far deeper...</div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
+      </div>
 
-
-    <div id="sscb-art-0" class="sscb-article-page sscb-hidden">
+      <div id="sscb-art-0" class="sscb-article-page sscb-hidden">
         <div class="sscb-back-nav-bar">
             <a class="sscb-back-action-trigger" onclick="sscbReturnToGrid()">← Back to Records </a>
-
         </div>
-
         <div class="sscb-article-hero-banner">
-<br>
-            <img src="11th.jpg" alt="Banner text">
-<br>
+            <br><img src="11th.jpg" alt="Banner text"><br>
             <div class="sscb-article-hero-overlay">
                 <div class="sscb-article-hero-inner">
                     <span class="sscb-article-badge">News and Updates</span>
@@ -2336,72 +2191,65 @@ The SCF ensures that concerns are acted upon promptly, preventing delays that ma
         <div class="sscb-article-body-wrapper">
             <div class="sscb-article-divider"></div>
             <div class="sscb-article-meta-row">May 2026</div>
-                     <div class="sscb-article-divider"></div>
+            <div class="sscb-article-divider"></div>
             <div class="sscb-article-author">Author: SSCB Executives</div>
             <div class="sscb-article-body-content">
                 <p>Draped in crimson and lit in red, the De La Salle Lipa SENTRUM was a beauty to behold in its final day for Grade 11 students. Built on the stories of a fairytale, the junior community danced the noon away in elegance and music during this year’s pioneering occasion—the Eleventh Hour!
-<br><br>
-Grounded in a fresh concept of Senior High School (SHS) celebration and spirit, the Eleventh Hour: Onse Upon A Time, the Senior Student Coordinating Board held the Grade 11 culminating activity on May 9, 2026, at the SENTRUM.
-<br><br>
-Serving as a prologue to the tale, the Senior Student Coordinating Board welcomed the level population to the afternoon banquet with inspiring messages from the administration and social mixers to tighten the knot between the event’s main characters: the SHS juniors.
-<br><br>
-Setting the fairytale atmosphere ablaze, the SHS Modern Dance Company delivered a charismatic performance that was as magical as it was electrifying.
-<br><br>
-As the story unfolded, the Heartthrob and Sweetheart enriched the story featuring ramps of each class’ enchanting beauties and charming men. Clothed in tones of scarlet and ivory, the junior audience exalted in cheers like loyal subjects celebrating their royalties.
-<br><br>
-Simultaneous with The Love Feast, a live voting for the Heartthrob and Sweetheart was opened, while magical performances anchored on belts and falsetto were offered by Nash Arden Diamzon (G11-18) and Francez Priolo (G11-14).
-<br><br>
-After the lunch, the Grade 11 students were like spectators to a coronation as the Heartthrob and Sweetheart of the year was hailed, crowned by Giannah Para and Jay-Jay Labong, SSCB Grade 11 Representatives.
-<br><br>
-Sashed by the administrator-packed panel of judges led by Sir Fred Angeles, Vice Chancellor for Mission, Vaughn Clarenz Inciong (G11-15) and Lian Denise Britania (G11-06) emerged victorious and were crowned Heartthrob and Sweetheart 2026, respectively.<br><br>
-Following the pageant segment, the awarding of winners for Class Logo Making and Lens of Love were recognized and handed the trophy, signifying their rising candidacies to be the next recipient of Class Spirit of the Year Award.<br><br>
-Adding to the evening's romantic finale, Grade 11 bands Terrafry and Shibuyas serenaded the student body with a lineup of nostalgic and crowd-favorite songs, including Kabisado, Shut Up and Dance, and Purple Rain. <br><br>
-As the final chapter came to a close, the afterparty officially began. DJ Paps took over the stage from the Grade 11 SSCB, energizing the crowd and drawing students to the stage, resembling a rave-like atmosphere.<br><br>
-Indeed, the first Eleventh Hour was more than just a culminating activity—it was a celebration of friendships forged, memories created, and a legacy begun, marking a magical end to the Grade 11 journey and an opening to the next.
-
-</p>
+                <br><br>
+                Grounded in a fresh concept of Senior High School (SHS) celebration and spirit, the Eleventh Hour: Onse Upon A Time, the Senior Student Coordinating Board held the Grade 11 culminating activity on May 9, 2026, at the SENTRUM.
+                <br><br>
+                Serving as a prologue to the tale, the Senior Student Coordinating Board welcomed the level population to the afternoon banquet with inspiring messages from the administration and social mixers to tighten the knot between the event’s main characters: the SHS juniors.
+                <br><br>
+                Setting the fairytale atmosphere ablaze, the SHS Modern Dance Company delivered a charismatic performance that was as magical as it was electrifying.
+                <br><br>
+                As the story unfolded, the Heartthrob and Sweetheart enriched the story featuring ramps of each class’ enchanting beauties and charming men. Clothed in tones of scarlet and ivory, the junior audience exalted in cheers like loyal subjects celebrating their royalties.
+                <br><br>
+                Simultaneous with The Love Feast, a live voting for the Heartthrob and Sweetheart was opened, while magical performances anchored on belts and falsetto were offered by Nash Arden Diamzon (G11-18) and Francez Priolo (G11-14).
+                <br><br>
+                After the lunch, the Grade 11 students were like spectators to a coronation as the Heartthrob and Sweetheart of the year was hailed, crowned by Giannah Para and Jay-Jay Labong, SSCB Grade 11 Representatives.
+                <br><br>
+                Sashed by the administrator-packed panel of judges led by Sir Fred Angeles, Vice Chancellor for Mission, Vaughn Clarenz Inciong (G11-15) and Lian Denise Britania (G11-06) emerged victorious and were crowned Heartthrob and Sweetheart 2026, respectively.<br><br>
+                Following the pageant segment, the awarding of winners for Class Logo Making and Lens of Love were recognized and handed the trophy, signifying their rising candidacies to be the next recipient of Class Spirit of the Year Award.<br><br>
+                Adding to the evening's romantic finale, Grade 11 bands Terrafry and Shibuyas serenaded the student body with a lineup of nostalgic and crowd-favorite songs, including Kabisado, Shut Up and Dance, and Purple Rain. <br><br>
+                As the final chapter came to a close, the afterparty officially began. DJ Paps took over the stage from the Grade 11 SSCB, energizing the crowd and drawing students to the stage, resembling a rave-like atmosphere.<br><br>
+                Indeed, the first Eleventh Hour was more than just a culminating activity—it was a celebration of friendships forged, memories created, and a legacy begun, marking a magical end to the Grade 11 journey and an opening to the next.</p>
             </div>
         </div>
-    </div>
+      </div>
 
-    <div id="sscb-art-1" class="sscb-article-page sscb-hidden">
+      <div id="sscb-art-1" class="sscb-article-page sscb-hidden">
         <div class="sscb-back-nav-bar">
             <a class="sscb-back-action-trigger" onclick="sscbReturnToGrid()">← Back to Records</a>
         </div>
         <div class="sscb-article-hero-banner">
-<br>
-            <img src="turnover.jpg" alt="Banner text">
+            <br><img src="turnover.jpg" alt="Banner text">
             <div class="sscb-article-hero-overlay">
                 <div class="sscb-article-hero-inner">
                     <span class="sscb-article-badge">News and Updates</span>
-                    <h1 class="sscb-article-main-title">REFUGEling The Spirit: iLAYA turns over nearly P 50K for educ donations
-</h1>
+                    <h1 class="sscb-article-main-title">REFUGEling The Spirit: iLAYA turns over nearly P 50K for educ donations</h1>
                 </div>
             </div>
         </div>
         <div class="sscb-article-body-wrapper">
             <div class="sscb-article-divider"></div>
             <div class="sscb-article-meta-row">January 2026</div>
-          
             <div class="sscb-article-divider"></div>
             <div class="sscb-article-author">Author: SSCB Executives</div>
             <div class="sscb-article-body-content">
-                
                 <p>Set in the most humble of Lipasallian avenues, the Capilla de San Juan Bautista de La Salle stood transformed—no longer just a place of reflection, but a gathering ground for conviction and unity—as Grade 11 and Grade 12 students filled its halls.  <br><br>
-Turning a humble chapel into a powerful witness of memory and resolve, the Senior High School (SHS) community takes a collective stand against racial persecution.<br><br>
-Through a formal handing of donations, the SSCB along with student-representatives from the Senior High School community turned over P47,250.00 to Rohingya refugees under Complementary Pathways (CPath) in January 28, 2026 at the DLSL Capilla.<br><br>
-This student-led collection will benefit students in CPath, a program of the United Nations High Commissioner for Refugees (UNHCR), studying in selected schools of the De La Salle Philippines network.<br><br>
-In the turnover ceremony, the SSCB organized a holistic program featuring interactive talks by the UNHCR and Sir Andyo Abusmas, Deputy Director of DLSBI-SAU, awarding ceremonies, and letter-making activity to beneficiaries.<br><br>
-According to Sir Andyo Abusmas, this cash donation by the SHS community will benefit refugees in the form of student allowances and other educational materials.<br><br>
-In the simultaneous competition under iLAYA, G11-12 and S12-02 were hailed champions and acted as student-representatives to the formal turnover.<br><br>
-Runners-up were also recognized with G11-04 and S12-01, and G11-02 and S12-03 as second-places and third-placers respectively for Grade 11 and Grade 12 batches.<br><br>
-The ceremony closed on a quiet note, realizing that what was turned over that day was not only assistance, but a promise of continued solidarity with Rohingya refugees under CPath—a commitment that calls the community to keep turning awareness into action.
-</p>
+                Turning a humble chapel into a powerful witness of memory and resolve, the Senior High School (SHS) community takes a collective stand against racial persecution.<br><br>
+                Through a formal handing of donations, the SSCB along with student-representatives from the Senior High School community turned over P47,250.00 to Rohingya refugees under Complementary Pathways (CPath) in January 28, 2026 at the DLSL Capilla.<br><br>
+                This student-led collection will benefit students in CPath, a program of the United Nations High Commissioner for Refugees (UNHCR), studying in selected schools of the De La Salle Philippines network.<br><br>
+                In the turnover ceremony, the SSCB organized a holistic program featuring interactive talks by the UNHCR and Sir Andyo Abusmas, Deputy Director of DLSBI-SAU, awarding ceremonies, and letter-making activity to beneficiaries.<br><br>
+                According to Sir Andyo Abusmas, this cash donation by the SHS community will benefit refugees in the form of student allowances and other educational materials.<br><br>
+                In the simultaneous competition under iLAYA, G11-12 and S12-02 were hailed champions and acted as student-representatives to the formal turnover.<br><br>
+                Runners-up were also recognized with G11-04 and S12-01, and G11-02 and S12-03 as second-places and third-placers respectively for Grade 11 and Grade 12 batches.<br><br>
+                The ceremony closed on a quiet note, realizing that what was turned over that day was not only assistance, but a promise of continued solidarity with Rohingya refugees under CPath—a commitment that calls the community to keep turning awareness into action.</p>
             </div>
         </div>
-    </div>
+      </div>
 
-    <div id="sscb-art-2" class="sscb-article-page sscb-hidden">
+      <div id="sscb-art-2" class="sscb-article-page sscb-hidden">
         <div class="sscb-back-nav-bar">
             <a class="sscb-back-action-trigger" onclick="sscbReturnToGrid()">← Back to Records</a>
         </div>
@@ -2417,465 +2265,407 @@ The ceremony closed on a quiet note, realizing that what was turned over that da
         <div class="sscb-article-body-wrapper">
             <div class="sscb-article-divider"></div>
             <div class="sscb-article-meta-row">October 2025</div>
-                       <div class="sscb-article-divider"></div>
-            <div class="sscb-article-author">Author: SSCB Executives</div>
+            <div class="sscb-article-divider"></div>
+            <div class="sscb-article-author">Author: Student Council Core</div>
             <div class="sscb-article-body-content">
                 <p>While the Philippines wrestles with corruption under the shelter of our democratic halls, another nation to the north bleeds from wounds far deeper. Beneath its temples, rivers, and rich cultural heritage, the people of Myanmar sits on a history marred by oppression and exclusion. <br><br>
-For the longest time, it bled giving justice to the few and inequality to the many—especially the Rohingya.<br><br>
-In response to the ongoing humanitarian crisis faced by the Rohingya people, the Senior Student Coordinating Board (SSCB), in partnership with the Community Involvement Office (CIO) and the De La Salle Brothers, Inc. – Social Action Unit (DLSBI-SAU), organized a three-day fundraising bingo event in Hasyenda on October 7, 9, and 10, 2025. The initiative aimed to raise financial support and awareness for Rohingya refugees residing in the Philippines.<br><br>
-According to United Nations High Commissioner for Refugees (UNHCR), the Rohingya people have endured a cycle of persecution that has stripped many of their homes, livelihoods, and sense of belonging for decades. Forced to flee state-sponsored violence and discrimination in Myanmar, hundreds of thousands have sought refuge in overcrowded camps and unfamiliar countries, carrying with them stories of loss and survival. <br><br>
-Up to date, families remain separated by borders, children grow up with little to no access to education, and the threat of gender-based violence continues to loom over their daily life.<br><br>
-Under the UNHCR, the Complementary Pathways programme selects Rohingya refugees who faced displacement in order to charitably provide them with their basic needs like safety and quality schooling.<br><br>
-This activity was launched in celebration of Peace Month wherein the selling period of bingo cards started around early September, mobilizing strong Lasallian participation across Senior High School (SHS) classes, with some attaining 100% engagement.<br><br>
-In a span of two weeks, the initiative successfully raised P 52,500, highlighting the Lasallian community’s collective spirit of service and impact.<br><br>
-“Bilang Lasalyano, nararapat pong sipatin natin hindi lamang ang ating mga pansarili o pambansang pangangailangan, kundi makibaka rin sa ating mga isyung pandaigdig. We, Lasallians, are known not because of our global name, but because we can respond to global needs. We are very proud of what we’ve done for iLAYA, and we hope to see you at the Turnover,” Luis Gabriel Pastolero, iLAYA Project Head says.<br><br>
-As the fundraising efforts draw to a close, anticipation now turns toward the SSCB’s formal turnover of donations and the impact that this humble collection will carry forward.
-</p>
+                For the longest time, it bled giving justice to the few and inequality to the many—especially the Rohingya.<br><br>
+                In response to the ongoing humanitarian crisis faced by the Rohingya people, the Senior Student Coordinating Board (SSCB), in partnership with the Community Involvement Office (CIO) and the De La Salle Brothers, Inc. – Social Action Unit (DLSBI-SAU), organized a three-day fundraising bingo event in Hasyenda on October 7, 9, and 10, 2025. The initiative aimed to raise financial support and awareness for Rohingya refugees residing in the Philippines.<br><br>
+                According to United Nations High Commissioner for Refugees (UNHCR), the Rohingya people have endured a cycle of persecution that has stripped many of their homes, livelihoods, and sense of belonging for decades. Forced to flee state-sponsored violence and discrimination in Myanmar, hundreds of thousands have sought refuge in overcrowded camps and unfamiliar countries, carrying with them stories of loss and survival. <br><br>
+                Up to date, families remain separated by borders, children grow up with little to no access to education, and the threat of gender-based violence continues to loom over their daily life.<br><br>
+                Under the UNHCR, the Complementary Pathways programme selects Rohingya refugees who faced displacement in order to charitably provide them with their basic needs like safety and quality schooling.<br><br>
+                This activity was launched in celebration of Peace Month wherein the selling period of bingo cards started around early September, mobilizing strong Lasallian participation across Senior High School (SHS) classes, with some attaining 100% engagement.<br><br>
+                In a span of two weeks, the initiative successfully raised P 52,500, highlighting the Lasallian community’s collective spirit of service and impact.<br><br>
+                “Bilang Lasalyano, nararapat pong sipatin natin hindi lamang ang ating mga pansarili o pambansang pangangailangan, kundi makibaka rin sa ating mga isyung pandaigdig. We, Lasallians, are known not because of our global name, but because we can respond to global needs. We are very proud of what we’ve done for iLAYA, and we hope to see you at the Turnover,” Luis Gabriel Pastolero, iLAYA Project Head says.<br><br>
+                As the fundraising efforts draw to a close, anticipation now turns toward the SSCB’s formal turnover of donations and the impact that this humble collection will carry forward.</p>
             </div>
         </div>
+      </div>
+     </div>  
     </div>
 
-</div>  </div>
-
-   
-
-
-    
+    <!-- Attendance Tracker -->
     <div id="sscb-performance" class="dlsl-panel">
         <div class="container">
-    <h2 class="blue">SSCB Attendance Tracker</h2>
-    <p style="font-family:Livvic;">hi comms hehehe pahingi description ha iloveyou</p>
-<br>
-    <div class="search-wrapper">
-      <input type="text" id="attendanceSearch" class="search-input" onkeyup="filterAttendance()" placeholder="Search by member name or position...">
-    </div>
+          <h2 class="blue">SSCB Attendance Tracker</h2>
+          <p style="font-family:Livvic;">hi comms hehehe pahingi description ha iloveyou</p>
+          <br>
+          <div class="search-wrapper">
+            <input type="text" id="attendanceSearch" class="search-input" onkeyup="filterAttendance()" placeholder="Search by member name or position...">
+          </div>
 
-    <div class="attendance-grid" id="attendanceGrid">
-      
-      <div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Princess Venus B. Tolentino</span>
-            <span class="member-role">IS President</span>
-          </div>
-          <span class="percentage-badge pct-high">100%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-high" style="width: 100%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>20</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>0</b></div>
- <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+          <div class="attendance-grid" id="attendanceGrid">
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Princess Venus B. Tolentino</span>
+                  <span class="member-role">IS President</span>
+                </div>
+                <span class="percentage-badge pct-high">100%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-high" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>20</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>0</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
 
-        </div>
-      </div>
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Luis Gabriel F. Pastolero</span>
+                  <span class="member-role">Grade 12 Vice President</span>
+                </div>
+                <span class="percentage-badge pct-low">5%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-low" style="width: 5%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>1</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>19</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
 
-      <div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Luis Gabriel F. Pastolero</span>
-            <span class="member-role">Grade 12 Vice President</span>
-          </div>
-          <span class="percentage-badge pct-low">5%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-low" style="width: 5%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>1</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>19</b></div>
-<div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
-        </div>
-      </div>
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Princess Giannah Brielle M. Para</span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-mid">80%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-mid" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>16</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>4</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
 
-      <div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Princess Giannah Brielle M. Para</span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-mid">80%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-mid" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>16</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>4</b></div>
-<div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
-        </div>
-      </div>
-      <div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Gene Marvin B. Andaya</span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-high">100%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-high" style="width: 100%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>20</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>0</b></div>
- <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Gene Marvin B. Andaya</span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-high">100%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-high" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>20</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>0</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
+            
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Ronel Albert Iosef S. Azores</span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-mid">80%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-mid" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>16</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>4</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
 
-        </div>
-      </div>
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Sophia J. Sarmiento</span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-low">5%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-low" style="width: 5%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>1</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>19</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
 
-      
-<div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Ronel Albert Iosef S. Azores</span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-mid">80%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-mid" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>16</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>4</b></div>
-<div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
-        </div>
-      </div>
-<div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Sophia J. Sarmiento</span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-low">5%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-low" style="width: 5%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>1</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>19</b></div>
-<div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
-        </div>
-      </div>
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Queen Kiandra L. Ibarra</span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-mid">80%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-mid" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>16</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>4</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>      
 
-      <div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Queen Kiandra L. Ibarra</span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-mid">80%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-mid" style="width: 80%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>16</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>4</b></div>
-<div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
-        </div>
-      </div>      
-      <div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Mark Justine A. Hornilla </span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-low">5%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-low" style="width: 5%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>1</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>19</b></div>
-<div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
-        </div>
-      </div>
-<div class="attendance-display-card">
-        <div class="card-header-row">
-          <div class="member-details">
-            <span class="member-name">Catherine Margareth I. Cabardo</span>
-            <span class="member-role">Grade 12 Representative</span>
-          </div>
-          <span class="percentage-badge pct-high">100%</span>
-        </div>
-        <div class="gauge-container">
-          <div class="gauge-bar-track">
-            <div class="gauge-fill bg-high" style="width: 100%;"></div>
-          </div>
-        </div>
-        <div class="breakdown-row">
-          <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>20</b></div>
-          <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>0</b></div>
- <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Mark Justine A. Hornilla </span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-low">5%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-low" style="width: 5%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>1</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>19</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
 
+            <div class="attendance-display-card">
+              <div class="card-header-row">
+                <div class="member-details">
+                  <span class="member-name">Catherine Margareth I. Cabardo</span>
+                  <span class="member-role">Grade 12 Representative</span>
+                </div>
+                <span class="percentage-badge pct-high">100%</span>
+              </div>
+              <div class="gauge-container">
+                <div class="gauge-bar-track">
+                  <div class="gauge-fill bg-high" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="breakdown-row">
+                <div class="stat-item"><span class="dot-indicator dot-present"></span>Present: <b>20</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-absent"></span>Absent: <b>0</b></div>
+                <div class="stat-item"><span class="dot-indicator dot-excused"></span>Excused: <b>0</b></div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      
-
     </div>
   </div>
-
-    </div>
-
-  </div>
-</div>
-</div>
+ </div>
 </div>
 
-<!-- ==================== Footer ==================== -->
-</div> <!-- end last tab-content -->
+</div>
+
 <footer>
-  <h3></h3>
-  <p>De La Salle Lipa - Senior Student Coordinating Board</p>
+
+  <p>De La Salle Lipa Integrated School</p>
   <small>© 2026 | Operated by the Committee on Creatives</small>
 </footer>
 
-</div> <!-- end .content -->
-
 <script>
-// Sidebar show on load
-
-
-// ==================== Tab JS ====================
-function openTab(e, tabId){
-  const tabs = document.querySelectorAll('.tab-content');
-  const btns = document.querySelectorAll('.tab');
-  tabs.forEach(tab => tab.classList.remove('active'));
-  btns.forEach(btn => btn.classList.remove('active'));
-  document.getElementById(tabId).classList.add('active');
-  e.currentTarget.classList.add('active');
-}
-
-// ==================== Carousel JS (Dynamic Dots) ====================
-const carousel = document.querySelector('.news-carousel');
-const slides = carousel.querySelectorAll('.slide');
-const dotsContainer = carousel.querySelector('.dots');
-
-let currentSlide = 0;
-
-// Create dots dynamically
-slides.forEach((_, i) => {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  dot.addEventListener('click', () => {
-    currentSlide = i;
-    showSlide(currentSlide);
-  });
-  dotsContainer.appendChild(dot);
-});
-
-const dots = dotsContainer.querySelectorAll('.dot');
-
-function showSlide(index){
-  slides.forEach((s,i)=>{
-    s.classList.remove('active');        // remove fade/slide from all
-    dots[i].style.background = "#ccc";   // reset dots
-  });
-
-  slides[index].classList.add('active'); // fade/slide in new slide
-  dots[index].style.background = "#0f3d2e"; // highlight active dot
-}
-
-showSlide(currentSlide);
-
-// Auto-slide every 5 seconds
-setInterval(()=>{
-  currentSlide = (currentSlide+1)%slides.length;
-  showSlide(currentSlide);
-},5000);
-
-// ==================== Scroll Reveal ====================
-const sections = document.querySelectorAll('section');
-const reveal = ()=>{
-  sections.forEach(sec=>{
-    const top = sec.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100){
-      sec.classList.add('show');
-    }
-  });
-}
-window.addEventListener('scroll', reveal);
-reveal();
-const revealChildren = (parentSelector) => {
-  const parent = document.querySelector(parentSelector);
-  if (!parent) return;
-  const children = parent.children;
-  Array.from(children).forEach((child, index) => {
-    setTimeout(() => {
-      child.classList.add('show');
-    }, index * 150); // stagger by 150ms
-  });
-};
-
-window.addEventListener('scroll', () => {
-  revealChildren('.board-grid');
-  revealChildren('.mv-grid');
-});
-function toggleSidebar(){
+function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
   const content = document.querySelector('.content');
-  const footer = document.querySelector('footer');
-
   sidebar.classList.toggle('collapsed');
   content.classList.toggle('collapsed');
 }
-// Portrait carousel
-const portraitCarousel = document.querySelector('.portrait-carousel');
-const pSlides = portraitCarousel.querySelectorAll('.portrait-slide');
-const pDotsContainer = portraitCarousel.querySelector('.portrait-dots');
-let currentPSlide = 0;
 
-// Create dots dynamically
-pSlides.forEach((_, i)=>{
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  dot.addEventListener('click', () => {
-    currentPSlide = i;
-    showPSlide(currentPSlide);
-  });
-  pDotsContainer.appendChild(dot);
-});
-
-const pDots = pDotsContainer.querySelectorAll('.dot');
-
-function showPSlide(index){
-  pSlides.forEach((s,i)=>{
-    s.classList.remove('active');
-    pDots[i].style.background = "#ccc";
-  });
-  pSlides[index].classList.add('active');
-  pDots[index].style.background = "#0f3d2e";
-}
-
-showPSlide(currentPSlide);
-
-// Auto-slide every 5 seconds
-setInterval(()=>{
-  currentPSlide = (currentPSlide+1) % pSlides.length;
-  showPSlide(currentPSlide);
-},5000);
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-// Show header only after scrolling past hero
-const header = document.querySelector('.top-header');
-const heroHeight = document.querySelector('.hero').offsetHeight;
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > heroHeight - 80) { // show after hero
-    header.classList.add('active');
-  } else {
-    header.classList.remove('active');
+function openTab(evt, tabName) {
+  const tabcontents = document.getElementsByClassName("tab-content");
+  for (let i = 0; i < tabcontents.length; i++) {
+    tabcontents[i].classList.remove("active");
   }
-});
-
-const scrollArrow = document.querySelector('.scroll-arrow');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
-    scrollArrow.style.opacity = "0";
-  } else {
-    scrollArrow.style.opacity = "1";
+  const tabs = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
   }
-});
-
-function changeAlumniTab(evt, tabId) {
-
-  const panels = document.querySelectorAll(".dlsl-panel");
-  const buttons = document.querySelectorAll(".dlsl-switch");
-
-  panels.forEach(p => p.classList.remove("active"));
-  buttons.forEach(b => b.classList.remove("active"));
-
-  document.getElementById(tabId).classList.add("active");
+  document.getElementById(tabName).classList.add("active");
   evt.currentTarget.classList.add("active");
-
+  
+  if(window.innerWidth <= 768) {
+    document.querySelector('.sidebar').classList.add('collapsed');
+    document.querySelector('.content').classList.add('collapsed');
+  }
 }
-document.elementFromPoint(500, 500)
-   function filterAttendance() {
-      const input = document.getElementById('attendanceSearch').value.toLowerCase();
-      const grid = document.getElementById('attendanceGrid');
-      const cards = grid.getElementsByClassName('attendance-display-card');
 
-      for (let i = 0; i < cards.length; i++) {
-        const nameText = cards[i].querySelector('.member-name').textContent.toLowerCase();
-        const roleText = cards[i].querySelector('.member-role').textContent.toLowerCase();
-        
-        // Displays card if either name or position matching criteria holds true
-        if (nameText.includes(input) || roleText.includes(input)) {
-          cards[i].style.display = "";
-        } else {
-          cards[i].style.display = "none";
-        }
+function changeAlumniTab(evt, panelId) {
+  const panels = document.getElementsByClassName("dlsl-panel");
+  for (let i = 0; i < panels.length; i++) {
+    panels[i].classList.remove("active");
+  }
+  const switches = document.querySelectorAll(".records-visual-tabs .dlsl-switch");
+  switches.forEach(sw => sw.classList.remove("active"));
+  
+  document.getElementById(panelId).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+
+function sscbShowArticle(artId) {
+  document.getElementById('sscbStoriesHome').classList.add('sscb-hidden');
+  const articles = document.getElementsByClassName('sscb-article-page');
+  for(let i=0; i<articles.length; i++) {
+    articles[i].classList.add('sscb-hidden');
+  }
+  document.getElementById(artId).classList.remove('sscb-hidden');
+}
+
+function sscbReturnToGrid() {
+  const articles = document.getElementsByClassName('sscb-article-page');
+  for(let i=0; i<articles.length; i++) {
+    articles[i].classList.add('sscb-hidden');
+  }
+  document.getElementById('sscbStoriesHome').classList.remove('sscb-hidden');
+}
+
+function sscbFilterStories() {
+  const input = document.getElementById('sscbStoriesSearch').value.toLowerCase();
+  const items = document.getElementsByClassName('sscb-story-item');
+  const featured = document.getElementById('sscbFeaturedWrapper');
+  
+  if (input.length > 0 && featured) {
+    featured.style.display = 'none';
+  } else if (featured) {
+    featured.style.display = 'block';
+  }
+  
+  for (let i = 0; i < items.length; i++) {
+    let title = items[i].getAttribute('data-sscb-search-title') || '';
+    if (title.toLowerCase().includes(input)) {
+      items[i].style.display = 'flex';
+    } else {
+      items[i].style.display = 'none';
+    }
+  }
+}
+
+function filterAttendance() {
+  const input = document.getElementById('attendanceSearch').value.toLowerCase();
+  const cards = document.getElementsByClassName('attendance-display-card');
+  for (let i = 0; i < cards.length; i++) {
+    let name = cards[i].querySelector('.member-name').innerText.toLowerCase();
+    let role = cards[i].querySelector('.member-role').innerText.toLowerCase();
+    if (name.includes(input) || role.includes(input)) {
+      cards[i].style.display = 'block';
+    } else {
+      cards[i].style.display = 'none';
+    }
+  }
+}
+
+// Simple Carousel initialization Logic logic
+window.addEventListener('DOMContentLoaded', () => {
+  // Main carousel setup
+  const mainSlides = document.querySelectorAll('.news-carousel .slide');
+  const mainDotsContainer = document.querySelector('.news-carousel .dots');
+  let mainIndex = 0;
+  
+  if(mainSlides.length > 0) {
+    mainSlides[0].classList.add('active');
+    mainSlides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if(i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        mainSlides[mainIndex].classList.remove('active');
+        mainIndex = i;
+        mainSlides[mainIndex].classList.add('active');
+        updateDots('.news-carousel .dot', mainIndex);
+      });
+      mainDotsContainer.appendChild(dot);
+    });
+    
+    setInterval(() => {
+      if(mainSlides.length === 0) return;
+      mainSlides[mainIndex].classList.remove('active');
+      mainIndex = (mainIndex + 1) % mainSlides.length;
+      mainSlides[mainIndex].classList.add('active');
+      updateDots('.news-carousel .dot', mainIndex);
+    }, 5000);
+  }
+
+  // Portrait carousel setup
+  const portSlides = document.querySelectorAll('.portrait-carousel .portrait-slide');
+  const portDotsContainer = document.querySelector('.portrait-carousel .portrait-dots');
+  let portIndex = 0;
+  
+  if(portSlides.length > 0) {
+    portSlides[0].classList.add('active');
+    portSlides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      if(i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        portSlides[portIndex].classList.remove('active');
+        portIndex = i;
+        portSlides[portIndex].classList.add('active');
+        updateDots('.portrait-carousel .dot', portIndex);
+      });
+      portDotsContainer.appendChild(dot);
+    });
+
+    setInterval(() => {
+      if(portSlides.length === 0) return;
+      portSlides[portIndex].classList.remove('active');
+      portIndex = (portIndex + 1) % portSlides.length;
+      portSlides[portIndex].classList.add('active');
+      updateDots('.portrait-carousel .dot', portIndex);
+    }, 6000);
+  }
+
+  function updateDots(selector, currentIdx) {
+    const dots = document.querySelectorAll(selector);
+    dots.forEach((d, idx) => {
+      if(idx === currentIdx) d.style.background = '#00A0BE';
+      else d.style.background = '#ccc';
+    });
+  }
+  
+  // Header behavior logic
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.top-header');
+    if(window.scrollY > 150) {
+      header.classList.add('active');
+    } else {
+      header.classList.remove('active');
+    }
+    
+    // Quick section entry reveal trigger animation
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if(top < window.innerHeight - 100) {
+        sec.classList.add('show');
       }
-    }
-
-function sscbShowArticle(targetViewId) {
-        document.getElementById('sscbStoriesHome').classList.add('sscb-hidden');
-        document.getElementById(targetViewId).classList.remove('sscb-hidden');
-        window.scrollTo(0, 0);
-    }
-
-    function sscbReturnToGrid() {
-        const structuralPages = document.querySelectorAll('.sscb-article-page');
-        structuralPages.forEach(panel => panel.classList.add('sscb-hidden'));
-        
-        document.getElementById('sscbStoriesHome').classList.remove('sscb-hidden');
-        window.scrollTo(0, 0);
-    }
-
-    function sscbFilterStories() {
-        const entryValue = document.getElementById('sscbStoriesSearch').value.toLowerCase();
-        
-        const heroBlock = document.querySelector('.sscb-featured-story');
-        if (heroBlock) {
-            const label = heroBlock.getAttribute('data-sscb-search-title');
-            if (label.includes(entryValue)) {
-                heroBlock.classList.remove('sscb-hidden');
-            } else {
-                heroBlock.classList.add('sscb-hidden');
-            }
-        }
-
-        const cardsCollection = document.querySelectorAll('.sscb-story-item');
-        cardsCollection.forEach(card => {
-            const description = card.getAttribute('data-sscb-search-title');
-            if (description.includes(entryValue)) {
-                card.classList.remove('sscb-hidden');
-            } else {
-                card.classList.add('sscb-hidden');
-            }
-        });
-    }
-
-
+    });
+  });
+});
 </script>
-
 </body>
 </html>
