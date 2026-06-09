@@ -12,7 +12,6 @@ font-family: Arial;
 font-size: 22px;
 color: var(--dlsl-green);
 }
-   /* Live Search Input Wrapper */
     .search-wrapper {
       margin-bottom: 30px;
       display: flex;
@@ -34,7 +33,6 @@ color: var(--dlsl-green);
       box-shadow: 0 0 0 3px rgba(15, 61, 70, 0.1);
     }
 
-    /* Responsive Transparency Cards Roster Grid Layout */
     .attendance-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
@@ -81,7 +79,6 @@ color: var(--dlsl-green);
       font-family: 'Livvic', sans-serif;
     }
 
-    /* Percentage Compliance Score Labels */
     .percentage-badge {
       font-size: 0.95rem;
       font-weight: 700;
@@ -90,12 +87,10 @@ color: var(--dlsl-green);
       font-family: 'Livvic', sans-serif;
     }
     
-    /* Compliance Threshold Classes */
     .pct-high { background: #e6f6f0; color: #0f3d2e; }
     .pct-mid { background: #fff9db; color: #f08c00; }
     .pct-low { background: #fff5f5; color: #fa5252; }
 
-    /* Visual Metrics Progress Tracks */
     .gauge-container {
       margin-bottom: 18px;
     }
@@ -115,7 +110,6 @@ color: var(--dlsl-green);
     .bg-mid { background-color: #f08c00; }
     .bg-low { background-color: #fa5252; }
 
-    /* Descriptive Statistics Numerical Split */
     .breakdown-row {
       display: flex;
       gap: 20px;
@@ -142,7 +136,7 @@ color: var(--dlsl-green);
 
 @font-face {
             font-family: 'Visby CF Heavy';
-            src: url('fsp-demo-visby-cf-heavy-regular.otf') format('opentype');
+            src: url('fonts/fsp-demo-visby-cf-heavy-regular.otf') format('opentype');
         }
 @font-face {
             font-family: 'Livvic';
@@ -154,12 +148,11 @@ section p{
 .board-section-rows {
   display: flex;
   flex-direction: column;
-  gap: 50px; /* spacing between rows */
+  gap: 50px; 
 }
 .gitna {
 text-align: center;}
 
-/* Wrapper for each row group */
 .role-group {
   width: 100%;
   display: grid;
@@ -167,20 +160,18 @@ text-align: center;}
   margin-bottom: 40px;
 }
 
-/* PRESIDENT → single centered */
 .role-group.single {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  max-width: 900px;  /* SAME WIDTH AS DOUBLE */
+  max-width: 900px;  
   margin-bottom: 40px;
-  margin: 0 auto;    /* CENTER IT */
+  margin: 0 auto;    
   gap: 40px;
 }
 .role-group.single .person-card {
   width: 100%;
 }
-/* PRESIDENT → single centered cleanly */
 #is-president .role-group.single {
   margin-bottom: 50px; 
 }
@@ -201,7 +192,6 @@ text-align: center;}
   max-width: 420px;  
 }
 
-/* TREASURERS / PROS → 2 equal columns */
 .role-group.double {
   grid-template-columns: repeat(2, 1fr);
   max-width: 900px;     
@@ -210,13 +200,11 @@ text-align: center;}
   gap: 40px;
 }
 
-/* PERSON CARD */
 .person-card {
   width: 100%;
   max-width: 420px;
 }
 
-/* Avatar shapes & alignment */
 .avatar img {
   width: 100%;
   height: auto;
@@ -248,11 +236,11 @@ body {
   margin: 0; 
 }
 
-.justify {
+.hahaha {
 color: #0f3d2e;
 text-align: justify;}
 
-.white {
+.haha {
 font-family: "Visby CF Heavy";
 font-size: 35px;
 color: #ffffff;}
@@ -335,7 +323,6 @@ font-family: "Visby CF Heavy";
   opacity: 1;
 }
 
-/* ==================== Sidebar ==================== */
 .sidebar { 
   position: fixed; 
   top: 0; 
@@ -407,7 +394,6 @@ font-family: "Visby CF Heavy";
   transition: all 0.3s ease;
 }
 
-/* ==================== Tabs ==================== */
 .tab-content{
   display: none;
   animation: recordsFade .7s ease;
@@ -416,7 +402,6 @@ font-family: "Visby CF Heavy";
   display: block;
 }
 
-/* ==================== Sections ==================== */
 section{
   opacity:0;
   transform:translateY(40px);
@@ -472,7 +457,6 @@ section.show{
  font-family: 'Livvic';
 }
 
-/* ==================== Colors ==================== */
 :root{
   --dlsl-green: #00A0BE;         
   --dlsl-green-dark: #13768b;    
@@ -523,30 +507,29 @@ section .container{
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
-section .{
+section .blablas{
   padding: 5px;
   border-radius: 18px;
 }
 
-. {
-  max-:1200px;
+.blablas {
+  max-width:1200px;
   margin:0 auto;
 }
 
-section .pad{
+section .blabla{
 background: var(--dlsl-green);
   padding: 5px;
   border-radius: 18px;
 }
 
-.pad {
-  max-:1200px;
+.blabla {
+  max-width:1200px;
   margin:0 auto;
 }
 
-/* ==================== Avatars & Cards ==================== */
 .avatar img{
-  :100%;
+  width:100%;
   height:100%;
   border-radius:50%;
   object-fit:cover;
@@ -557,7 +540,7 @@ background: var(--dlsl-green);
   gap:24px;
 }
 .avatar{
-  : 160px !important;
+  width: 160px !important;
   height: 160px !important;
   border-radius: 50%;
   border: 4px solid #fff;
@@ -637,28 +620,27 @@ font-family: "Visby CF Heavy";
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
-@media(min-:720px){
+@media(min-width:720px){
   .board-grid{
     grid-template-columns:repeat(2,1fr);
   }
 }
-@media(min-:1024px){
+@media(min-width:1024px){
   .board-grid{
     grid-template-columns:repeat(4,1fr);
   }
 }
 
 .container{
-  max-:1200px;
+  max-width:1200px;
   margin:0 auto;
 }
 
 .container1{
-  max-:1200px;
+  max-width:1200px;
   margin:0 auto;
 }
 	
-/* ==================== Cover ==================== */
 .hero {
   position: relative;
   height: 100vh;
@@ -762,7 +744,6 @@ font-family: "Visby CF Heavy";
   text-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-/* ==================== Intro ==================== */
 .intro-section {
     background: #fff; 
     padding: 80px 20px;
@@ -771,8 +752,8 @@ font-family: "Visby CF Heavy";
 }
 
 .intro-wrapper {
-    max-: 1200px;
-    : 100%;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .intro {
@@ -786,7 +767,7 @@ font-family: "Visby CF Heavy";
 
 .logo-circle {
 font-family: "Visby CF Heavy";
-    : 220px;
+    width: 220px;
     height: 220px;
     border-radius: 50%;
     background: url('logo.png') no-repeat center center;
@@ -804,7 +785,7 @@ font-family: "Visby CF Heavy";
 }
 
 .intro-desc {
-    max-: 600px;
+    max-width: 600px;
     font-size: 18px;
     line-height: 1.6;
     color: #444;
@@ -816,7 +797,6 @@ font-family: 'Livvic';
 color: #000;
 }
 
-/* ==================== Mission & Vision ==================== */
 .mv-grid{
   display:grid;
   grid-template-columns:1fr;
@@ -829,27 +809,26 @@ color: #000;
   border:1px solid #f0f0f0;
 }
 .mv-box h3{margin:0 0 8px;color:var(--green);}
-@media(min-:720px){
+@media(min-width:720px){
   .mv-grid{grid-template-columns:1fr 1fr;}
 }
 
-/* ==================== Carousel ==================== */
 .news-carousel{
   position:relative;
   overflow:hidden;
   border-radius:14px;
-  :100%;
-  max-:100%;
+  width:100%;
+  max-width:100%;
   height:500px;
   margin:0 auto;
 }
 .news-section .container1 {
-  max-: 1400px;
+  max-width: 1400px;
   padding: 50px 40px;
 }
 
 .news-carousel-container {
-  : 100%;
+  width: 100%;
   margin-bottom: 40px; 
 }
 
@@ -866,12 +845,12 @@ color: #000;
 
 .news-carousel-container {
   flex: 2; 
-  min-: 300px;
+  min-width: 300px;
 }
 
 .portrait-carousel-container {
   flex: 1; 
-  max-: 400px; 
+  max-width: 400px; 
 }
 
 .portrait-carousel {
@@ -890,7 +869,7 @@ color: #000;
   position: absolute;
   top:0;
   left:0;
-  :100%;
+  width:100%;
   height:100%;
   opacity:0;
   transform:translateY(30px);
@@ -908,7 +887,7 @@ color: #000;
 }
 
 .portrait-slide img {
-  :100%;
+  width:100%;
   height:100%;
   object-fit:cover;
   border-radius:14px;
@@ -918,7 +897,7 @@ color: #000;
   position:absolute;
   bottom:0;
   left:0;
-  :100%;
+  width:100%;
   background:rgba(0,0,0,0.6);
   color:#fff;
   padding:12px;
@@ -928,14 +907,14 @@ color: #000;
 .portrait-dots {
   position:absolute;
   bottom:0px;
-  :100%;
+  width:100%;
   text-align:center;
   z-index:5;
 }
 
 .portrait-dots .dot {
   display:inline-block;
-  :8px;
+  width:8px;
   height:8px;
   margin:0 4px;
   background:#ccc;
@@ -947,7 +926,7 @@ color: #000;
   position: absolute;
   top: 0;
   left: 0;
-  : 100%;
+  width: 100%;
   height: 100%;
   opacity: 0;
   transform: translateX(30px);
@@ -964,7 +943,7 @@ color: #000;
 }
 
 .slide-img {
-  : 100%;
+  width: 100%;
   height: auto;
   border-radius: 14px;
   object-fit: cover; 
@@ -981,7 +960,7 @@ color: #000;
   position:absolute;
   bottom:0;
   left:0;
-  :100%;
+  width:100%;
   background:rgba(0,0,0,0.6);
   color:#fff;
   padding:12px;
@@ -1007,9 +986,6 @@ font-size:12px;opacity:0.8;}
   cursor: pointer;
 }
 
-/* ===============================
-   DLSL TAB SYSTEM (UNIQUE)
-================================ */
 .dlsl-switcher {
   width: 100%;
   max-width: 1100px;
@@ -1075,9 +1051,6 @@ font-size:12px;opacity:0.8;}
   transform: translateY(0px);
 }
 
-/* ================================
-   RECORDS TAB - VISUAL MATCH
-================================ */
 .records-visual-wrap{
   padding: 60px 6%;
   background: #f8fdfb;
@@ -1153,7 +1126,6 @@ font-family: 'Visby CF Heavy';
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==================== Footer ==================== */
 footer{
   background: #fff;
   padding: 20px 10px;
@@ -1256,7 +1228,6 @@ footer small{
     padding: 40px 20px;
 }
 
-/* --- SEARCH SECTION --- */
 .sscb-controls-section {
     display: flex;
     justify-content: space-between;
@@ -1286,7 +1257,6 @@ footer small{
     border-color: var(--sscb-stories-blue);
 }
 
-/* --- HOME PAGE: FEATURED STORY --- */
 .sscb-featured-story {
     display: grid;
     grid-template-columns: 1fr;
@@ -1327,6 +1297,14 @@ footer small{
     line-height: 1.2;
     margin-bottom: 15px;
 }
+.sscb-featured-content h1:hover {
+    font-family: 'Visby CF Heavy';
+    font-size: 32px;
+    color: var(--dlsl-green-dark);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
 
 .sscb-featured-meta {
     font-size: 14px;
@@ -1350,7 +1328,6 @@ footer small{
     font-size: 15px;
 }
 
-/* --- HOME PAGE: SMALLER GRID STORIES --- */
 .sscb-stories-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -1408,6 +1385,17 @@ footer small{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.sscb-story-title:hover {
+    font-family: 'Visby CF Heavy';
+    font-size: 18px;
+    color: var(--dlsl-green-dark);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 
 .sscb-story-excerpt {
     font-family: 'Livvic';
@@ -1420,7 +1408,6 @@ footer small{
     overflow: hidden;
 }
 
-/* --- ARTICLE VIEW LAYOUT --- */
 .sscb-article-page {
     background-color: #fff;
 }
@@ -1567,12 +1554,7 @@ footer small{
     color: var(--dlsl-green-dark);
 }
 
-/* ========================================================
-   MOBILE OPTIMIZATION MEDIA QUERY 
-   Matches 80% desktop aspect-ratio experience natively
-=========================================================== */
 @media (max-width: 768px) {
-    /* Compress broad elements slightly to emulate an 80% viewport scale */
     section {
         padding: 40px 16px;
     }
@@ -1580,7 +1562,6 @@ footer small{
         font-size: 26px !important;
     }
     
-    /* Layout Scaling Changes */
     .columns-container {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1590,7 +1571,6 @@ footer small{
         gap: 20px;
     }
     
-    /* Adapt News Flex Container Alignment */
     .news-flex {
         flex-direction: column;
     }
@@ -1604,7 +1584,6 @@ footer small{
         height: 360px;
     }
     
-    /* Scale Intro Section Layout elements */
     .intro {
         gap: 24px;
         text-align: center;
@@ -1618,7 +1597,6 @@ footer small{
         margin: 0 auto;
     }
     
-    /* Attendance Element scaling adjustments */
     .attendance-grid {
         grid-template-columns: 1fr;
     }
@@ -1627,7 +1605,6 @@ footer small{
         gap: 8px;
     }
     
-    /* Records tab system formatting updates */
     .records-visual-tabs button {
         padding: 8px 16px;
         font-size: 14px;
@@ -1636,7 +1613,6 @@ footer small{
         padding: 20px 16px;
     }
     
-    /* Article Detail banner mobile optimization layout */
     .sscb-article-hero-banner {
         height: 280px;
     }
@@ -1684,7 +1660,6 @@ footer small{
 
 <div class="content collapsed">
 
-<!-- ==================== HOME TAB ==================== -->
 <div id="home" class="tab-content active">
 <header class="hero">
   <div class="hero-overlay"></div>
@@ -1716,16 +1691,16 @@ footer small{
 </section>
 
 <section class="mission-vision-section">
-  <div class="pad">
-    <h2 class="white">Mission and Vision of the SSCB</h2>
+  <div class="blabla">
+    <h2 class="haha">Mission and Vision of the SSCB</h2>
     <div class="mv-grid">
       <div class="mv-box">
         <h3> Mission</h3>
-        <p class="justify">The Senior Student Coordinating Board is committed to empowering the student body of De La Salle Lipa Senior High School through servant leadership, transformative social action, and student-centered representation. Guided by the Lasallian values of Faith, Service, and Communion, the SSCB advocates for student welfare, promotes holistic development, and advances nation-building through formative in-campus initiatives and responsive off-campus engagements that address contemporary Filipino and global socio-political realities.</p>
+        <p class="hahaha">The Senior Student Coordinating Board is committed to empowering the student body of De La Salle Lipa Senior High School through servant leadership, transformative social action, and student-centered representation. Guided by the Lasallian values of Faith, Service, and Communion, the SSCB advocates for student welfare, promotes holistic development, and advances nation-building through formative in-campus initiatives and responsive off-campus engagements that address contemporary Filipino and global socio-political realities.</p>
       </div>
       <div class="mv-box">
         <h3>Vision</h3>
-        <p class="justify">The Senior Student Coordinating Board is among the premier basic education student governments, serving as a leading force for learner representation, youth empowerment, and student-led movements, grounded in De La Salle Lipa Senior High School’s spirit of faith, zeal for service, and communion in mission.</p>
+        <p class="hahaha">The Senior Student Coordinating Board is among the premier basic education student governments, serving as a leading force for learner representation, youth empowerment, and student-led movements, grounded in De La Salle Lipa Senior High School’s spirit of faith, zeal for service, and communion in mission.</p>
       </div>
     </div>
   </div>
@@ -1733,11 +1708,10 @@ footer small{
 
 <section id="carousel-section" class="news-section">
   <div class="container1">
-    <h2 class="white">Latest </h2>
+    <h2 class="haha">Latest </h2>
     <div class="news-flex">
-      <!-- Main Landscape Carousel -->
       <div class="news-carousel-container">
-        <h3 class="white" style="margin-bottom:16px; font-size:25px;">Events</h3>
+        <h3 class="haha" style="margin-bottom:16px; font-size:25px;">Events</h3>
         <div class="news-carousel">
           <div class="slides">
             <a href="https://www.instagram.com/p/DYhLSj_oCAr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="slide">
@@ -1766,9 +1740,8 @@ footer small{
         </div>
       </div>
 
-      <!-- Portrait Carousel -->
       <div class="portrait-carousel-container">
-        <h3 class="white" style="margin-bottom:16px; font-size:25px;">Announcements</h3>
+        <h3 class="haha" style="margin-bottom:16px; font-size:25px;">Announcements</h3>
         <div class="portrait-carousel">
           <div class="portrait-slide">
             <a href="https://www.instagram.com/p/DYZRW9DP0J_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
@@ -1800,8 +1773,8 @@ footer small{
           <div class="portrait-dots"></div>
         </div>
       </div>
-    </div> <!-- end news-flex -->
-  </div> <!-- end container1 -->
+    </div> 
+  </div> 
 </section>
 
 <section class="board-section">
@@ -1845,7 +1818,6 @@ footer small{
 </section>
 </div>
 
-<!-- ==================== SAO TAB ==================== -->
 <div id="sao" class="tab-content">
   <section class="board-section">
     <div class="container">
@@ -1930,7 +1902,6 @@ footer small{
   </section>
 </div>
 
-<!-- ==================== IS PRESIDENT TAB ==================== -->
 <div id="op" class="tab-content">
   <section class="board-section">
     <div class="container">
@@ -1989,7 +1960,6 @@ footer small{
   </section>
 </div>
 
-<!-- ==================== IS VICE PRESIDENT TAB ==================== -->
 <div id="ovp" class="tab-content">
   <section class="board-section">
       <div class="container">
@@ -2096,7 +2066,6 @@ footer small{
   </section>
 </div>
 
-<!-- ==================== Records =================== -->
 <div id="records" class="tab-content">
  <div class="records-visual-wrap">
   <div class="records-visual-title">
@@ -2111,7 +2080,6 @@ footer small{
   </div>
 
   <div class="records-visual-content">
-    <!-- Student Concern Form -->
     <div id="sscb-scf" class="dlsl-panel">
       <div id="container">
         <h2 style="font-family: 'Visby CF Heavy'; color: var(--dlsl-green); text-align:center;">Student Concern Form</h2>
@@ -2127,7 +2095,6 @@ footer small{
       </div>
     </div>
 
-    <!-- Reports -->
     <div id="sscb-reports" class="dlsl-panel active">
      <div class="sscb-stories-wrapper">
       <div id="sscbStoriesHome">
@@ -2284,7 +2251,6 @@ footer small{
      </div>  
     </div>
 
-    <!-- Attendance Tracker -->
     <div id="sscb-performance" class="dlsl-panel">
         <div class="container">
           <h2 class="blue" style="font-family: 'Visby CF Heavy';">SSCB Attendance Tracker</h2>
@@ -2580,9 +2546,7 @@ function filterAttendance() {
   }
 }
 
-// Simple Carousel initialization Logic logic
 window.addEventListener('DOMContentLoaded', () => {
-  // Main carousel setup
   const mainSlides = document.querySelectorAll('.news-carousel .slide');
   const mainDotsContainer = document.querySelector('.news-carousel .dots');
   let mainIndex = 0;
@@ -2611,7 +2575,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 5000);
   }
 
-  // Portrait carousel setup
   const portSlides = document.querySelectorAll('.portrait-carousel .portrait-slide');
   const portDotsContainer = document.querySelector('.portrait-carousel .portrait-dots');
   let portIndex = 0;
@@ -2648,7 +2611,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // Header behavior logic
   window.addEventListener('scroll', () => {
     const header = document.querySelector('.top-header');
     if(window.scrollY > 150) {
@@ -2657,7 +2619,6 @@ window.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('active');
     }
     
-    // Quick section entry reveal trigger animation
     const sections = document.querySelectorAll('section');
     sections.forEach(sec => {
       const top = sec.getBoundingClientRect().top;
