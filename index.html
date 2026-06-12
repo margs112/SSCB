@@ -142,6 +142,10 @@ color: var(--dlsl-green);
             font-family: 'Livvic';
             src: url('Livvic-Regular.otf') format('truetype');
         }
+@font-face {
+            font-family: 'soundmay';
+            src: url('soudmay.otf') format('opentype');
+        }
 section p{
  font-family: 'Livvic';
 }
@@ -642,26 +646,95 @@ font-family: "Visby CF Heavy";
   justify-content: center;
   overflow: hidden; 
 }
-
-.hero::after {
+.heroop{
+  position: relative;
+  height: 100vh;
+  background: url('op.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+ .heroop::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyYzZjazdlbDl6dDRxeXNndHpkazN1YnBmYTZqb2M1bTd6OWVzMWZrZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3xz2BRU6WpaxKiPzuE/source.gif') center/cover no-repeat;
-  opacity: 0.25; 
+  
+   background: url('https://i.pinimg.com/originals/1d/d7/7d/1dd77d62c8c89db3b0e6e0142b47807d.gif') center 100% / 101% no-repeat;
+  
+  opacity: 1; 
   pointer-events: none;
   mix-blend-mode: screen; 
   z-index: 2;
 }
 
-.hero-overlay {
+
+.heroovp{
+  position: relative;
+  height: 100vh;
+  background: url('ovp.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+.heroovp::after {
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.55)
-  );
-  z-index: 1;
+  
+   background: url('https://i.pinimg.com/originals/1d/d7/7d/1dd77d62c8c89db3b0e6e0142b47807d.gif') center 100% / 101% no-repeat;
+  
+  opacity: 1; 
+  pointer-events: none;
+  mix-blend-mode: screen; 
+  z-index: 2;
+}
+
+ @media (max-width: 900px) {
+.heroop{
+width: 100%; max-width: 1920px; height: auto; display: block; margin: 0 auto; aspect-ratio: 1920 / 1080;}
+
+.heroovp{
+width: 100%; max-width: 1920px; height: auto; display: block; margin: 0 auto; aspect-ratio: 1920 / 1080;}
+
+
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+   background: url('https://i.pinimg.com/originals/1d/d7/7d/1dd77d62c8c89db3b0e6e0142b47807d.gif') center 100% / 101% no-repeat;
+  
+  opacity: 1; 
+  pointer-events: none;
+  mix-blend-mode: screen; 
+  z-index: 2;
+}
+ @media (max-width: 900px) {
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('12345.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+}
+
+           .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+   background: url('https://i.pinimg.com/originals/1d/d7/7d/1dd77d62c8c89db3b0e6e0142b47807d.gif') center 100% / 150% no-repeat;
+  
+  opacity: 1; 
+  pointer-events: none;
+  mix-blend-mode: screen; 
+  z-index: 2;
+}
 }
 
 .hero-content {
@@ -711,9 +784,9 @@ font-family: "Visby CF Heavy";
 }
 
 @keyframes slowFloat {
-  0% { transform: translateY(0); opacity: 0.4; }
-  50% { transform: translateY(14px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 0.4; }
+  0% { transform: translateY(0);  }
+  50% { transform: translateY(14px); }
+  100% { transform: translateY(0);  }
 }
 .blue {
 color: #00A0BE;}
@@ -1119,10 +1192,10 @@ font-family: 'Visby CF Heavy';
 }
 
 footer{
-  background: #fff;
+  background: var(--dlsl-green);
   padding: 20px 10px;
   text-align: center;
-  color: #000;
+  color: #fff;
  font-family: 'Livvic';
 }
 
@@ -1134,12 +1207,8 @@ footer h3{
 
 footer p{
   margin:0 0 10px;
-  opacity:0.9;
 }
 
-footer small{
-  opacity:0.7;
-}
 
 .email-btn {
   position: relative;
@@ -1636,7 +1705,7 @@ footer small{
         .cmt-map-viewport-box {
             flex: 2;
             position: relative;
-            background-color: #bcdbe5; 
+            background-color: #8ad1f0; 
             overflow: hidden; 
             display: flex;
             justify-content: center;
@@ -1870,7 +1939,7 @@ footer small{
         }
 
         .cmt-nav-widget-card {
-            background-color: #f8faf9;
+            background-color: #f5fbff;
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 20px;
@@ -1878,7 +1947,7 @@ footer small{
             box-shadow: 0 2px 6px rgba(0,0,0,0.02);
         }
         .cmt-nav-widget-card h4 {
-            color: #005a43;
+            color: var(--dlsl-green-dark);
             margin-bottom: 16px;
             letter-spacing: -0.5px;
         }
@@ -1890,7 +1959,7 @@ footer small{
             font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
-            color: #666;
+            color: var(--dlsl-green);
             margin-bottom: 6px;
             letter-spacing: 0.5px;
         }
@@ -1919,7 +1988,8 @@ footer small{
         
         .cmt-nav-btn-action {
             width: 100%;
-            background-color: #005a43;
+            background-color: var(--dlsl-green);
+font-family: 'Visby CF Heavy';
             color: white;
             border: none;
             padding: 14px;
@@ -1930,7 +2000,7 @@ footer small{
             transition: background 0.2s, transform 0.1s;
             margin-top: 6px;
         }
-        .cmt-nav-btn-action:hover { background-color: #004432; }
+        .cmt-nav-btn-action:hover { background-color: var(--dlsl-green-dark); }
         .cmt-nav-btn-action:active { transform: scale(0.99); }
 
         .cmt-directions-panel-box {
@@ -1990,56 +2060,107 @@ footer small{
         /* Mobile Layout Split Fix Viewport Ratio Configurations */
         @media (max-width: 900px) {
             .cmt-interface-container { 
-                flex-direction: column; 
-            }
+        flex-direction: column !important; 
+        position: relative !important;
+background: #8ad1f0;
+    }
             .cmt-map-viewport-box {
                 flex: none;
                 width: 100%;
-                height: 32vh; 
+                height: 38vh; 
             }
             
-            .cmt-info-sidebar-panel { 
-                width: 100%; 
-                max-width: 100%; 
-                min-width: 100%;
-                height: 68vh; 
-                box-shadow: 0 -10px 25px rgba(0,0,0,0.1); 
-                border-radius: 20px 20px 0 0; 
-                padding: 18px;
-            }
+.cmt-info-sidebar-panel { 
+        position: fixed !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important; 
+        max-width: 100% !important; 
+        min-width: 100% !important;
+        height: 62vh !important; /* Starting bottom height */
+        background-color: #ffffff !important;
+        box-shadow: 0 -10px 30px rgba(0,0,0,0.25) !important; 
+        border-radius: 24px 24px 0 0 !important; 
+        padding: 18px !important;
+        z-index: 99999 !important; /* Keeps it strictly above parent website layers */
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Smooth sliding transition action */
+        transform: translateY(0) !important;
+    }
 
-            .cmt-bottom-sheet-handle-bar {
-                display: block;
-            }
+    .cmt-bottom-sheet-handle-bar {
+        display: block !important;
+    }
 
-            .cmt-info-sidebar-panel.cmt-state-expanded {
-                height: 85vh;
-            }
+    /* Slides the panel upward when the state class is triggered */
+    .cmt-info-sidebar-panel.cmt-state-expanded {
+        transform: translateY(3vh) !important; /* Extends your viewport view area up smoothly */
+        height: 85vh !important;
+    }
 
-            .cmt-nav-widget-card {
-                padding: 12px;
-                margin-bottom: 12px;
-            }
-            .cmt-nav-widget-card h4 {
-                font-size: 26px !important;
-                margin-bottom: 8px;
-                text-align: center;
-            }
-            .cmt-nav-field-group {
-                margin-bottom: 8px;
-            }
-            .cmt-nav-field-group select {
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-            .cmt-nav-btn-action {
-                padding: 10px;
-                font-size: 13px;
-            }
-            .cmt-placeholder-state-view {
-                padding: 15px 10px;
-            }
+    /* Rotates the small arrow layout indicator */
+    .cmt-info-sidebar-panel.cmt-state-expanded .cmt-bottom-sheet-arrow-indicator {
+        transform: rotate(180deg) !important;
+    }
+
+    .cmt-nav-widget-card {
+        padding: 12px !important;
+        margin-bottom: 12px !important;
+    }
+    .cmt-nav-widget-card h4 {
+        font-size: 26px !important;
+        margin-bottom: 8px !important;
+        text-align: center !important;
+    }
+    .cmt-nav-field-group {
+        margin-bottom: 8px !important;
+    }
+    .cmt-nav-field-group select {
+        padding: 10px 12px !important;
+        font-size: 14px !important;
+    }
+    .cmt-nav-btn-action {
+        padding: 10px !important;
+        font-size: 13px !important;
+    }
+    .cmt-placeholder-state-view {
+        padding: 15px 10px !important;
+    }
+}
+.floating-text-box {
+font-family: 'soundmay';
+  animation: slowFloat 2.2s ease-in-out infinite;
+                   position: absolute;
+            top: 30%;
+            /* Center positioning tricks */
+justify-content: center;
+                       text-align: center;
+
         }
+
+        /* Typography inside the box */
+        .floating-text-box h2 {
+color: #00687a;
+            margin-top: 0;
+            font-size: 150px;
+        }
+
+ @media (max-width: 900px) {
+.floating-text-box {
+font-family: 'soundmay';
+                   position: relative;
+            top: 25%;
+            /* Center positioning tricks */
+justify-content: center;
+                       text-align: center;
+
+        }
+
+        /* Typography inside the box */
+        .floating-text-box h2 {
+color: #00687a;
+            margin-top: 0;
+            font-size: 50px;
+        }}
 </style>
 </head>
 <body>
@@ -2085,7 +2206,7 @@ footer small{
   <a href="#carousel-section" class="hero-btn">Click here</a>
 <div class="scroll-arrow">
   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
-       stroke="white" stroke-width="1.2"
+       stroke="var(--dlsl-green)" stroke-width="1.2"
        stroke-linecap="round" stroke-linejoin="round">
     <path d="M6 9l6 6 6-6"/>
   </svg>
@@ -2309,34 +2430,34 @@ footer small{
             </div>
             
             <div class="cmt-nav-widget-card">
-                <h4 style="font-family: 'Visby CF Heavy'; font-size: 35px; cursor: pointer; margin: 0;" onclick="cmtToggleMobileSidebarView()">tracker</h4>
+                <h4 style="font-family: 'Visby CF Heavy'; font-size: 35px; color: var(--dlsl-green); cursor: pointer; margin: 0;" onclick="cmtToggleMobileSidebarView()">Interactive DLSL Campus Map </h4>
                 
                 <div class="cmt-nav-field-group">
-                    <label for="cmtStartLocationId">sn k ngaun</label>
+                    <label for="cmtStartLocationId">Your Current Location</label>
                     <select id="cmtStartLocationId" onchange="cmtHandleStartLocationChange()">
-                        <option value="" disabled selected>Pili ka simula mo</option>
+                        <option value="" disabled selected>Select building...</option>
                     </select>
                 </div>
 
                 <div class="cmt-nav-field-group">
-                    <label for="cmtEndLocationId">san k punta sis?</label>
+                    <label for="cmtEndLocationId">Your Destination</label>
                     <select id="cmtEndLocationId" onchange="cmtHandleEndDropdownChange()">
-                        <option value="" disabled selected>ano destination m</option>
+                        <option value="" disabled selected>Select building...</option>
                     </select>
                 </div>
-                <button class="cmt-nav-btn-action" onclick="cmtEngageLiveTrackingSystem()">ano tara</button>
+                <button class="cmt-nav-btn-action" onclick="cmtEngageLiveTrackingSystem()">Navigate</button>
             </div>
 
             <div id="cmtDirectionsCardId" class="cmt-directions-panel-box cmt-utility-hidden">
                 <h5 id="cmtLiveDistanceTextId">Distance: Selecting target...</h5>
                 <ul class="cmt-directions-list-container" style="list-style: none; padding: 0;">
-                    <li style="margin-top: 5px; color: #666; font-size: 11px;">Calculated static distance based on map vector points.</li>
+                    <li style="margin-top: 5px; color: #666; font-size: 11px;">Note: Estimated distance only. </li>
                 </ul>
             </div>
 
             <div id="cmtSidebarPlaceholderId" class="cmt-placeholder-state-view">
-                <h3>click k lg te</h3>
-                <p>pindot ka ng bilog o kaya pili k ng bldg n ppuntahan m</p>
+                <h3>Select a building</h3>
+                <p>Building information will show up here.</p>
             </div>
 
             <div id="cmtSidebarContentId" class="cmt-sidebar-content-scroll cmt-utility-hidden">
@@ -2443,7 +2564,22 @@ footer small{
 </div>
 
 <div id="op" class="tab-content">
-  <section class="board-section">
+
+<header class="heroop">
+<div class="hero-content">
+ 
+<div class="scroll-arrow">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="1.2"
+       stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 9l6 6 6-6"/>
+  </svg>
+</div>
+</div>
+</header>
+
+ 
+<section id="officepres" class="board-section">
     <div class="container">
       <h2 class="blue" style="text-align: center;">Office of the IS President</h2>
       <h3 style="text-align: center; font-size: 25px;">Functions of the Office</h3>
@@ -2501,6 +2637,21 @@ footer small{
 </div>
 
 <div id="ovp" class="tab-content">
+
+<header class="heroovp">
+
+
+<div class="hero-content">
+<div class="scroll-arrow">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+       stroke="white" stroke-width="1.2"
+       stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 9l6 6 6-6"/>
+  </svg>
+</div>
+</div>
+</header>
+
   <section class="board-section">
       <div class="container">
       <h2 class="blue" style="text-align: center;">Office of the G12 Vice President</h2>
@@ -2985,13 +3136,22 @@ footer small{
         </div>
     </div>
   </div>
+
  </div>
+
 </div>
 
 </div>
 
 <footer>
 
+<svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 60px;">
+  <path d="M0,60 C150,100 350,20 500,60 C650,100 850,20 1000,60 C1150,100 1250,60 1300,60" 
+        fill="none" 
+        stroke="#fff" 
+        stroke-width="5" 
+        stroke-linecap="round"/>
+</svg>
   <p>Senior Student Coordinating Board</p>
   <small>© 2026 | Operated by the Committee on Creatives</small>
 </footer>
@@ -3221,8 +3381,8 @@ const cmtBuildingNamesConfig = {
             const endSelect = document.getElementById('cmtEndLocationId');
             
             if (endSelect && startSelect) {
-                endSelect.innerHTML = '<option value="" disabled selected>ano destination m</option>';
-                startSelect.innerHTML = '<option value="" disabled selected>Pili ka simula mo</option>';
+                endSelect.innerHTML = '<option value="" disabled selected>Select building...</option>';
+                startSelect.innerHTML = '<option value="" disabled selected>Select building...</option>';
                 
                 for (let i = 1; i <= 33; i++) {
                     if (i === 15) continue;
@@ -3277,11 +3437,12 @@ const cmtBuildingNamesConfig = {
         window.addEventListener('touchend', cmtEndDragGesture);
         cmtViewportDOM.addEventListener('wheel', cmtMouseWheelZoomHandler, { passive: false });
 
-        function cmtToggleMobileSidebarView() {
-            if (window.innerWidth <= 900) {
-                cmtSidebarDOM.classList.toggle('cmt-state-expanded');
-            }
-        }
+       function cmtToggleMobileSidebarView() {
+    const mobileSidebarTarget = document.getElementById('cmtInfoSidebarId');
+    if (window.innerWidth <= 900 && mobileSidebarTarget) {
+        mobileSidebarTarget.classList.toggle('cmt-state-expanded');
+    }
+}
 
         function cmtStartDragGesture(e) {
             cmtIsDraggingActive = true;
