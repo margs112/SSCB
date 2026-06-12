@@ -2198,19 +2198,19 @@ color: #00687a;
 <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
 <div class="sidebar collapsed">
   <h3>‎ </h3>
-  <button onclick="openTab(event,'home')" class="tab active">Home</button>
-<button onclick="openTab(event,'campusmap')" class="tab">Campus Map</button>
-  <button onclick="openTab(event,'sao')" class="tab">Student Activities Office</button>
-  <button onclick="openTab(event,'op')" class="tab">Office of the Integrated School President</button>
-  <button onclick="openTab(event,'ovp')" class="tab">Office of the Vice President</button>
-  <button onclick="openTab(event,'records')" class="tab">Records</button>
-  <button onclick="openTab(event,'constitution')" class="tab">Constitution</button>
+  <button onclick="openTab(event,'home', 'homestart')" class="tab active">Home</button>
+<button onclick="openTab(event,'campusmap', 'campusmapstart')" class="tab">Campus Map</button>
+  <button onclick="openTab(event,'sao', 'saostart')" class="tab">Student Activities Office</button>
+  <button onclick="openTab(event,'op', 'opstart')" class="tab">Office of the Integrated School President</button>
+  <button onclick="openTab(event,'ovp', 'ovpstart')" class="tab">Office of the Vice President</button>
+  <button onclick="openTab(event,'records', 'recordsstart')" class="tab">Records</button>
+  <button onclick="openTab(event,'constitution', 'constitutionstart')" class="tab">Constitution</button>
 </div>
 
 <div class="content collapsed">
 
 <div id="home" class="tab-content active">
-<header class="hero">
+<header class="hero" id="homestart">
   <div class="hero-overlay"></div>
 <div class="hero-content">
   <a href="#carousel-section" class="hero-btn">Click here</a>
@@ -2490,9 +2490,9 @@ color: #00687a;
 </div>
 
 <div id="sao" class="tab-content">
-  <section class="board-section">
+  <section class="board-section" >
     <div class="container">
-      <h2 class="blue">Student Activities Office</h2>
+      <h2 class="blue" id="saostart">Student Activities Office</h2>
       <p class="section-desc">
        The Senior High School (SHS) arm of the Student Activities Office (SAO) is in charge of designing, implementing, and monitoring student activities for SHS, overseeing the execution of co-curricular and extracurricular activities for the Grade 11 and Grade 12 communities.
       </p>
@@ -2576,7 +2576,7 @@ color: #00687a;
 <div id="op" class="tab-content">
 
 <header class="heroop">
-<div class="hero-content">
+<div class="hero-content" id="opstart">
  
 <div class="scroll-arrow">
   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
@@ -2648,7 +2648,7 @@ color: #00687a;
 
 <div id="ovp" class="tab-content">
 
-<header class="heroovp">
+<header class="heroovp" id="ovpstart">
 
 
 <div class="hero-content">
@@ -2770,7 +2770,7 @@ color: #00687a;
 <div id="records" class="tab-content">
  <div class="records-visual-wrap">
   <div class="records-visual-title">
-    <h2>Records</h2>
+    <h2 id="recordsstart">Records</h2>
     <span></span>
   </div>
 
@@ -3174,24 +3174,72 @@ function toggleSidebar() {
   content.classList.toggle('collapsed');
 }
 
-function openTab(evt, tabName) {
-  const tabcontents = document.getElementsByClassName("tab-content");
-  for (let i = 0; i < tabcontents.length; i++) {
-    tabcontents[i].classList.remove("active");
-  }
-  const tabs = document.getElementsByClassName("tab");
-  for (let i = 0; i < tabs.length; i++) {
-    tabs[i].classList.remove("active");
-  }
-  document.getElementById(tabName).classList.add("active");
-  evt.currentTarget.classList.add("active");
-  
-  if(window.innerWidth <= 768) {
-    document.querySelector('.sidebar').classList.add('collapsed');
-    document.querySelector('.content').classList.add('collapsed');
-  }
+function openTab(evt, tabId, scrollToId) {
+    // 1. Deactivate all tabs and hide content containers
+    const tabContents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+    }
+    
+    const tabs = document.getElementsByClassName("tab");
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+    }
+    
+    // 2. Activate target tab container
+    const targetContent = document.getElementById(tabId);
+    if (targetContent) {
+        targetContent.classList.add("active");
+        
+        // Handle reveal fade-in animations on sections
+        const childSections = targetContent.querySelectorAll('section');
+        childSections.forEach(sec => {
+            sec.classList.add('show');
+            sec.style.opacity = "1";
+            sec.style.transform = "translateY(0)";
+        });
+    }
+    
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add("active");
+    }
+    
+    // 3. Close the global navigation sidebar automatically after clicking a tab
+    const mainSidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.content');
+    
+    if (mainSidebar && mainContent) {
+        // Option A: If your website uses the "collapsed" class structure to hide the sidebar
+        mainSidebar.classList.add('collapsed');
+        mainContent.classList.add('collapsed');
+        
+        // Option B: If your website toggles an "active" class to open/close it on mobile, uncomment below instead:
+        // mainSidebar.classList.remove('active');
+    }
+    
+    // 4. Scroll seamlessly to the specific target element ID
+    if (scrollToId) {
+        // A slight timeout ensures the tab is fully rendered and visible before scrolling
+        setTimeout(() => {
+            const element = document.getElementById(scrollToId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+            }
+        }, 100); 
+    }
+    
+    // 5. Map lifecycle rules if switching to campusmap
+    if (tabId === 'campusmap') {
+        setTimeout(() => {
+            if (typeof cmtApplyCanvasTransformation === 'function') {
+                cmtApplyCanvasTransformation();
+            }
+        }, 50);
+    }
 }
-
 function changeAlumniTab(evt, panelId) {
   const panels = document.getElementsByClassName("dlsl-panel");
   for (let i = 0; i < panels.length; i++) {
