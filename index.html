@@ -137,7 +137,7 @@ color: var(--dlsl-green);
 
 @font-face {
             font-family: 'Visby CF Heavy';
-            src: url('fsp-demo-visby-cf-heavy-regular.otf') format('opentype');
+            src: url('fonts/fsp-demo-visby-cf-heavy-regular.otf') format('opentype');
         }
 @font-face {
             font-family: 'Livvic';
@@ -2087,7 +2087,7 @@ font-family: 'Visby CF Heavy';
         .cmt-placeholder-state-view h3 { color: #2c3e2b; margin-bottom: 8px; }
 
         .cmt-sidebar-content-scroll { display: flex; flex-direction: column; overflow-y: auto; }
-        .cmt-building-header-image-box { width: 100%; height: 160px; background-color: #ddd; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+        .cmt-building-header-image-box { width: 100%; height: 100%; background-color: #ddd; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
         .cmt-building-header-image-box img { width: 100%; height: 100%; object-fit: cover; }
         .cmt-details-body-wrapper { padding: 16px 0; }
 
@@ -2450,39 +2450,27 @@ color: #00687a;
                         <img src="https://static.vecteezy.com/system/resources/thumbnails/073/274/811/small/green-map-pin-location-marker-navigation-symbol-isolated-on-transparent-background-3d-illustration-modern-design-useful-for-travel-direction-and-gps-concepts-png.png" alt="Destination Target Star">
                     </div>
 
-                    <div id="pin-b1" class="cmt-pin-dot-node cmt-color-blue" style="top: 19.8%; left: 23.4%;" onclick="cmtFocusTargetBuilding('b1', 23.4, 19.8, this)"></div>
-                    <div id="pin-b2" class="cmt-pin-dot-node cmt-color-blue" style="top: 32.2%; left: 15.5%;" onclick="cmtFocusTargetBuilding('b2', 15.5, 32.2, this)"></div>
-                    <div id="pin-b3" class="cmt-pin-dot-node cmt-color-blue" style="top: 61.2%; left: 17.5%;" onclick="cmtFocusTargetBuilding('b3', 17.5, 61.2, this)"></div>
-                    <div id="pin-b4" class="cmt-pin-dot-node cmt-color-blue" style="top: 69.8%; left: 33.2%;" onclick="cmtFocusTargetBuilding('b4', 33.2, 69.8, this)"></div>
-                    <div id="pin-b5" class="cmt-pin-dot-node cmt-color-blue" style="top: 57.2%; left: 37.8%;" onclick="cmtFocusTargetBuilding('b5', 37.8, 57.2, this)"></div>
-                    <div id="pin-b6" class="cmt-pin-dot-node cmt-color-blue" style="top: 51.5%; left: 47.3%;" onclick="cmtFocusTargetBuilding('b6', 47.3, 51.5, this)"></div>
-                    <div id="pin-b7" class="cmt-pin-dot-node cmt-color-blue" style="top: 48.0%; left: 28.5%;" onclick="cmtFocusTargetBuilding('b7', 28.5, 48.0, this)"></div>
-                    <div id="pin-b8" class="cmt-pin-dot-node cmt-color-blue" style="top: 52.8%; left: 26.8%;" onclick="cmtFocusTargetBuilding('b8', 26.8, 52.8, this)"></div>
-                    <div id="pin-b9" class="cmt-pin-dot-node cmt-color-blue" style="top: 53.6%; left: 31.6%;" onclick="cmtFocusTargetBuilding('b9', 31.6, 53.6, this)"></div>
-                    <div id="pin-b10" class="cmt-pin-dot-node cmt-color-blue" style="top: 46.5%; left: 36.2%;" onclick="cmtFocusTargetBuilding('b10', 36.2, 46.5, this)"></div>
-                    <div id="pin-b11" class="cmt-pin-dot-node cmt-color-blue" style="top: 41.5%; left: 41.2%;" onclick="cmtFocusTargetBuilding('b11', 41.2, 41.5, this)"></div>
-                    <div id="pin-b12" class="cmt-pin-dot-node cmt-color-blue" style="top: 37.5%; left: 29.0%;" onclick="cmtFocusTargetBuilding('b12', 29.0, 37.5, this)"></div>
-                    <div id="pin-b13" class="cmt-pin-dot-node cmt-color-blue" style="top: 32.2%; left: 36.2%;" onclick="cmtFocusTargetBuilding('b13', 36.2, 32.2, this)"></div>
-                    <div id="pin-b14" class="cmt-pin-dot-node cmt-color-blue" style="top: 29.5%; left: 39.5%;" onclick="cmtFocusTargetBuilding('b14', 39.5, 29.5, this)"></div>
-                    <div id="pin-b16" class="cmt-pin-dot-node cmt-color-blue" style="top: 21.8%; left: 63.8%;" onclick="cmtFocusTargetBuilding('b16', 63.8, 21.8, this)"></div>
-                    <div id="pin-b17" class="cmt-pin-dot-node cmt-color-blue" style="top: 31.5%; left: 59.0%;" onclick="cmtFocusTargetBuilding('b17', 59.0, 31.5, this)"></div>
-                    <div id="pin-b18" class="cmt-pin-dot-node cmt-color-blue" style="top: 34.0%; left: 49.3%;" onclick="cmtFocusTargetBuilding('b18', 49.3, 34.0, this)"></div>
-                    <div id="pin-b19" class="cmt-pin-dot-node cmt-color-blue" style="top: 33.2%; left: 69.5%;" onclick="cmtFocusTargetBuilding('b19', 69.5, 33.2, this)"></div>
-                    <div id="pin-b20" class="cmt-pin-dot-node cmt-color-blue" style="top: 31.2%; left: 73.0%;" onclick="cmtFocusTargetBuilding('b20', 73.0, 31.2, this)"></div>
-                    <div id="pin-b21" class="cmt-pin-dot-node cmt-color-blue" style="top: 24.5%; left: 75.8%;" onclick="cmtFocusTargetBuilding('b21', 75.8, 24.5, this)"></div>
-                    <div id="pin-b22" class="cmt-pin-dot-node cmt-color-blue" style="top: 24.5%; left: 83.2%;" onclick="cmtFocusTargetBuilding('b22', 83.2, 24.5, this)"></div>
-                    <div id="pin-b23" class="cmt-pin-dot-node cmt-color-blue" style="top: 31.5%; left: 87.2%;" onclick="cmtFocusTargetBuilding('b23', 87.2, 31.5, this)"></div>
-                    <div id="pin-b24" class="cmt-pin-dot-node cmt-color-blue" style="top: 41.2%; left: 67.5%;" onclick="cmtFocusTargetBuilding('b24', 67.5, 41.2, this)"></div>
-                    <div id="pin-b25" class="cmt-pin-dot-node cmt-color-blue" style="top: 44.5%; left: 70.4%;" onclick="cmtFocusTargetBuilding('b25', 70.4, 44.5, this)"></div>
-                    <div id="pin-b26" class="cmt-pin-dot-node cmt-color-blue" style="top: 40.5%; left: 72.8%;" onclick="cmtFocusTargetBuilding('b26', 72.8, 40.5, this)"></div>
-                    <div id="pin-b27" class="cmt-pin-dot-node cmt-color-blue" style="top: 43.5%; left: 75.4%;" onclick="cmtFocusTargetBuilding('b27', 75.4, 43.5, this)"></div>
-                    <div id="pin-b28" class="cmt-pin-dot-node cmt-color-blue" style="top: 78.5%; left: 42.5%;" onclick="cmtFocusTargetBuilding('b28', 42.5, 78.5, this)"></div>
-                    <div id="pin-b29" class="cmt-pin-dot-node cmt-color-blue" style="top: 45.4%; left: 81.2%;" onclick="cmtFocusTargetBuilding('b29', 81.2, 45.4, this)"></div>
-                    <div id="pin-b30" class="cmt-pin-dot-node cmt-color-blue" style="top: 48.0%; left: 69.8%;" onclick="cmtFocusTargetBuilding('b30', 69.8, 48.0, this)"></div>
-                    <div id="pin-b31" class="cmt-pin-dot-node cmt-color-blue" style="top: 52.8%; left: 78.5%;" onclick="cmtFocusTargetBuilding('b31', 78.5, 52.8, this)"></div>
-                    <div id="pin-b32" class="cmt-pin-dot-node cmt-color-blue" style="top: 61.2%; left: 81.2%;" onclick="cmtFocusTargetBuilding('b32', 81.2, 61.2, this)"></div>
-                    <div id="pin-b33" class="cmt-pin-dot-node cmt-color-blue" style="top: 49.5%; left: 83.0%;" onclick="cmtFocusTargetBuilding('b33', 83.0, 49.5, this)"></div>
-                    
+                <div id="pin-b1" class="cmt-pin-dot-node cmt-color-blue" style="left: 14.8%; top: 32.5%;" onclick="cmtFocusTargetBuilding('b1', 14.8, 32.5, this)"></div>
+<div id="pin-b2" class="cmt-pin-dot-node cmt-color-blue" style="left: 24.0%; top: 20%;" onclick="cmtFocusTargetBuilding('b2', 24.0, 20, this)"></div>
+<div id="pin-b3" class="cmt-pin-dot-node cmt-color-blue" style="left: 33.5%; top: 35%;" onclick="cmtFocusTargetBuilding('b3', 33.5, 35, this)"></div>
+<div id="pin-b4" class="cmt-pin-dot-node cmt-color-blue" style="left: 28.2%; top: 47.0%;" onclick="cmtFocusTargetBuilding('b4', 28.2, 47.0, this)"></div>
+<div id="pin-b5" class="cmt-pin-dot-node cmt-color-blue" style="left: 32.8%; top: 51.5%;" onclick="cmtFocusTargetBuilding('b5', 32.8, 51.5, this)"></div>
+<div id="pin-b6" class="cmt-pin-dot-node cmt-color-blue" style="left: 21.5%; top: 59.5%;" onclick="cmtFocusTargetBuilding('b6', 21.5, 59.5, this)"></div>
+<div id="pin-b7" class="cmt-pin-dot-node cmt-color-blue" style="left: 36.8%; top: 56.5%;" onclick="cmtFocusTargetBuilding('b7', 36.8, 56.5, this)"></div>
+<div id="pin-b8" class="cmt-pin-dot-node cmt-color-blue" style="left: 36.5%; top: 46%;" onclick="cmtFocusTargetBuilding('b8', 36.5, 46, this)"></div>
+<div id="pin-b9" class="cmt-pin-dot-node cmt-color-blue" style="left: 45.5%; top: 50%;" onclick="cmtFocusTargetBuilding('b9', 45.5, 50, this)"></div>
+<div id="pin-b10" class="cmt-pin-dot-node cmt-color-blue" style="left: 40.8%; top: 36.8%;" onclick="cmtFocusTargetBuilding('b10', 40.8, 36.8, this)"></div>
+<div id="pin-b11" class="cmt-pin-dot-node cmt-color-blue" style="left: 43.2%; top: 28%;" onclick="cmtFocusTargetBuilding('b11', 43.2, 28, this)"></div>
+<div id="pin-b12" class="cmt-pin-dot-node cmt-color-blue" style="left: 49.5%; top: 33%;" onclick="cmtFocusTargetBuilding('b12', 49.5, 33, this)"></div>
+<div id="pin-b13" class="cmt-pin-dot-node cmt-color-blue" style="left: 59.0%; top: 31%;" onclick="cmtFocusTargetBuilding('b13', 59.0, 31, this)"></div>
+<div id="pin-b14" class="cmt-pin-dot-node cmt-color-blue" style="left: 71.8%; top: 49.5%;" onclick="cmtFocusTargetBuilding('b14', 71.8, 49.5, this)"></div>
+<div id="pin-b15" class="cmt-pin-dot-node cmt-color-blue" style="left: 78%; top: 40.5%;" onclick="cmtFocusTargetBuilding('b15', 78, 40.5, this)"></div>
+<div id="pin-b16" class="cmt-pin-dot-node cmt-color-blue" style="left: 79.2%; top: 44.5%;" onclick="cmtFocusTargetBuilding('b16', 79.2, 44.5, this)"></div>
+<div id="pin-b17" class="cmt-pin-dot-node cmt-color-blue" style="left: 73.5%; top: 37%;" onclick="cmtFocusTargetBuilding('b17', 73.5, 37, this)"></div>
+<div id="pin-b18" class="cmt-pin-dot-node cmt-color-blue" style="left: 72%; top: 32%;" onclick="cmtFocusTargetBuilding('b18', 72, 32, this)"></div>
+<div id="pin-b19" class="cmt-pin-dot-node cmt-color-blue" style="left: 65.5%; top: 20%;" onclick="cmtFocusTargetBuilding('b19', 65.5, 20, this)"></div>
+<div id="pin-b20" class="cmt-pin-dot-node cmt-color-blue" style="left: 77%; top: 20.5%;" onclick="cmtFocusTargetBuilding('b20', 77, 20.5, this)"></div>
+<div id="pin-b21" class="cmt-pin-dot-node cmt-color-blue" style="left: 81.8%; top: 23.5%;" onclick="cmtFocusTargetBuilding('b21', 81.8, 23.5, this)"></div>
                 </div>
             </div>
         </div>
@@ -2526,7 +2514,7 @@ color: #00687a;
 
             <div id="cmtSidebarContentId" class="cmt-sidebar-content-scroll cmt-utility-hidden">
                 <div class="cmt-building-header-image-box">
-                    <img id="cmtBuildingImgId" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><rect width='100%' height='100%' fill='%23607d8b'/></svg>" alt="Building Image">
+                    <img id="cmtBuildingImageId" src="" alt="Building Image" style="width:100%; height:100%; border-radius:8px;">
                 </div>
                 <div class="cmt-details-body-wrapper">
                     <span id="cmtBuildingTagId" class="cmt-tag-badge">Academic Zone</span>
@@ -3441,411 +3429,544 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 const cmtBuildingNamesConfig = {
-            b1: "Retreat Complex", b2: "Sports Complex", b3: "CBEAM", b4: "1ST GATE",
-            b5: "MB", b6: "Chez", b7: "JRF", b8: "SC", b9: "JRN", b10: "gzebo",
-            b11: "Diokno", b12: "ictc", b13: "sorry", b14: "Miguel Malvar",
-            b16: "Oval", b17: "Capilla De San Juan Bautista De La Salle", b18: "Sentrum",
-            b19: "Centen A", b20: "Centen B", b21: "Jaime Hilario (JH)", b22: "Brother Benilde (BB)",
-            b23: "idk", b24: "idk", b25: "idk", b26: "St. Brother Miguel Hall", b27: "idk",
-            b28: "idk", b29: "idk", b30: "Claro M. Recto (CMR)", b31: "idk", b32: "College Lobby",
-            b33: "idk"
-        };
+    b1: "Sports Complex", b2: "Retreat Complex", b3: "Gregorio Zara Hall", b4: "Jose Rizal El Fili (JRF)",
+    b5: "Jose Rizal Noli (JRN)", b6: "CBEAM Building", b7: "Mabini Building (MB)", b8: "Gazebos",
+    b9: "Chez Rafael", b10: "Sen. Jose W. Diokno", b11: "Br. Miguel Malvar", b12: "Sentrum",
+    b13: "Capilla", b14: "Claro M. Recto (CMR)", b15: "Hasyenda", b16: "St. Brother Miguel (BM)",
+    b17: "St. Mutien Marie (MM)", b18: "Centen A and B", b19: "Oval", b20: "St. Brother Jaime Hilario (JH)",
+    b21: "St. Brother Benilde (BB)"
+};
 
-        const cmtCampusDatabase = {};
-       
-        for (let i = 1; i <= 33; i++) {
-            const bId = `b${i}`;
-            if (i === 15) continue;
+// Detailed definitions for the sidebar UI (Departments removed)
+const cmtBuildingExtendedProfiles = {
+    b1: {
+        pic: "sportscomplex.png",
+        tag: "Nearest Gate: CBEAM Gate",
+        about: "The multi-purpose gymnasium at DLSL is designed to accommodate both Senior High School and College students, boasting a seating capacity of 1,500. The court area caters to 1,000 individuals, while the bleachers area accommodates an additional 500. This versatile facility serves as a dynamic space for various sports activities, events and gatherings, providing ample seating for spectators and participants."
+    },
+    b2: {
+        pic: "retreatcomplex.png",
+        tag: "Nearest Gate: CBEAM Gate",
+        about: "The Retreat Complex is the main formation center of DLSL and was designed by Arch. Antonio Gutierrez Jr. and Arch. Barry Del Rosario. It comprises a chapel, two mess halls and four cabanas. The complex features three session halls, a one-story dormitory, a mess hall, comfort rooms, an open activity area, and a chapel, serving as a venue for various formation activities for the 11,000 DLSL population. The structures prioritize eco-friendliness by using less electricity and paint. The main buildings are open-air, maximizing natural light during the day. Indigenous materials like bamboo and sawali are integrated, reflecting the campus' commitment to environmental care and nurturance."
+    },
+    b3: {
+        pic: "gregorio.png",
+        tag: "", 
+        about: "The 2-storey main IT building is a specialized DLSL facility equipped with two office spaces, one conference room and a dedicated Computer Laboratory. This purpose-built structure serves as a central hub for information technology-related activities, providing a conducive environment for administrative work, meetings and hands-on learning experiences for students in the Computer Laboratory."
+    },
+    b4: {
+        pic: "jr.png",
+        tag: "Nearest Gate: CBEAM Gate",
+        about: "The Noli Me Tangere and El Filibusterismo Building is a distinguished 4-storey twin structure, designed as a dedicated learning area for Senior High School (SHS) students. Comprising 15 classrooms, each with a corresponding office space, along with four regular office spaces, the building provides a conducive environment for academic pursuits. Named after the iconic novels of National Hero Dr. Jose Rizal, the building serves as the home for SHS classrooms. It hosts the offices of the SHS Assistant Principal and SHS Moderators. This significant facility was inaugurated in May 1999, marking a milestone in the institution's commitment to quality education."
+    },
+    b5: {
+        pic: "jr.png",
+        tag: "Nearest Gate: CBEAM Gate",
+        about: "The Noli Me Tangere and El Filibusterismo Building is a distinguished 4-storey twin structure, designed as a dedicated learning area for Senior High School (SHS) students. Comprising 15 classrooms, each with a corresponding office space, along with four regular office spaces, the building provides a conducive environment for academic pursuits. Named after the iconic novels of National Hero Dr. Jose Rizal, the building serves as the home for SHS classrooms. It hosts the offices of the SHS Assistant Principal and SHS Moderators. This significant facility was inaugurated in May 1999, marking a milestone in the institution's commitment to quality education."
+    },
+    b6: {
+        pic: "cbeam.png",
+        tag: "Nearest Gate: CBEAM Gate",
+        about: "The CBEAM Hall is strategically designed, comprising four classrooms on the first floor, eight on both the second and third floors, and four additional classrooms on the fourth floor. This purpose-built facility serves as a dedicated space for Business, Accountancy and Graduate School programs. Positioned between Mabini Hall and the Brothers Community residence, it acts as a central hub, fostering a conducive environment for students pursuing excellence in these fields, further enhancing the collaborative and learning experience within the college community."
+    },
+    b7: {
+        pic: "mabini.png",
+        tag: "Nearest Gate: CBEAM Gate",
+        about: "The 6-storey Multi-Purpose Building, designed by Br. Dindo Maralit FSC, serves the College of Nursing and the College of Information Technology and Engineering. Housing 27 classrooms, 4 Nursing labs, 8 Science labs, 4 Engineering labs, an auditorium (155 seats), and an amphitheater (96 seats), it features the College of Law’s moot court, SMART wireless technology lab, Mac lab, and offices for College Deans. Notable for its rock garden, spiral stairs, and roofed deck with a view of Lipa City, it is a dynamic hub for academic and technological pursuits, fostering a conducive learning environment."
+    },
+    b8: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b9: {
+        pic: "chezrafael.png",
+        tag: "Nearest Gate: Front Gate",
+        about: "The 4-storey hotel and café at DLSL are versatile facilities for HRM, Tourism, and Culinary Arts students. It encompasses four kitchen labs, one dining area, one canteen, two storage rooms, eight hotel rooms, a Spa area on the 4th floor, two conference rooms, and three office spaces. This comprehensive setup provides hands-on learning experiences for students in various hospitality and culinary disciplines, offering a realistic environment to hone their skills and prepare for their future careers."
+    },
+    b10: {
+        pic: "diokno.png",
+        tag: "Nearest Gate: Front Gate",
+        about: "The 5-storey main administrative building, formerly the Management Training Development Center (MTDC), is a central hub featuring 15 office spaces, one boardroom, four conference rooms, and an E-library on the lower floor. Additionally, the ground floor hosts three commercial spaces. The building includes a 175-seat auditorium on the 5th floor. This structure is home to the Office of the President, Vice Chancellors and C-Suites, Executive Offices, Administrative Offices, and the Learning Resource Center, providing a cohesive space for crucial administrative functions and academic resources."
+    },
+    b11: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b12: {
+        pic: "sentrum.png",
+        tag: "Nearest Gate: Front Gate",
+        about: "The multi-purpose covered gymnasium at DLSL, named SAMAHAN AT TIPANAN NG MGA MAG-AARAL or SENTRUM, boasts a seating capacity of 3,400 and features state-of-the-art AV equipment and a LED Wall. Under the leadership of former President Br. Rafael S. Donato FSC, SENTRUM was inaugurated in December 1995. It is a cultural and sports hub in Batangas, envisioned to host various events. This multi-purpose facility, equipped with NBA standard collapsible goals and electronic scoreboards, is a testament to DLSL's commitment to providing top-notch facilities for its students and the community."
+    },
+    b13: {
+        pic: "capilla.png",
+        tag: "Nearest Gate: College Lobby",
+        about: "Designed by Architect Joselito Gutierrez Jr., the Capilla de San Juan Bautista de La Salle stands majestically at the heart of De La Salle Lipa's campus. With dimensions of 38.30 meters in length and 22.50 meters in width, this sacred space offers a serene venue for worship and a tranquil spot to bask in the cool Lipa breeze. Additionally, the Capilla, accommodating 544 individuals, hosts regular masses, contributing to the spiritual richness that enhances the holistic development of the campus community and fosters a sense of unity and tranquility."
+    },
+    b14: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b15: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b16: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b17: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b18: {
+        pic: "centen.png",
+        tag: "Nearest Gate: College Lobbg or Side Gate",
+        about: "Nestled within the DLSL campus, the multi-purpose covered gymnasium is a dynamic hub for sports and events. Boasting three versatile courts, the facility caters to basketball and volleyball enthusiasts, with the flexibility to host various activities. Although primarily designed for sports, the gymnasium transforms into a vibrant venue for campus events, further enhancing its utility. The thoughtfully designed seating capacity of 300, divided into 100 seats for each court, ensures an immersive experience for spectators. This versatile space exemplifies DLSL's commitment to fostering a vibrant and inclusive campus culture."
+    },
+    b19: {
+        pic: "oval.png",
+        tag: "Nearest Gate: Side Gate",
+        about: "The expansive oval field at DLSL is a multifaceted sports facility designed to accommodate various athletic activities. Equipped with top-notch track and field tracks, the field serves as a perfect venue for sprinting, relay races and other track events. The softball diamond, meticulously laid out, invites players to engage in thrilling softball matches. The well-maintained football field provides a dynamic space for intense soccer games. This versatile sports complex caters to the diverse interests of athletes, creating an environment conducive to both competitive sports and recreational activities."
+    },
+    b20: {
+        pic: "",
+        tag: "",
+        about: ""
+    },
+    b21: {
+        pic: "bb.png",
+        tag: "Nearest Gate: Side Gate",
+        about: "Completed in June 2011, the BB Hall is a three-story building with a roof deck designed for Grade School pupils from Nursery to Grade 6. The structure encompasses ten office spaces, 39 classrooms, 2 Computer Labs, 1 Robolab, 1 Speech Lab, 2 Multi-purpose Rooms, 1 Playroom, 3 Conference Rooms, 1 Internet Room, and a ground-floor Canteen. This comprehensive facility houses various offices and rooms, including preschool, grade school, assistant principal, guidance center, PAASCU, grade school academic units, Bakas Publication, laboratories, grade school library, and the canteen. Br. Dindo Maralit FSC, an alumnus and former DLSL Services Director, designed the BB Hall."
+    }
+};
 
-            cmtCampusDatabase[bId] = {
-                pctX: 0, pctY: 0, pinId: `pin-${bId}`,
-                name: cmtBuildingNamesConfig[bId], 
-                tag: "dlsl",
-                about: "qng gus2 nyo lg piru wag n eme",
-                departments: ["qng gus2 nyo lg piru wag n eme"]
-            };
-        }
+const cmtCampusDatabase = {};
 
-        const cmtCoordinateDataset = {
-            b1: [23.4, 19.8], b2: [15.5, 32.2], b3: [17.5, 61.2], b4: [33.2, 69.8],
-            b5: [37.8, 57.2], b6: [47.3, 51.5], b7: [28.5, 48.0], b8: [26.8, 52.8],
-            b9: [31.6, 53.6], b10: [36.2, 46.5], b11: [41.2, 41.5], b12: [29.0, 37.5],
-            b13: [36.2, 32.2], b14: [39.5, 29.5], b16: [63.8, 21.8],
-            b17: [59.0, 31.5], b18: [49.3, 34.0], b19: [69.5, 33.2], b20: [73.0, 31.2],
-            b21: [75.8, 24.5], b22: [83.2, 24.5], b23: [87.2, 31.5], b24: [67.5, 41.2],
-            b25: [70.4, 44.5], b26: [72.8, 40.5], b27: [75.4, 43.5], b28: [42.5, 78.5],
-            b29: [81.2, 45.4], b30: [69.8, 48.0], b31: [78.5, 52.8], b32: [81.2, 61.2],
-            b33: [83.0, 49.5]
-        };
-        for (const [key, coords] of Object.entries(cmtCoordinateDataset)) {
+// Clean database generation loop mapping custom metadata to your 21 active sidebar profiles
+for (let i = 1; i <= 21; i++) {
+    const bId = `b${i}`;
+    const profile = cmtBuildingExtendedProfiles[bId];
+    
+    cmtCampusDatabase[bId] = {
+        pctX: 0,
+        pctY: 0,
+        pinId: `pin-${bId}`,
+        name: cmtBuildingNamesConfig[bId], 
+        pic: profile ? profile.pic : "default.png",
+        tag: profile ? profile.tag : "DLSL Campus",
+        about: profile ? profile.about : "Information profile details regarding this campus structure."
+    };
+}
+
+
+const cmtCoordinateDataset = {
+    b1: [14.8, 32.5],   // Sports Complex
+    b2: [24.0, 20],   // Retreat Complex
+    b3: [33.5, 35],   // Gregorio Zara Hall
+    b4: [28.2, 47.0],   // Jose Rizal El Fili (JRF)
+    b5: [32.8, 51.5],   // Jose Rizal Noli (JRN)
+    b6: [21.5, 59.5],   // CBEAM Building
+    b7: [36.8, 56.5],   // Mabini Building (MB - Dark Green Pin)
+    b8: [34.5, 43.5],   // Gazebos
+    b9: [44.8, 48.2],   // Chez Rafael
+    b10: [40.8, 36.8],  // Sen. Jose W. Diokno
+    b11: [43.2, 28],  // Br. Miguel Malvar
+    b12: [49.5, 33],  // Sentrum
+    b13: [59.0, 31],  // Capilla
+    b14: [71.8, 49.5],  // Claro M. Recto (CMR)
+    b15: [78, 40.5],  // Hasyenda
+    b16: [79.2, 44.5],  // St. Brother Miguel (BM)
+    b17: [73.5, 37],  // St. Mutien Marie (MM)
+    b18: [72, 32],  // Centen A and B
+    b19: [65.5, 20],  // Oval
+    b20: [77, 20.5],  // St. Brother Jaime Hilario (JH)
+    b21: [81.8, 23.5]   // St. Brother Benilde (BB)
+};
+// Map structural layout arrays into active database properties
+for (const [key, coords] of Object.entries(cmtCoordinateDataset)) {
+    if (cmtCampusDatabase[key]) {
+        cmtCampusDatabase[key].pctX = coords[0];
+        cmtCampusDatabase[key].pctY = coords[1];
+    }
+}
+
+// Retaining specific admin detail structure overridden for MB (Mabini Building is now b7)
+cmtCampusDatabase.b7.tag = "Administrative";
+cmtCampusDatabase.b7.about = "The Administration Building serves as the operational nerve center of De La Salle Lipa. It houses the offices of the President, Vice Chancellors, and key administrative departments responsible for the university's governance and strategic direction.";
+cmtCampusDatabase.b7.departments = ["Office of the President", "Office of the Vice Chancellor for Academics", "Human Resources"];
+
+window.addEventListener('DOMContentLoaded', () => {
+    const startSelect = document.getElementById('cmtStartLocationId');
+    const endSelect = document.getElementById('cmtEndLocationId');
+    
+    if (endSelect && startSelect) {
+        endSelect.innerHTML = '<option value="" disabled selected>Select building...</option>';
+        startSelect.innerHTML = '<option value="" disabled selected>Select building...</option>';
+        
+        for (let i = 1; i <= 21; i++) {
+            const key = `b${i}`;
             if (cmtCampusDatabase[key]) {
-                cmtCampusDatabase[key].pctX = coords[0];
-                cmtCampusDatabase[key].pctY = coords[1];
+                const name = cmtCampusDatabase[key].name;
+                
+                const optionEnd = document.createElement('option');
+                optionEnd.value = key;
+                optionEnd.textContent = name;
+                endSelect.appendChild(optionEnd);
+
+                const optionStart = document.createElement('option');
+                optionStart.value = key;
+                optionStart.textContent = name;
+                startSelect.appendChild(optionStart);
             }
         }
+    }
+    cmtApplyCanvasTransformation();
+});
 
-        cmtCampusDatabase.b5.tag = "Administrative";
-        cmtCampusDatabase.b5.about = "The Administration Building serves as the operational nerve center of De La Salle Lipa. It houses the offices of the President, Vice Chancellors, and key administrative departments responsible for the university's governance and strategic direction.";
-        cmtCampusDatabase.b5.departments = ["Office of the President", "Office of the Vice Chancellor for Academics", "Human Resources"];
+const cmtCanvasDOM = document.getElementById('cmtMapCanvasId');
+const cmtViewportDOM = document.getElementById('cmtViewportId');
+const cmtCampusImgDOM = document.getElementById('cmtCampusImgId');
+const cmtVisualPathDOM = document.getElementById('cmtVisualPathId');
+const cmtResetBtnDOM = document.getElementById('cmtResetBtnId');
+const cmtUserDotDOM = document.getElementById('cmtUserLocationDotId');
+const cmtDestStarDOM = document.getElementById('cmtDestinationStarId');
+const cmtSidebarDOM = document.getElementById('cmtInfoSidebarId');
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const startSelect = document.getElementById('cmtStartLocationId');
-            const endSelect = document.getElementById('cmtEndLocationId');
-            
-            if (endSelect && startSelect) {
-                endSelect.innerHTML = '<option value="" disabled selected>Select building...</option>';
-                startSelect.innerHTML = '<option value="" disabled selected>Select building...</option>';
-                
-                for (let i = 1; i <= 33; i++) {
-                    if (i === 15) continue;
-                   
-                    const key = `b${i}`;
-                    if (cmtCampusDatabase[key]) {
-                        const name = cmtCampusDatabase[key].name;
-                        
-                        const optionEnd = document.createElement('option');
-                        optionEnd.value = key;
-                        optionEnd.textContent = name;
-                        endSelect.appendChild(optionEnd);
+let cmtUserCurrentPos = { pctX: 41.5, pctY: 68.0 }; // Default initial position set to MB (b7)
+let cmtCurrentEndKey = null;
+let cmtIsTrackingMode = false;
+let cmtActiveBuildingKey = null;
 
-                        const optionStart = document.createElement('option');
-                        optionStart.value = key;
-                        optionStart.textContent = name;
-                        startSelect.appendChild(optionStart);
-                    }
-                }
-            }
-            cmtApplyCanvasTransformation();
-        });
+let cmtCurrentZoomLevel = 1;
+let cmtPanOffsetX = 0;
+let cmtPanOffsetY = 0;
+let cmtIsDraggingActive = false;
+let cmtDragStartX = 0, cmtDragStartY = 0;
+let cmtInitialPinchDistance = 0;
+let cmtInitialPinchZoom = 1;
 
-        const cmtCanvasDOM = document.getElementById('cmtMapCanvasId');
-        const cmtViewportDOM = document.getElementById('cmtViewportId');
-        const cmtCampusImgDOM = document.getElementById('cmtCampusImgId');
-        const cmtVisualPathDOM = document.getElementById('cmtVisualPathId');
-        const cmtResetBtnDOM = document.getElementById('cmtResetBtnId');
-        const cmtUserDotDOM = document.getElementById('cmtUserLocationDotId');
-        const cmtDestStarDOM = document.getElementById('cmtDestinationStarId');
-        const cmtSidebarDOM = document.getElementById('cmtInfoSidebarId');
-        
-        let cmtUserCurrentPos = { pctX: 37.8, pctY: 57.2 };
-        let cmtCurrentEndKey = null;
-        let cmtIsTrackingMode = false;
-        let cmtActiveBuildingKey = null;
-        
-        let cmtCurrentZoomLevel = 1;
-        let cmtPanOffsetX = 0;
-        let cmtPanOffsetY = 0;
-        let cmtIsDraggingActive = false;
-        let cmtDragStartX = 0, cmtDragStartY = 0;
-        let cmtInitialPinchDistance = 0;
-        let cmtInitialPinchZoom = 1;
+cmtViewportDOM.addEventListener('mousedown', cmtStartDragGesture);
+cmtViewportDOM.addEventListener('mousemove', cmtProcessDragMove);
+window.addEventListener('mouseup', cmtEndDragGesture);
 
-        cmtViewportDOM.addEventListener('mousedown', cmtStartDragGesture);
-        cmtViewportDOM.addEventListener('mousemove', cmtProcessDragMove);
-        window.addEventListener('mouseup', cmtEndDragGesture);
+cmtViewportDOM.addEventListener('touchstart', cmtTouchStartHandler, { passive: false });
+cmtViewportDOM.addEventListener('touchmove', cmtTouchMoveHandler, { passive: false });
+window.addEventListener('touchend', cmtEndDragGesture);
+cmtViewportDOM.addEventListener('wheel', cmtMouseWheelZoomHandler, { passive: false });
 
-        cmtViewportDOM.addEventListener('touchstart', cmtTouchStartHandler, { passive: false });
-        cmtViewportDOM.addEventListener('touchmove', cmtTouchMoveHandler, { passive: false });
-        window.addEventListener('touchend', cmtEndDragGesture);
-        cmtViewportDOM.addEventListener('wheel', cmtMouseWheelZoomHandler, { passive: false });
-
-       function cmtToggleMobileSidebarView() {
+function cmtToggleMobileSidebarView() {
     const mobileSidebarTarget = document.getElementById('cmtInfoSidebarId');
     if (window.innerWidth <= 900 && mobileSidebarTarget) {
         mobileSidebarTarget.classList.toggle('cmt-state-expanded');
     }
 }
 
-        function cmtStartDragGesture(e) {
-            cmtIsDraggingActive = true;
-            cmtCanvasDOM.classList.add('cmt-state-dragging');
-            cmtDragStartX = e.clientX - cmtPanOffsetX;
-            cmtDragStartY = e.clientY - cmtPanOffsetY;
-        }
+function cmtStartDragGesture(e) {
+    cmtIsDraggingActive = true;
+    cmtCanvasDOM.classList.add('cmt-state-dragging');
+    cmtDragStartX = e.clientX - cmtPanOffsetX;
+    cmtDragStartY = e.clientY - cmtPanOffsetY;
+}
 
-        function cmtProcessDragMove(e) {
-            if (!cmtIsDraggingActive) return;
-            if (e.preventDefault) e.preventDefault();
+function cmtProcessDragMove(e) {
+    if (!cmtIsDraggingActive) return;
+    if (e.preventDefault) e.preventDefault();
+    
+    cmtPanOffsetX = e.clientX - cmtDragStartX;
+    cmtPanOffsetY = e.clientY - cmtDragStartY;
+    
+    cmtApplyCanvasTransformation();
+}
+
+function cmtEndDragGesture() {
+    cmtIsDraggingActive = false;
+    cmtInitialPinchDistance = 0;
+    cmtCanvasDOM.classList.remove('cmt-state-dragging');
+}
+
+function cmtTouchStartHandler(e) {
+    if (e.touches.length === 1) {
+        cmtIsDraggingActive = true;
+        cmtCanvasDOM.classList.add('cmt-state-dragging');
+        cmtDragStartX = e.touches[0].clientX - cmtPanOffsetX;
+        cmtDragStartY = e.touches[0].clientY - cmtPanOffsetY;
+    } else if (e.touches.length === 2) {
+        cmtIsDraggingActive = false;
+        cmtCanvasDOM.classList.add('cmt-state-dragging');
+        cmtInitialPinchDistance = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+        );
+        cmtInitialPinchZoom = cmtCurrentZoomLevel;
+    }
+}
+
+function cmtTouchMoveHandler(e) {
+    if (e.preventDefault) e.preventDefault();
+    if (e.touches.length === 1 && cmtIsDraggingActive) {
+        cmtPanOffsetX = e.touches[0].clientX - cmtDragStartX;
+        cmtPanOffsetY = e.touches[0].clientY - cmtDragStartY;
+        cmtApplyCanvasTransformation();
+    } else if (e.touches.length === 2) {
+        const currentDistance = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+        );
+        if (cmtInitialPinchDistance > 0) {
+            const pinchScale = currentDistance / cmtInitialPinchDistance;
+            let targetZoom = cmtInitialPinchZoom * pinchScale;
             
-            cmtPanOffsetX = e.clientX - cmtDragStartX;
-            cmtPanOffsetY = e.clientY - cmtDragStartY;
-            
-            cmtApplyCanvasTransformation();
-        }
-
-        function cmtEndDragGesture() {
-            cmtIsDraggingActive = false;
-            cmtInitialPinchDistance = 0;
-            cmtCanvasDOM.classList.remove('cmt-state-dragging');
-        }
-
-        function cmtTouchStartHandler(e) {
-            if (e.touches.length === 1) {
-                cmtIsDraggingActive = true;
-                cmtCanvasDOM.classList.add('cmt-state-dragging');
-                cmtDragStartX = e.touches[0].clientX - cmtPanOffsetX;
-                cmtDragStartY = e.touches[0].clientY - cmtPanOffsetY;
-            } else if (e.touches.length === 2) {
-                cmtIsDraggingActive = false;
-                cmtCanvasDOM.classList.add('cmt-state-dragging');
-                cmtInitialPinchDistance = Math.hypot(
-                    e.touches[0].clientX - e.touches[1].clientX,
-                    e.touches[0].clientY - e.touches[1].clientY
-                );
-                cmtInitialPinchZoom = cmtCurrentZoomLevel;
-            }
-        }
-
-        function cmtTouchMoveHandler(e) {
-            if (e.preventDefault) e.preventDefault();
-            if (e.touches.length === 1 && cmtIsDraggingActive) {
-                cmtPanOffsetX = e.touches[0].clientX - cmtDragStartX;
-                cmtPanOffsetY = e.touches[0].clientY - cmtDragStartY;
-                cmtApplyCanvasTransformation();
-            } else if (e.touches.length === 2) {
-                const currentDistance = Math.hypot(
-                    e.touches[0].clientX - e.touches[1].clientX,
-                    e.touches[0].clientY - e.touches[1].clientY
-                );
-                if (cmtInitialPinchDistance > 0) {
-                    const pinchScale = currentDistance / cmtInitialPinchDistance;
-                    let targetZoom = cmtInitialPinchZoom * pinchScale;
-                    
-                    if (targetZoom < 0.8) targetZoom = 0.8;
-                    if (targetZoom > 5) targetZoom = 5;
-                    const touchCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
-                    const touchCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
-                    cmtZoomToCoordinatesPoint(touchCenterX, touchCenterY, targetZoom);
-                }
-            }
-        }
-
-        function cmtMouseWheelZoomHandler(e) {
-            e.preventDefault();
-            const zoomIntensity = 0.12;
-            let targetZoom = cmtCurrentZoomLevel + (e.deltaY < 0 ? zoomIntensity : -zoomIntensity);
             if (targetZoom < 0.8) targetZoom = 0.8;
             if (targetZoom > 5) targetZoom = 5;
-
-            cmtZoomToCoordinatesPoint(e.clientX, e.clientY, targetZoom);
+            const touchCenterX = (e.touches[0].clientX + e.touches[1].clientX) / 2;
+            const touchCenterY = (e.touches[0].clientY + e.touches[1].clientY) / 2;
+            cmtZoomToCoordinatesPoint(touchCenterX, touchCenterY, targetZoom);
         }
+    }
+}
 
-        function cmtZoomToCoordinatesPoint(clientX, clientY, targetZoom) {
-            const viewportRect = cmtViewportDOM.getBoundingClientRect();
-            const mouseX = clientX - viewportRect.left;
-            const mouseY = clientY - viewportRect.top;
-            cmtPanOffsetX = mouseX - (mouseX - cmtPanOffsetX) * (targetZoom / cmtCurrentZoomLevel);
-            cmtPanOffsetY = mouseY - (mouseY - cmtPanOffsetY) * (targetZoom / cmtCurrentZoomLevel);
-            cmtCurrentZoomLevel = targetZoom;
+function cmtMouseWheelZoomHandler(e) {
+    e.preventDefault();
+    const zoomIntensity = 0.12;
+    let targetZoom = cmtCurrentZoomLevel + (e.deltaY < 0 ? zoomIntensity : -zoomIntensity);
+    if (targetZoom < 0.8) targetZoom = 0.8;
+    if (targetZoom > 5) targetZoom = 5;
 
-            cmtApplyCanvasTransformation();
-            cmtEvaluateResetButtonDisplay();
+    cmtZoomToCoordinatesPoint(e.clientX, e.clientY, targetZoom);
+}
+
+function cmtZoomToCoordinatesPoint(clientX, clientY, targetZoom) {
+    const viewportRect = cmtViewportDOM.getBoundingClientRect();
+    const mouseX = clientX - viewportRect.left;
+    const mouseY = clientY - viewportRect.top;
+    cmtPanOffsetX = mouseX - (mouseX - cmtPanOffsetX) * (targetZoom / cmtCurrentZoomLevel);
+    cmtPanOffsetY = mouseY - (mouseY - cmtPanOffsetY) * (targetZoom / cmtCurrentZoomLevel);
+    cmtCurrentZoomLevel = targetZoom;
+
+    cmtApplyCanvasTransformation();
+    cmtEvaluateResetButtonDisplay();
+}
+
+function cmtApplyCanvasTransformation() {
+    cmtCanvasDOM.style.transform = `translate(${cmtPanOffsetX}px, ${cmtPanOffsetY}px) scale(${cmtCurrentZoomLevel})`;
+    document.body.style.setProperty('--cmt-map-scale-var', cmtCurrentZoomLevel);
+}
+
+function cmtEvaluateResetButtonDisplay() {
+    if (cmtCurrentZoomLevel !== 1 || cmtPanOffsetX !== 0 || cmtPanOffsetY !== 0 || cmtIsTrackingMode) {
+        if (!cmtIsTrackingMode) {
+            cmtResetBtnDOM.innerText = "🔍 Zoom Out Entire Map";
+            cmtResetBtnDOM.className = "cmt-reset-btn-control";
         }
+        cmtResetBtnDOM.classList.remove('cmt-utility-hidden');
+    } else {
+        cmtResetBtnDOM.classList.add('cmt-utility-hidden');
+    }
+}
 
-        function cmtApplyCanvasTransformation() {
-            cmtCanvasDOM.style.transform = `translate(${cmtPanOffsetX}px, ${cmtPanOffsetY}px) scale(${cmtCurrentZoomLevel})`;
-            document.body.style.setProperty('--cmt-map-scale-var', cmtCurrentZoomLevel);
-        }
+function cmtHandleStartLocationChange() {
+    const startVal = document.getElementById('cmtStartLocationId').value;
+    if (!startVal) return;
 
-        function cmtEvaluateResetButtonDisplay() {
-            if (cmtCurrentZoomLevel !== 1 || cmtPanOffsetX !== 0 || cmtPanOffsetY !== 0 || cmtIsTrackingMode) {
-                if (!cmtIsTrackingMode) {
-                    cmtResetBtnDOM.innerText = "🔍 Zoom Out Entire Map";
-                    cmtResetBtnDOM.className = "cmt-reset-btn-control";
-                }
-                cmtResetBtnDOM.classList.remove('cmt-utility-hidden');
-            } else {
-                cmtResetBtnDOM.classList.add('cmt-utility-hidden');
-            }
-        }
+    const selectedBuilding = cmtCampusDatabase[startVal];
+    if (selectedBuilding) {
+        cmtUserCurrentPos.pctX = selectedBuilding.pctX;
+        cmtUserCurrentPos.pctY = selectedBuilding.pctY;
+        
+        cmtUserDotDOM.style.left = `${cmtUserCurrentPos.pctX}%`;
+        cmtUserDotDOM.style.top = `${cmtUserCurrentPos.pctY}%`;
+        cmtUserDotDOM.classList.remove('cmt-utility-hidden');
+    }
 
-        function cmtHandleStartLocationChange() {
-            const startVal = document.getElementById('cmtStartLocationId').value;
-            if (!startVal) return;
+    if (cmtIsTrackingMode && cmtCurrentEndKey) {
+        cmtRecomputeVectorRouteLine();
+    }
+}
 
-            const selectedBuilding = cmtCampusDatabase[startVal];
-            if (selectedBuilding) {
-                cmtUserCurrentPos.pctX = selectedBuilding.pctX;
-                cmtUserCurrentPos.pctY = selectedBuilding.pctY;
-                
-                cmtUserDotDOM.style.left = `${cmtUserCurrentPos.pctX}%`;
-                cmtUserDotDOM.style.top = `${cmtUserCurrentPos.pctY}%`;
-                cmtUserDotDOM.classList.remove('cmt-utility-hidden');
-            }
+function cmtHandleEndDropdownChange() {
+    const end = document.getElementById('cmtEndLocationId').value;
+    if (!end) return;
 
-            if (cmtIsTrackingMode && cmtCurrentEndKey) {
-                cmtRecomputeVectorRouteLine();
-            }
-        }
-
-        function cmtHandleEndDropdownChange() {
-            const end = document.getElementById('cmtEndLocationId').value;
-            if (!end) return;
-
-            const destinationNode = cmtCampusDatabase[end];
-            if (destinationNode) {
-                if (cmtIsTrackingMode) {
-                    cmtVisualPathDOM.setAttribute('d', '');
-                    cmtDestStarDOM.classList.add('cmt-utility-hidden');
-                    document.getElementById('cmtDirectionsCardId').classList.add('cmt-utility-hidden');
-                    cmtIsTrackingMode = false;
-                }
-                cmtFocusTargetBuilding(end, destinationNode.pctX, destinationNode.pctY, document.getElementById(destinationNode.pinId));
-            }
-        }
-
-        function cmtFocusTargetBuilding(key, pctX, pctY, dotElement) {
-            if (cmtActiveBuildingKey === key) {
-                cmtResetGlobalView();
-                return;
-            }
-
-            const data = cmtCampusDatabase[key];
-            if (!data) return;
-            cmtActiveBuildingKey = key;
-
-            document.querySelectorAll('.cmt-pin-dot-node').forEach(p => p.classList.remove('cmt-state-active'));
-            if (dotElement) dotElement.classList.add('cmt-state-active');
-
-            cmtCanvasDOM.classList.remove('cmt-state-dragging'); 
-
-            cmtCurrentZoomLevel = 2.8; 
-            const wrapperWidth = cmtCampusImgDOM.clientWidth;
-            const wrapperHeight = cmtCampusImgDOM.clientHeight;
-            const viewportRect = cmtViewportDOM.getBoundingClientRect();
-
-            const targetX = (pctX / 100) * wrapperWidth;
-            const targetY = (pctY / 100) * wrapperHeight;
-
-            cmtPanOffsetX = (viewportRect.width / 2) - (targetX * cmtCurrentZoomLevel);
-            cmtPanOffsetY = (viewportRect.height / 2) - (targetY * cmtCurrentZoomLevel);
-
-            cmtApplyCanvasTransformation();
-            if (!cmtIsTrackingMode) {
-                cmtResetBtnDOM.innerText = "🔍 Zoom Out Entire Map";
-                cmtResetBtnDOM.className = "cmt-reset-btn-control";
-                cmtResetBtnDOM.classList.remove('cmt-utility-hidden');
-            }
-
-            cmtPopulateSidebarDataDetails(data);
-        }
-
-        function cmtEngageLiveTrackingSystem() {
-            const start = document.getElementById('cmtStartLocationId').value;
-            const end = document.getElementById('cmtEndLocationId').value;
-            
-            if (!start) {
-                alert("Pili ka muna kung saan ka magsisimula te!");
-                document.getElementById('cmtEndLocationId').value = "";
-                return;
-            }
-            if (!end) return;
-            cmtCurrentEndKey = end;
-            cmtIsTrackingMode = true;
-
-            document.querySelectorAll('.cmt-pin-dot-node').forEach(p => p.classList.remove('cmt-state-active'));
-            const destinationNode = cmtCampusDatabase[end];
-            if (destinationNode) {
-                const nodeEl = document.getElementById(destinationNode.pinId);
-                if (nodeEl) nodeEl.classList.add('cmt-state-active');
-                
-                cmtDestStarDOM.style.left = `${destinationNode.pctX}%`;
-                cmtDestStarDOM.style.top = `${destinationNode.pctY}%`;
-                cmtDestStarDOM.classList.remove('cmt-utility-hidden');
-            }
-
-            document.getElementById('cmtDirectionsCardId').classList.remove('cmt-utility-hidden');
-            
-            cmtRecomputeVectorRouteLine();
-            
-            cmtCurrentZoomLevel = 1;
-            cmtPanOffsetX = 0;
-            cmtPanOffsetY = 0;
-            cmtApplyCanvasTransformation();
-
-            cmtResetBtnDOM.innerText = "❌ Clear Route Path";
-            cmtResetBtnDOM.className = "cmt-reset-btn-control cmt-modifier-danger";
-            cmtResetBtnDOM.classList.remove('cmt-utility-hidden');
-
-            if (destinationNode) cmtPopulateSidebarDataDetails(destinationNode);
-        }
-
-        function cmtRecomputeVectorRouteLine() {
-            if (!cmtIsTrackingMode || !cmtCurrentEndKey) return;
-            const destNode = cmtCampusDatabase[cmtCurrentEndKey];
-            const mapWidth = cmtCampusImgDOM.clientWidth;
-            const mapHeight = cmtCampusImgDOM.clientHeight;
-
-            const x1 = (cmtUserCurrentPos.pctX / 100) * mapWidth;
-            const y1 = (cmtUserCurrentPos.pctY / 100) * mapHeight;
-            const x2 = (destNode.pctX / 100) * mapWidth;
-            const y2 = (destNode.pctY / 100) * mapHeight;
-
-            cmtVisualPathDOM.setAttribute('d', `M ${x1} ${y1} L ${x2} ${y2}`);
-            const distancePercent = Math.sqrt(Math.pow(destNode.pctX - cmtUserCurrentPos.pctX, 2) + Math.pow(destNode.pctY - cmtUserCurrentPos.pctY, 2));
-            const approximateMeters = Math.round(distancePercent * 6.1);
-            const textEl = document.getElementById('cmtLiveDistanceTextId');
-            if (approximateMeters <= 5) {
-                textEl.innerHTML = "<strong>Arrival state reached!</strong> Object targets are aligned.";
-            } else {
-                textEl.innerHTML = " Est. Walk Distance: <strong>" + approximateMeters + " meters</strong>";
-            }
-        }
-
-        function cmtSyncDropdownValueToPin(key) {
-            const selectEl = document.getElementById('cmtEndLocationId');
-            if (selectEl) {
-                selectEl.value = key;
-            }
-        }
-
-        function cmtPopulateSidebarDataDetails(data) {
-            document.getElementById('cmtSidebarPlaceholderId').classList.add('cmt-utility-hidden');
-            document.getElementById('cmtSidebarContentId').classList.remove('cmt-utility-hidden');
-            
-            document.getElementById('cmtBuildingNameId').innerText = data.name;
-            document.getElementById('cmtBuildingAboutId').innerText = data.about;
-            
-            const tag = document.getElementById('cmtBuildingTagId');
-            tag.innerText = data.tag;
-
-            const list = document.getElementById('cmtBuildingDepartmentsId');
-            list.innerHTML = '';
-            data.departments.forEach(d => {
-                const li = document.createElement('li');
-                li.innerText = d;
-                list.appendChild(li);
-            });
-            cmtSyncDropdownValueToPin(data.pinId.replace('pin-', ''));
-        }
-
-        function cmtResetGlobalView() {
-            cmtCanvasDOM.classList.remove('cmt-state-dragging');
-            cmtCurrentZoomLevel = 1;
-            cmtPanOffsetX = 0;
-            cmtPanOffsetY = 0;
-            cmtApplyCanvasTransformation();
-            
-            cmtIsTrackingMode = false;
-            cmtCurrentEndKey = null;
-            cmtActiveBuildingKey = null;
-            cmtVisualPathDOM.setAttribute('d', ''); 
+    const destinationNode = cmtCampusDatabase[end];
+    if (destinationNode) {
+        if (cmtIsTrackingMode) {
+            cmtVisualPathDOM.setAttribute('d', '');
             cmtDestStarDOM.classList.add('cmt-utility-hidden');
             document.getElementById('cmtDirectionsCardId').classList.add('cmt-utility-hidden');
-            cmtResetBtnDOM.classList.add('cmt-utility-hidden');
-            document.querySelectorAll('.cmt-pin-dot-node').forEach(p => p.classList.remove('cmt-state-active'));
-            document.getElementById('cmtSidebarPlaceholderId').classList.remove('cmt-utility-hidden');
-            document.getElementById('cmtSidebarContentId').classList.add('cmt-utility-hidden');
-            document.getElementById('cmtEndLocationId').value = ""; 
-            document.getElementById('cmtStartLocationId').value = "";
-            cmtUserDotDOM.classList.add('cmt-utility-hidden');
-            
-            cmtSidebarDOM.classList.remove('cmt-state-expanded');
+            cmtIsTrackingMode = false;
         }
+        cmtFocusTargetBuilding(end, destinationNode.pctX, destinationNode.pctY, document.getElementById(destinationNode.pinId));
+    }
+}
 
-        window.addEventListener('resize', () => {
-            if (cmtIsTrackingMode) cmtRecomputeVectorRouteLine();
-        });
+function cmtFocusTargetBuilding(key, pctX, pctY, dotElement) {
+    if (cmtActiveBuildingKey === key) {
+        cmtResetGlobalView();
+        return;
+    }
+
+    const data = cmtCampusDatabase[key];
+    if (!data) return;
+    cmtActiveBuildingKey = key;
+
+    document.querySelectorAll('.cmt-pin-dot-node').forEach(p => p.classList.remove('cmt-state-active'));
+    if (dotElement) dotElement.classList.add('cmt-state-active');
+
+    cmtCanvasDOM.classList.remove('cmt-state-dragging'); 
+
+    cmtCurrentZoomLevel = 2.8; 
+    const wrapperWidth = cmtCampusImgDOM.clientWidth;
+    const wrapperHeight = cmtCampusImgDOM.clientHeight;
+    const viewportRect = cmtViewportDOM.getBoundingClientRect();
+
+    const targetX = (pctX / 100) * wrapperWidth;
+    const targetY = (pctY / 100) * wrapperHeight;
+
+    cmtPanOffsetX = (viewportRect.width / 2) - (targetX * cmtCurrentZoomLevel);
+    cmtPanOffsetY = (viewportRect.height / 2) - (targetY * cmtCurrentZoomLevel);
+
+    cmtApplyCanvasTransformation();
+    if (!cmtIsTrackingMode) {
+        cmtResetBtnDOM.innerText = "🔍 Zoom Out Entire Map";
+        cmtResetBtnDOM.className = "cmt-reset-btn-control";
+        cmtResetBtnDOM.classList.remove('cmt-utility-hidden');
+    }
+
+    cmtPopulateSidebarDataDetails(data);
+}
+
+function cmtEngageLiveTrackingSystem() {
+    const start = document.getElementById('cmtStartLocationId').value;
+    const end = document.getElementById('cmtEndLocationId').value;
+    
+    if (!start) {
+        alert("Pili ka muna kung saan ka magsisimula te!");
+        document.getElementById('cmtEndLocationId').value = "";
+        return;
+    }
+    if (!end) return;
+    cmtCurrentEndKey = end;
+    cmtIsTrackingMode = true;
+
+    document.querySelectorAll('.cmt-pin-dot-node').forEach(p => p.classList.remove('cmt-state-active'));
+    const destinationNode = cmtCampusDatabase[end];
+    if (destinationNode) {
+        const nodeEl = document.getElementById(destinationNode.pinId);
+        if (nodeEl) nodeEl.classList.add('cmt-state-active');
+        
+        cmtDestStarDOM.style.left = `${destinationNode.pctX}%`;
+        cmtDestStarDOM.style.top = `${destinationNode.pctY}%`;
+        cmtDestStarDOM.classList.remove('cmt-utility-hidden');
+    }
+
+    document.getElementById('cmtDirectionsCardId').classList.remove('cmt-utility-hidden');
+    
+    cmtRecomputeVectorRouteLine();
+    
+    cmtCurrentZoomLevel = 1;
+    cmtPanOffsetX = 0;
+    cmtPanOffsetY = 0;
+    cmtApplyCanvasTransformation();
+
+    cmtResetBtnDOM.innerText = "❌ Clear Route Path";
+    cmtResetBtnDOM.className = "cmt-reset-btn-control cmt-modifier-danger";
+    cmtResetBtnDOM.classList.remove('cmt-utility-hidden');
+
+    if (destinationNode) cmtPopulateSidebarDataDetails(destinationNode);
+}
+
+function cmtRecomputeVectorRouteLine() {
+    if (!cmtIsTrackingMode || !cmtCurrentEndKey) return;
+    const destNode = cmtCampusDatabase[cmtCurrentEndKey];
+    const mapWidth = cmtCampusImgDOM.clientWidth;
+    const mapHeight = cmtCampusImgDOM.clientHeight;
+
+    const x1 = (cmtUserCurrentPos.pctX / 100) * mapWidth;
+    const y1 = (cmtUserCurrentPos.pctY / 100) * mapHeight;
+    const x2 = (destNode.pctX / 100) * mapWidth;
+    const y2 = (destNode.pctY / 100) * mapHeight;
+
+    cmtVisualPathDOM.setAttribute('d', `M ${x1} ${y1} L ${x2} ${y2}`);
+    const distancePercent = Math.sqrt(Math.pow(destNode.pctX - cmtUserCurrentPos.pctX, 2) + Math.pow(destNode.pctY - cmtUserCurrentPos.pctY, 2));
+    const approximateMeters = Math.round(distancePercent * 6.1);
+    const textEl = document.getElementById('cmtLiveDistanceTextId');
+    if (approximateMeters <= 5) {
+        textEl.innerHTML = "<strong>Arrival state reached!</strong> Object targets are aligned.";
+    } else {
+        textEl.innerHTML = " Est. Walk Distance: <strong>" + approximateMeters + " meters</strong>";
+    }
+}
+
+function cmtSyncDropdownValueToPin(key) {
+    const selectEl = document.getElementById('cmtEndLocationId');
+    if (selectEl) {
+        selectEl.value = key;
+    }
+}
+
+function cmtPopulateSidebarDataDetails(data) {
+    document.getElementById('cmtSidebarPlaceholderId').classList.add('cmt-utility-hidden');
+    document.getElementById('cmtSidebarContentId').classList.remove('cmt-utility-hidden');
+    
+    // Updates Name and Text Content
+    document.getElementById('cmtBuildingNameId').innerText = data.name;
+    document.getElementById('cmtBuildingAboutId').innerText = data.about;
+    
+    // Updates the Tag pill (Hides if empty, like b3)
+    const tag = document.getElementById('cmtBuildingTagId');
+    if (tag) {
+        if (data.tag) {
+            tag.innerText = data.tag;
+            tag.style.display = "inline-block";
+        } else {
+            tag.style.display = "none";
+        }
+    }
+
+    // Updates Image Source
+    const picElement = document.getElementById('cmtBuildingImageId');
+    if (picElement && data.pic) {
+        picElement.src = data.pic;; 
+        picElement.alt = data.name;
+    }
+    
+    cmtSyncDropdownValueToPin(data.pinId.replace('pin-', ''));
+}
+
+function cmtResetGlobalView() {
+    cmtCanvasDOM.classList.remove('cmt-state-dragging');
+    cmtCurrentZoomLevel = 1;
+    cmtPanOffsetX = 0;
+    cmtPanOffsetY = 0;
+    cmtApplyCanvasTransformation();
+    
+    cmtIsTrackingMode = false;
+    cmtCurrentEndKey = null;
+    cmtActiveBuildingKey = null;
+    cmtVisualPathDOM.setAttribute('d', ''); 
+    cmtDestStarDOM.classList.add('cmt-utility-hidden');
+    document.getElementById('cmtDirectionsCardId').classList.add('cmt-utility-hidden');
+    cmtResetBtnDOM.classList.add('cmt-utility-hidden');
+    document.querySelectorAll('.cmt-pin-dot-node').forEach(p => p.classList.remove('cmt-state-active'));
+    document.getElementById('cmtSidebarPlaceholderId').classList.remove('cmt-utility-hidden');
+    document.getElementById('cmtSidebarContentId').classList.add('cmt-utility-hidden');
+    document.getElementById('cmtEndLocationId').value = ""; 
+    document.getElementById('cmtStartLocationId').value = "";
+    cmtUserDotDOM.classList.add('cmt-utility-hidden');
+    
+    cmtSidebarDOM.classList.remove('cmt-state-expanded');
+}
+
+window.addEventListener('resize', () => {
+    if (cmtIsTrackingMode) cmtRecomputeVectorRouteLine();
+});
+
 </script>
 </body>
 </html>
